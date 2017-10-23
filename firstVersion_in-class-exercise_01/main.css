@@ -1,0 +1,18 @@
+body {
+ padding: 40px;
+ background-color: #2b2b2b;
+}
+
+h1 {
+ padding: 15px;
+ color: #ff008d;
+ text-align: center;
+ font: italic 200% courier;
+}
+
+p {
+ padding: 25px;
+ color: #33a8ff;
+ text-align: center;
+ border: 3px dotted #ff008d;
+}
