@@ -25,7 +25,7 @@ var folders;
 var angle = 0;
 var dragObjectIndex = null;
 var trashCounter = 0;
-var endY = -200;
+var endY = -800;
 var endFill = 1;
 var endFillAngle = 0;
 
@@ -62,7 +62,7 @@ function setup() {
     // folder1 = createSprite(width - 200, 100);
     // folder2 = createSprite(width - 230, 250);
     // folder3 = createSprite(width - 200, 300);
-    screenshot = createSprite(width/7, height - 60);
+    screenshot = createSprite(width/7, height - 100);
     folder1 = createSprite(width/4 + 50, height - 100);
     folder2 = createSprite(width/4, height - 300);
     folder3 = createSprite(width/5, height - 250);
@@ -137,17 +137,17 @@ function draw() {
 
     //you won!
     if (trashCounter == 4) {
-        textSize(60);
+        textSize(200);
         endFill = map(sin(endFillAngle), -1, 1, 0, 200);
         fill(color(100, 255 - endFill, endFill));
-        text("GUIDE TO A VIRTUALLY CONFLICTED REALITY", 50, endY, width / 2, height);
+        text("flush bloop bloop ", 50, endY, width - 50, height);
 
         if(endY<=height + 100){
-          endY+=10;
+          endY+=3;
         endFillAngle += .02;
         }
         else if (endY > height + 100) {
-            endY = -200;
+            endY = -800;
         }
     }
 
@@ -159,8 +159,8 @@ function draw() {
     drawSprite(folder1);
     drawSprite(screenshot);
     if (!screenshot.removed) {
-        textStyle(BOLD);
-        // text("HELP ME CLEAN \n drag items to trash \n (browsers only)", screenshot.position.x - 70, screenshot.position.y + 40, 140, 100);
+        // textStyle(BOLD);
+        text("wanna play? clean desktop pls \n (browsers only)", screenshot.position.x - 70, screenshot.position.y + 50, 140, 100);
     }
     if (!folder1.removed) {
         text("mismatched socks", folder1.position.x - 70, folder1.position.y + 40, 140, 100);
