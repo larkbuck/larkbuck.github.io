@@ -12,9 +12,14 @@ body {
   padding: 1em 1em;
   color: #161616;
   background-color: #F7F7F7;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
+
 
 /*home-page */
 
@@ -38,6 +43,7 @@ body {
   max-width: 66%;
   /*margin-left: 300px;*/
 }
+
 
 /*solid border boxes*/
 
@@ -92,45 +98,90 @@ p a:hover {
   /*padding: .5em .5em .5em 1.5em;*/
 }
 
+
 /*flex boxes for hireMe*/
 
 .flex-container {
-  display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
   align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
   align-items: flex-start;
   margin-top: 80px;
   height: 100%;
 }
 
 .flex-item_1 {
-  align-self: auto;
   margin: 15px;
+  /*align-self: auto;
+  flex: 1 1 100%;*/
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
   flex: 1 1 100%;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
 }
 
 .flex-item_2 {
-  align-self: auto;
   margin: 15px;
+  /*align-self: auto;
+  flex: 1 1 40%;*/
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 1 1 40%;
+  -ms-flex: 1 1 40%;
   flex: 1 1 40%;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
 }
 
 .flex-item_3 {
-  align-self: auto;
   margin: 15px;
+  /*align-self: auto;
+  flex: 1 1 25%;*/
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 1 1 25%;
+  -ms-flex: 1 1 25%;
   flex: 1 1 25%;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
 }
 
 .flex-item_4 {
-  align-self: auto;
   margin: 15px;
+  /*align-self: auto;
+  flex: 1 1 25%;*/
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 1 1 25%;
+  -ms-flex: 1 1 25%;
   flex: 1 1 25%;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
 }
 
 .flex-item_1 img {
@@ -163,18 +214,21 @@ p a:hover {
   height: auto;
 }
 
+
 /*.flex-item_1 iframe {
     width: 100%;
     height: auto;
 }*/
 
 #container_logo {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 40px 80px 40px 20px;
   max-width: 600px;
 }
 
-#logo_img{
+#logo_img {
   min-width: 200px;
   max-width: 600px;
 }
@@ -183,6 +237,8 @@ p a:hover {
   /*flex properties set in flex-container*/
   /* background-image: url("../assets/TTHeartMovie/StarBackSmall.jpg");
   background-attachment: scroll; */
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 40px 80px 40px 80px;
   /*justify-content: flex-end;*/
@@ -193,6 +249,8 @@ p a:hover {
   /*flex properties set in flex-container*/
   background-image: url("../assets/TTHeartMovie/StarBackSmall.jpg");
   background-attachment: scroll;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 40px 80px 40px 80px;
   max-width: 800px;
@@ -223,6 +281,8 @@ p a:hover {
 #container_babump {
   background-color: #ffffff;
   padding: 20px 5px 40px 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   /*font-family: 'Raleway', sans-serif;*/
@@ -265,6 +325,8 @@ p a:hover {
 #container_tGotchi {
   background-color: #060709;
   padding: 20px 5px 40px 5px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   /*font-family: "Open Sans", "Helvetica", "Arial", sans-serif;*/
   /*font-family: 'Raleway', sans-serif;*/
@@ -293,6 +355,8 @@ p a:hover {
 
 @media screen and (max-width: 990px) {
   .flex-container {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .flex-item_2 {
@@ -314,11 +378,11 @@ p a:hover {
     display: flex;
     flex-direction: column;
   }
-
   li {
     font-size: 36px;
   }
 }
+
 
 /*flexbox for setting sticky footer*/
 
@@ -340,6 +404,7 @@ footer {
   padding: 60px 0px 10px 0px;
   font-size: 16px;
 }
+
 
 /*CSS for Nav Menu*/
 
@@ -411,6 +476,7 @@ footer {
   /*padding: .5em .5em .5em 1.5em;*/
 }
 
+
 /*project index links*/
 
 .projectLinks {
@@ -433,5 +499,6 @@ footer {
   /*background-color: #BFB8BA;*/
   /*padding: .5em .5em .5em 1.5em;*/
 }
+
 
 /*the end*/
