@@ -127,6 +127,7 @@ p a:hover {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+  flex-basis: content;
   margin-top: 80px;
   height: 100%;
 }
@@ -274,6 +275,7 @@ p a:hover {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  flex-basis: content;
   padding: 40px 80px 40px 80px;
   max-width: 800px;
   /*justify-content: flex-end;*/
