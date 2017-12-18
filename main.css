@@ -20,7 +20,6 @@ body {
   flex-direction: column;
 }
 
-
 /*home-page */
 
 .top {
@@ -43,7 +42,6 @@ body {
   max-width: 66%;
   /*margin-left: 300px;*/
 }
-
 
 /*solid border boxes*/
 
@@ -98,26 +96,34 @@ p a:hover {
   /*padding: .5em .5em .5em 1.5em;*/
 }
 
-
 /*flex boxes for hireMe*/
 
 .flex-container {
+  display: -webkit-box;
+  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: start;
   align-content: flex-start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -129,9 +135,13 @@ p a:hover {
   margin: 15px;
   /*align-self: auto;
   flex: 1 1 100%;*/
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -144,9 +154,13 @@ p a:hover {
   margin: 15px;
   /*align-self: auto;
   flex: 1 1 40%;*/
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
   -webkit-flex: 1 1 40%;
   -ms-flex: 1 1 40%;
   flex: 1 1 40%;
@@ -159,9 +173,13 @@ p a:hover {
   margin: 15px;
   /*align-self: auto;
   flex: 1 1 25%;*/
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
   -webkit-flex: 1 1 25%;
   -ms-flex: 1 1 25%;
   flex: 1 1 25%;
@@ -174,9 +192,13 @@ p a:hover {
   margin: 15px;
   /*align-self: auto;
   flex: 1 1 25%;*/
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
   -webkit-flex: 1 1 25%;
   -ms-flex: 1 1 25%;
   flex: 1 1 25%;
@@ -214,7 +236,6 @@ p a:hover {
   width: 100%;
   height: auto;
 }
-
 
 /*.flex-item_1 iframe {
     width: 100%;
@@ -361,12 +382,38 @@ p a:hover {
     flex-wrap: wrap;
   }
   .flex-item_2 {
+    /*flex: 0 1 90%;
+    align-self: auto;*/
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 90%;
+    -ms-flex: 0 1 90%;
     flex: 0 1 90%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
     align-self: auto;
     margin: 10px;
   }
   .flex-item {
+    /*flex: 0 1 90%;
+    align-self: auto;*/
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 90%;
+    -ms-flex: 0 1 90%;
     flex: 0 1 90%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
     align-self: auto;
     margin: 10px;
   }
@@ -376,14 +423,25 @@ p a:hover {
     padding: 1em 1em;
     color: #161616;
     background-color: #F7F7F7;
+    /*display: flex;
+    flex-direction: column;*/
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   li {
     font-size: 36px;
   }
 }
-
 
 /*flexbox for setting sticky footer*/
 
@@ -392,20 +450,37 @@ p a:hover {
    all of the remaining space on the page.
    The other elements have flex-grow: 0 and won't contest the free space. */
   /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  /*flex: 1 0 auto;*/
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
   flex: 1 0 auto;
 }
 
 footer {
   /* Like the header, the footer will have a static height - it shouldn't grow or shrink.  */
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-  flex: 0 0 auto;
-  align-self: flex-end;
+  /*flex: 0 0 auto;
+  align-self: flex-end;*/
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
   width: 100%;
   text-align: right;
   padding: 60px 0px 10px 0px;
   font-size: 16px;
 }
-
 
 /*CSS for Nav Menu*/
 
@@ -477,7 +552,6 @@ footer {
   /*padding: .5em .5em .5em 1.5em;*/
 }
 
-
 /*project index links*/
 
 .projectLinks {
@@ -500,6 +574,5 @@ footer {
   /*background-color: #BFB8BA;*/
   /*padding: .5em .5em .5em 1.5em;*/
 }
-
 
 /*the end*/
