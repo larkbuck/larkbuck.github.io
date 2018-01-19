@@ -94,11 +94,30 @@ p a:hover {
 
 /* flex-boxes */
 
+.highlight:hover {
+  border-style: dotted;
+  border-width: 5px;
+  border-color: #D2DB21 #8787C1 #00DA80 #D31996;
+}
+
 .container {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   flex-flow: row wrap;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  margin: 40px 10px 10px 10px;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.container-column {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: column wrap;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.15);
   padding: 20px;
@@ -154,7 +173,7 @@ p a:hover {
   height: auto;
 }
 
-/*flex boxes*/
+/*flex boxes old*/
 
 .flex-container {
   display: flex;
@@ -226,6 +245,10 @@ p a:hover {
     height: auto;
 }*/
 
+#container_max1000 {
+  max-width: 1000px;
+}
+
 #container_logo {
   flex-wrap: wrap;
   padding: 40px 80px 40px 20px;
@@ -262,9 +285,10 @@ p a:hover {
   /*overflow: auto;*/
 }
 
-#item_ttMovieText {
+#item_ttMovieText a {
   color: #F7F7F7;
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  text-decoration: none;
   /* letter-spacing: .07em;
   order: 0;
   min-width: 400px; */
@@ -326,22 +350,18 @@ p a:hover {
 
 #container_tGotchi {
   background-color: #060709;
-  padding: 20px 5px 40px 5px;
-  flex-wrap: wrap;
+  padding: 40px;
+  max-width: 600px;
+  /* align-self: flex-end; */
   /*font-family: "Open Sans", "Helvetica", "Arial", sans-serif;*/
   /*font-family: 'Raleway', sans-serif;*/
-}
-
-#item_tGotchiBanner {
-  max-width: 800px;
-  align-self: flex-start;
 }
 
 #item_tGotchiText {
   color: #bcff66;
   letter-spacing: .07em;
-  order: 0;
   font-weight: 200;
+  text-align: center;
 }
 
 #item_bubbleImages {
