@@ -80,25 +80,26 @@ body {
   max-width: 550px;
 }
 
-p a {
+p a, h1 a {
   text-decoration: none;
   color: #222;
   border-bottom: 2px #00DA80 dotted;
 }
 
-p a:hover {
+p a:hover, h1 a:hover {
   color: #FFFFFF;
   background-color: #161616;
   /*padding: .5em .5em .5em 1.5em;*/
 }
-
-/* flex-boxes */
 
 .highlight:hover {
   border-style: dotted;
   border-width: 5px;
   border-color: #D2DB21 #8787C1 #00DA80 #D31996;
 }
+
+/* flexboxes */
+/* flexbox containers for project gallery */
 
 .container {
   display: -webkit-flex;
@@ -107,8 +108,9 @@ p a:hover {
   flex-flow: row wrap;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.15);
-  padding: 20px;
+  padding: 40px;
   margin: 40px 10px 10px 10px;
+  align-content: flex-start;
   align-items: flex-start;
   justify-content: space-around;
 }
@@ -117,11 +119,12 @@ p a:hover {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.15);
   padding: 20px;
   margin: 40px 10px 10px 10px;
+  align-content: flex-start;
   align-items: flex-start;
   justify-content: space-around;
 }
@@ -173,7 +176,7 @@ p a:hover {
   height: auto;
 }
 
-/*flex boxes old*/
+/*flex boxes for project pages*/
 
 .flex-container {
   display: flex;
@@ -310,7 +313,10 @@ p a:hover {
   background-color: #ffffff;
   padding: 20px 5px 40px 5px;
   flex-wrap: wrap;
-  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-family: "Raleway", "Helvetica", "Arial", sans-serif;
+  color: #222;
+  letter-spacing: .07em;
+  padding: 50px;
   /*font-family: 'Raleway', sans-serif;*/
 }
 
@@ -348,8 +354,20 @@ p a:hover {
   max-width: 800px;
 }
 
+.line_top {
+  border-top: 1px solid #D3D3D3;
+  padding-top: 50px;
+  margin-top: 30px;
+}
+
+.padding_top {
+  padding-top: 50px;
+}
+
 #container_tGotchi {
-  background-color: #060709;
+  background-image: url("../assets/traumagotchi/traumagotchi_BG_tall.png");
+  background-attachment: scroll;
+  /* background-color: #060709; */
   padding: 40px;
   max-width: 600px;
   /* align-self: flex-end; */
