@@ -92,10 +92,26 @@ p a:hover, h1 a:hover {
   /*padding: .5em .5em .5em 1.5em;*/
 }
 
+.highlight {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #FF000000;
+}
+
 .highlight:hover {
-  border-style: dotted;
+  border-style: solid;
   border-width: 5px;
   border-color: #D2DB21 #8787C1 #00DA80 #D31996;
+  /* outline-style: solid;
+  outline-width: 5px;
+  outline-color: #D2DB21;
+  outline-offset: -5px; */
+
+}
+
+.highlight a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+
 }
 
 /* flexboxes */
@@ -108,8 +124,8 @@ p a:hover, h1 a:hover {
   flex-flow: row wrap;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.15);
-  padding: 40px;
-  margin: 40px 10px 10px 10px;
+  padding: 20px;
+  margin: 10px 10px 10px 10px;
   align-content: flex-start;
   align-items: flex-start;
   justify-content: space-around;
@@ -138,37 +154,37 @@ p a:hover, h1 a:hover {
 .two-thirds {
   width: 65%;
   /* IE */
-  flex: 0 1 calc(66% - 20px);
+  flex: 0 1 calc(66% - 25px);
 }
 
 .half {
   width: 49%;
   /* IE */
-  flex: 0 2 calc(50% - 20px);
+  flex: 0 2 calc(50% - 25px);
 }
 
 .third {
   width: 32.2%;
   /* IE */
-  flex: 0 1 calc(33.333333% - 20px);
+  flex: 0 1 calc(33.333333% - 25px);
 }
 
 .fourth {
   width: 24%;
   /* IE */
-  flex: 0 1 calc(25% - 20px);
+  flex: 0 1 calc(25% - 25px);
 }
 
 .fifth {
   width: 19.5%;
   /* IE */
-  flex: 0 1 calc(20% - 20px);
+  flex: 0 1 calc(20% - 25px);
 }
 
 .sixth {
   width: 15.7%;
   /* IE */
-  flex: 0 1 calc(16.666666% - 20px);
+  flex: 0 1 calc(16.666666% - 25px);
 }
 
 .image {
@@ -248,8 +264,8 @@ p a:hover, h1 a:hover {
     height: auto;
 }*/
 
-#container_max1000 {
-  max-width: 1000px;
+#container_gallery {
+  margin-top: 50px;
 }
 
 #container_logo {
@@ -268,7 +284,8 @@ p a:hover, h1 a:hover {
   /* background-image: url("../assets/TTHeartMovie/StarBackSmall.jpg");
   background-attachment: scroll; */
   flex-wrap: wrap;
-  padding: 40px 80px 40px 80px;
+  padding: 40px 40px 40px 40px;
+  color: black;
   /*justify-content: flex-end;*/
   /*overflow: auto;*/
 }
@@ -282,19 +299,14 @@ p a:hover, h1 a:hover {
   /* padding: 10px 10px 40px 80px; */
   max-width: 800px;
   color: #F7F7F7;
-  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
-  letter-spacing: .07em;
-  /*justify-content: flex-end;*/
-  /*overflow: auto;*/
 }
 
-#item_ttMovieText a {
+#item_ttMovieText {
   color: #F7F7F7;
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  letter-spacing: .08em;
   text-decoration: none;
-  /* letter-spacing: .07em;
-  order: 0;
-  min-width: 400px; */
+  text-align: justify;
 }
 
 #item_ttMovieMainImage {
@@ -365,14 +377,15 @@ p a:hover, h1 a:hover {
 }
 
 #container_tGotchi {
-  background-image: url("../assets/traumagotchi/traumagotchi_BG_tall.png");
+  background-image: url("../assets/traumagotchi/traumagotchi_BG_tall.jpg");
   background-attachment: scroll;
-  /* background-color: #060709; */
   padding: 40px;
   max-width: 600px;
-  /* align-self: flex-end; */
-  /*font-family: "Open Sans", "Helvetica", "Arial", sans-serif;*/
-  /*font-family: 'Raleway', sans-serif;*/
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 #item_tGotchiText {
