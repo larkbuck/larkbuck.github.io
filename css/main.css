@@ -402,6 +402,12 @@ p a:hover, h1 a:hover {
   max-width: 640px;
 }
 
+#container_everything-after {
+  padding: 30px;
+  /* padding: 10px 10px 40px 80px; */
+  max-width: 800px;
+}
+
 @media screen and (max-width: 768px) {
   /* .flex-container {
     flex-wrap: wrap;
