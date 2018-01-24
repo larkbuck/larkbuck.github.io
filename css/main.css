@@ -408,6 +408,20 @@ p a:hover, h1 a:hover {
   max-width: 800px;
 }
 
+#container_everything-after {
+  padding: 30px;
+  /* padding: 10px 10px 40px 80px; */
+  max-width: 800px;
+}
+
+#container_heart-empire {
+  color: black;
+}
+
+#container_heart-empire h1 {
+  padding: 10px;
+}
+
 @media screen and (max-width: 768px) {
   /* .flex-container {
     flex-wrap: wrap;
