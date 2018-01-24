@@ -25,7 +25,7 @@ var folders;
 var angle = 0;
 var dragObjectIndex = null;
 var trashCounter = 0;
-var endY = -800;
+var endY = -200;
 var endFill = 1;
 var endFillAngle = 0;
 
@@ -137,17 +137,17 @@ function draw() {
 
     //you won!
     if (trashCounter == 4) {
-        textSize(200);
+        textSize(150);
         endFill = map(sin(endFillAngle), -1, 1, 0, 200);
         fill(color(100, 255 - endFill, endFill));
-        text("flush bloop bloop ", 50, endY, width - 50, height);
+        text("thankyou", 50, endY, width - 50, height);
 
         if(endY<=height + 100){
           endY+=3;
         endFillAngle += .02;
         }
         else if (endY > height + 100) {
-            endY = -800;
+            endY = -1000;
         }
     }
 
