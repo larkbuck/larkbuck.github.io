@@ -421,19 +421,17 @@ p a:hover, h1 a:hover {
     flex: 0 1 90%;
     align-self: auto;
     margin: 10px;
-  }
+  } */
   body {
     font-size: 20px;
     line-height: 1.7;
     padding: 1em 1em;
-    color: #161616;
-    background-color: #F7F7F7;
     display: flex;
     flex-direction: column;
   }
   li {
     font-size: 36px;
-  } */
+  }
 }
 
 /*flexbox for setting sticky footer*/
