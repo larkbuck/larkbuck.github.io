@@ -192,6 +192,11 @@ p a:hover, h1 a:hover {
   height: auto;
 }
 
+.align-right {
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
 /*flex boxes for project pages*/
 
 .flex-container {
@@ -229,32 +234,12 @@ p a:hover, h1 a:hover {
   flex: 1 1 25%;
 }
 
-.flex-item_1 img {
-  width: 100%;
-  height: auto;
-}
-
-.flex-item_2 img {
-  width: 100%;
-  height: auto;
-}
-
-.flex-item_3 img {
-  width: 100%;
-  height: auto;
-}
-
-.flex-item_4 img {
+.flex-item_1 img, .flex-item_2 img, .flex-item_3 img, .flex-item_4 img {
   width: 100%;
   height: auto;
 }
 
 .flex-item_2 iframe {
-  width: 100%;
-  height: auto;
-}
-
-.flex-item_3 img {
   width: 100%;
   height: auto;
 }
@@ -376,6 +361,10 @@ p a:hover, h1 a:hover {
   padding-top: 50px;
 }
 
+.black {
+  color: black;
+}
+
 #container_tGotchi {
   background-image: url("../assets/traumagotchi/traumagotchi_BG_tall.jpg");
   background-attachment: scroll;
@@ -466,7 +455,7 @@ footer {
   width: 100%;
   text-align: right;
   padding: 60px 0px 10px 0px;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 /*CSS for Nav Menu*/
