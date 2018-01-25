@@ -200,6 +200,8 @@ p a:hover, h1 a:hover {
 /*flex boxes for project pages*/
 
 .flex-container {
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
