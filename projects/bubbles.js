@@ -5,6 +5,9 @@ let popText = [];
 let counter = 0;
 let popSound = [];
 
+//Creating animations from sprite sheets
+let confettiPop_pink;
+
 function preload() {
   //need to preload images to bubblesPop array
   for (i = 0; i < 21; i++) {
@@ -17,8 +20,9 @@ function preload() {
 
   popSound[0] = loadSound('../assets/bubbles/bubble_pop.mp3');
 
+  //create an animation from a sequence of numbered images
+  confettiPop_pink = loadAnimation('../assets/bubbles/confettiPop_pink_256_00001.png', '../assets/bubbles/confettiPop_pink_256_00011.png');
 }
-
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
@@ -38,6 +42,9 @@ function draw() {
   clear();
   // tint(255, 126);
   // image(bubblesPop[0], 10, 10);
+
+  // animate the sprite sheet
+  animation(confettiPop_pink, 100, 130);
 
   //hm how to stagger them... could set timer that releases them, sets move state to true
   for (var i = 0; i < bubbles.length; i++) {
@@ -94,9 +101,9 @@ class Bubble {
   pop() {
     if (this.popCounter < 6) {
       stroke(0, this.randomSeed * 20, this.popCounter * this.randomSeed * 10, 100);
-      strokeWeight(15/this.popCounter);
+      strokeWeight(15 / this.popCounter);
       noFill();
-      ellipse(this.x, this.y - this.popCounter*2, this.img.height / this.popCounter, this.img.height / this.popCounter);
+      ellipse(this.x, this.y - this.popCounter * 2, this.img.height / this.popCounter, this.img.height / this.popCounter);
 
       // fill(0, 255, 10, 255/this.popCounter);
       // textAlign(CENTER);
