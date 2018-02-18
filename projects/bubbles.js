@@ -1,12 +1,20 @@
+let state = 0;
 let bubblesPop = []; //array of images
 let bubble; //bubble object
 let bubbles = []; //array of bubble objects
 let popText = [];
+let popTextWords = ["some things", "are", "just", "joyous", "and beatiful", "and fill you", "with awe,", "thank goddess.", "the act", "of watching", "bubbles move through", "air releases", "serotonin. this is", "an untested", "but not unlikely", "hypothesis.", "Go", "be", "a", "bubble", "now.", " ", " ", " "];
 let counter = 0;
 let popSound = [];
+let serotoninImages = []
+let serotonin;
+let serotoninSwitch = false;
 
-//Creating animations from sprite sheets
-let confettiPop_pink;
+//Creating animations from explode things --- tho bug with animations so doing away with for now! saved copy in sync/code/games
+// let popAnimations = [];
+// let confettiPop_pink;
+// let confettiPop_green;
+// let collisionAnimation;
 
 function preload() {
   //need to preload images to bubblesPop array
@@ -18,14 +26,8 @@ function preload() {
     }
   }
 
+  serotonin = loadImage('../assets/bubbles/serotonin_512px.png')
   popSound[0] = loadSound('../assets/bubbles/bubble_pop.mp3');
-
-  //can't get p5.play to work! the sprite sheet is off, when trying to load stills get error
-  //create an animation from a sequence of numbered images
-  // confettiPop_pink = loadImage('../assets/bubbles/confettiPop_pink_01.png');
-  confettiPop_pink = loadAnimation('../assets/bubbles/confettiPop_pink_01.png', '../assets/bubbles/confettiPop_pink_11.png');
-  confettiPop_pink.playing = false;
-  confettiPop_pink.frameDelay = 4;
 }
 
 function setup() {
@@ -36,45 +38,40 @@ function setup() {
 
   //create array of bubble objects
   for (var i = 0; i < bubblesPop.length; i++) {
-    bubbles[i] = new Bubble(bubblesPop[i], random(windowWidth - 200) + 100, windowHeight + 250 * (i) + random(200), popSound[0]);
+    bubbles[i] = new Bubble(bubblesPop[i], random(windowWidth - 200) + 100, windowHeight + 150 * (i) + random(200), popSound[0]);
   }
-
 }
 
 function draw() {
-  // background(0);
-  clear();
-  // tint(255, 126);
-  // image(bubblesPop[0], 10, 10);
-
-  // animate the sprite sheet
+    // background(0);
+    clear();
 
 
-  //hm how to stagger them... could set timer that releases them, sets move state to true
-  for (var i = 0; i < bubbles.length; i++) {
-    //un-comment this if you want popped item to keep moving
-    // bubbles[i].move();
+    for (var i = 0; i < bubbles.length; i++) {
+      //un-comment this if you want popped item to keep moving
+      // bubbles[i].move();
 
-    if (bubbles[i].popped == false) {
-      bubbles[i].move();
-      bubbles[i].display();
-    } else {
-      // animation(confettiPop_pink, bubbles[i].x, bubbles[i].y);
-      bubbles[i].pop();
+      if (bubbles[i].popped == false) {
+        bubbles[i].move();
+        bubbles[i].display();
+      } else {
+        // animation(confettiPop_pink, bubbles[i].x, bubbles[i].y);
+        bubbles[i].pop();
+      }
+    }
+
+    if (serotoninSwitch == true){
+      serotoninImages[0] = image(serotonin, windowWidth - 600, 600);
     }
   }
-  // console.log(bubbles[0].x);
-}
 
 //create Bubble class using ES6 constructor
-//will need display, x, y, move, possible destroy function ?
 class Bubble {
-  constructor(img, x, y, popSound, popAnimation, popped, popCounter, randomSeed) {
+  constructor(img, x, y, popSound, popped, popCounter, randomSeed) {
     this.img = img;
     this.x = x;
     this.y = y;
     this.popSound = popSound
-    this.popAnimation = confettiPop_pink;
     this.popped = false;
     this.popCounter = 1.5;
     this.randomSeed = random(10);
@@ -105,11 +102,8 @@ class Bubble {
   }
 
   pop() {
-    // this.popAnimation.looping = false;
-    animation(this.popAnimation, this.x, this.y);
 
     if (this.popCounter < 6) {
-
       stroke(0, this.randomSeed * 20, this.popCounter * this.randomSeed * 10, 100);
       strokeWeight(15 / this.popCounter);
       noFill();
@@ -120,44 +114,45 @@ class Bubble {
       // textSize(33);
       // text("ultimate", this.x, this.y);
 
-
       this.popCounter += .5;
     }
-    // if (this.popCounter <= 10) {
-    //   setInterval(function() {
-    //     stroke(0);
-    //     noFill();
-    //     color(this.popCounter * 5);
-    //     ellipse(this.x, this.y, this.img.width / this.popCounter, this.img.height / this.popCounter);
-    //     this.popCounter += 1;
-    //   }, 50);
-    // }
   }
 }
 
-
-
 function mousePressed() {
-  // loop backwards so bubbles on top pop first
 
+  // loop backwards so bubbles on top pop first
   for (var i = bubbles.length - 1; i >= 0; i--) {
-    animation(confettiPop_pink, bubbles[i].x, bubbles[i].y);
     if (dist(bubbles[i].x, bubbles[i].y, mouseX, mouseY) < (bubbles[i].img.height) / 2) {
       bubbles[i].popped = true;
       bubbles[i].popSound.setVolume(0.5);
       bubbles[i].popSound.setLoop(false);
       bubbles[i].popSound.play();
-      confettiPop_pink.play();
       setTimeout(function() {
-        popText[i] = createP(`bubble #${counter}`);
-        // popText[i].position(bubbles[i].x - 30, bubbles[i].y - 80);
-        popText[i].position(windowWidth - 250, 350 + 50 * counter);
-        popText[i].style("position:fixed; font-size: 20px; color: orange");
+        popText[i] = createP(popTextWords[counter]);
+        if (counter <= 7) {
+          popText[i].position(windowWidth - 250, 350 + 50 * counter);
+          popText[i].style("position:fixed; font-size: 26px; color: orange");
+          // popText[i] = createP(`bubble #${counter}`);
+          // popText[i].position(bubbles[i].x - 30, bubbles[i].y - 80);
+        } else if (counter <= 11) {
+          popText[i].position(windowWidth - 350, 340 + 50 * (counter - 7));
+          popText[i].style("position:fixed; font-size: 26px; color: blue");
+        } else if (counter <= 15) {
+          popText[i].position(windowWidth - 350, 340 + 50 * (counter - 7));
+          popText[i].style("position:fixed; font-size: 26px; color: blue");
+          serotoninSwitch = true;
+        } else {
+          popText[i].position(windowWidth - 450, 330 + 50 * (counter - 15));
+          popText[i].style("position:fixed; font-size: 100px; color: pink");
+        }
+
         counter++;
         // move bubble off screen so no re-clicks
-        bubbles[i].x = -400;
-        bubbles[i].y = -400;
-      }, 500);
+        bubbles[i].x -= 200;
+        bubbles[i].y = windowHeight - 300;
+        // bubbles[i].popped = false;
+      }, 300);
 
       console.log(`bubbles[${i}] has popped`);
       break;
