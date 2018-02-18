@@ -35,7 +35,6 @@ function setup() {
   frameRate(60);
   canvas.parent("bgCanvas");
   canvas.position(0, 0);
-  canvas.style("z-index: -2;");
 
 
   if (window.matchMedia("(max-width: 600px)").matches) {
@@ -43,7 +42,6 @@ function setup() {
     canvas.style("z-index: -2;");
     console.log("media query works");
   };
-
 
   //create array of bubble objects
   for (var i = 0; i < bubblesPop.length; i++) {
@@ -72,6 +70,11 @@ function draw() {
   if (serotoninSwitch == true) {
     serotoninImages[0] = image(serotonin, windowWidth - 600, 600);
   }
+}
+
+//bug: not working when you resize height
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 //create Bubble class using ES6 constructor
