@@ -72,7 +72,6 @@ function draw() {
   }
 }
 
-//bug: not working when you resize height
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
@@ -131,13 +130,14 @@ class Bubble {
   }
 }
 
-function mousePressed() {
+// function mousePressed() {
+function mouseClicked() {
 
   // loop backwards so bubbles on top pop first
   for (var i = bubbles.length - 1; i >= 0; i--) {
     if (dist(bubbles[i].x, bubbles[i].y, mouseX, mouseY) < (bubbles[i].img.height) / 2) {
       bubbles[i].popped = true;
-      bubbles[i].popSound.setVolume(0.5);
+      bubbles[i].popSound.setVolume(0.1);
       bubbles[i].popSound.setLoop(false);
       bubbles[i].popSound.play();
       setTimeout(function() {
