@@ -269,6 +269,7 @@ p a:hover, h1 a:hover {
   /*flex properties set in flex-container*/
   /* background-image: url("../assets/TTHeartMovie/StarBackSmall.jpg");
   background-attachment: scroll; */
+  flex-direction: column;;
   flex-wrap: wrap;
   padding: 40px 40px 40px 40px;
   color: black;
