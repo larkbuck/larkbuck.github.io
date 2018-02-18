@@ -35,6 +35,7 @@ function setup() {
   frameRate(60);
   canvas.parent("bgCanvas");
   canvas.position(0, 0);
+  canvas.style("z-index: -2;");
 
 
   if (window.matchMedia("(max-width: 600px)").matches) {
