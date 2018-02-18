@@ -20,8 +20,12 @@ function preload() {
 
   popSound[0] = loadSound('../assets/bubbles/bubble_pop.mp3');
 
+  //can't get p5.play to work! the sprite sheet is off, when trying to load stills get error
   //create an animation from a sequence of numbered images
-  confettiPop_pink = loadAnimation('../assets/bubbles/confettiPop_pink_256_00001.png', '../assets/bubbles/confettiPop_pink_256_00011.png');
+  // confettiPop_pink = loadImage('../assets/bubbles/confettiPop_pink_01.png');
+  confettiPop_pink = loadAnimation('../assets/bubbles/confettiPop_pink_01.png', '../assets/bubbles/confettiPop_pink_11.png');
+  confettiPop_pink.playing = false;
+  confettiPop_pink.frameDelay = 4;
 }
 
 function setup() {
@@ -44,7 +48,7 @@ function draw() {
   // image(bubblesPop[0], 10, 10);
 
   // animate the sprite sheet
-  animation(confettiPop_pink, 100, 130);
+
 
   //hm how to stagger them... could set timer that releases them, sets move state to true
   for (var i = 0; i < bubbles.length; i++) {
@@ -55,6 +59,7 @@ function draw() {
       bubbles[i].move();
       bubbles[i].display();
     } else {
+      // animation(confettiPop_pink, bubbles[i].x, bubbles[i].y);
       bubbles[i].pop();
     }
   }
@@ -64,11 +69,12 @@ function draw() {
 //create Bubble class using ES6 constructor
 //will need display, x, y, move, possible destroy function ?
 class Bubble {
-  constructor(img, x, y, popSound, popped, popCounter, randomSeed) {
+  constructor(img, x, y, popSound, popAnimation, popped, popCounter, randomSeed) {
     this.img = img;
     this.x = x;
     this.y = y;
     this.popSound = popSound
+    this.popAnimation = confettiPop_pink;
     this.popped = false;
     this.popCounter = 1.5;
     this.randomSeed = random(10);
@@ -99,7 +105,11 @@ class Bubble {
   }
 
   pop() {
+    // this.popAnimation.looping = false;
+    animation(this.popAnimation, this.x, this.y);
+
     if (this.popCounter < 6) {
+
       stroke(0, this.randomSeed * 20, this.popCounter * this.randomSeed * 10, 100);
       strokeWeight(15 / this.popCounter);
       noFill();
@@ -109,6 +119,7 @@ class Bubble {
       // textAlign(CENTER);
       // textSize(33);
       // text("ultimate", this.x, this.y);
+
 
       this.popCounter += .5;
     }
@@ -125,27 +136,18 @@ class Bubble {
 }
 
 
-function popCircles(bubble) {
-  // for (i = 1; i < 10; i += 1) {
-  //   fill(0);
-  //   ellipse(bubble.x, bubble.y, bubble.img.width / i, bubble.img.height / i);
-  //   console.log(bubble);
-  // }
-}
 
 function mousePressed() {
   // loop backwards so bubbles on top pop first
+
   for (var i = bubbles.length - 1; i >= 0; i--) {
+    animation(confettiPop_pink, bubbles[i].x, bubbles[i].y);
     if (dist(bubbles[i].x, bubbles[i].y, mouseX, mouseY) < (bubbles[i].img.height) / 2) {
       bubbles[i].popped = true;
       bubbles[i].popSound.setVolume(0.5);
       bubbles[i].popSound.setLoop(false);
       bubbles[i].popSound.play();
-      popCircles(bubbles[i]);
-      // for (j = 1; j <= 10; j += .01) {
-      //   image(bubbles[i].img, bubbles[i].x, bubbles[i].y, bubbles[i].img.width/j, bubbles[i].img.height/j);
-      //   console.log(bubbles[i].img.width/j);
-      // }
+      confettiPop_pink.play();
       setTimeout(function() {
         popText[i] = createP(`bubble #${counter}`);
         // popText[i].position(bubbles[i].x - 30, bubbles[i].y - 80);
