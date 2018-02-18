@@ -3,7 +3,7 @@ let bubblesPop = []; //array of images
 let bubble; //bubble object
 let bubbles = []; //array of bubble objects
 let popText = [];
-let popTextWords = ["some things", "are", "just", "joyous", "and beatiful", "and fill you", "with awe,", "thank goddess.", "the act", "of watching", "bubbles move through", "air releases", "serotonin. this is", "an untested", "but not unlikely", "hypothesis.", "Go", "be", "a", "bubble", "now.", " ", " ", " "];
+let popTextWords = ["some things", "are", "just", "joyous", "and beatiful", "and fill you", "with awe,", "thank goddess.", "the act", "of watching", "bubbles move through", "air releases", "serotonin. this is", "an untested", "but not unlikely", "hypothesis.", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];
 let counter = 0;
 let popSound = [];
 let serotoninImages = []
@@ -32,8 +32,16 @@ function preload() {
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
+  frameRate(60);
+  canvas.parent("bgCanvas");
   canvas.position(0, 0);
-  canvas.style("position:fixed;");
+
+
+  if (window.matchMedia("(max-width: 600px)").matches) {
+    // run JavaScript in here.
+    canvas.style("z-index: -2;");
+    console.log("media query works");
+  };
 
 
   //create array of bubble objects
@@ -43,27 +51,27 @@ function setup() {
 }
 
 function draw() {
-    // background(0);
-    clear();
+  // background(0);
+  clear();
+  // background(34, 30, 24);
 
+  for (var i = 0; i < bubbles.length; i++) {
+    //un-comment this if you want popped item to keep moving
+    // bubbles[i].move();
 
-    for (var i = 0; i < bubbles.length; i++) {
-      //un-comment this if you want popped item to keep moving
-      // bubbles[i].move();
-
-      if (bubbles[i].popped == false) {
-        bubbles[i].move();
-        bubbles[i].display();
-      } else {
-        // animation(confettiPop_pink, bubbles[i].x, bubbles[i].y);
-        bubbles[i].pop();
-      }
-    }
-
-    if (serotoninSwitch == true){
-      serotoninImages[0] = image(serotonin, windowWidth - 600, 600);
+    if (bubbles[i].popped == false) {
+      bubbles[i].move();
+      bubbles[i].display();
+    } else {
+      // animation(confettiPop_pink, bubbles[i].x, bubbles[i].y);
+      bubbles[i].pop();
     }
   }
+
+  if (serotoninSwitch == true) {
+    serotoninImages[0] = image(serotonin, windowWidth - 600, 600);
+  }
+}
 
 //create Bubble class using ES6 constructor
 class Bubble {
@@ -92,7 +100,7 @@ class Bubble {
     // bug here! When there are more than a few bubbles on the screen
     // some of them will appear at middle of page not bottom. not sure why...
     if (this.y <= -250) {
-      this.y = windowHeight + 250;
+      this.y = windowHeight + 1250;
     }
 
     // this.y -= (300/(this.img.width));
@@ -129,23 +137,26 @@ function mousePressed() {
       bubbles[i].popSound.setLoop(false);
       bubbles[i].popSound.play();
       setTimeout(function() {
-        popText[i] = createP(popTextWords[counter]);
         if (counter <= 7) {
+          popText[i] = createP(popTextWords[counter]);
           popText[i].position(windowWidth - 250, 350 + 50 * counter);
           popText[i].style("position:fixed; font-size: 26px; color: orange");
           // popText[i] = createP(`bubble #${counter}`);
           // popText[i].position(bubbles[i].x - 30, bubbles[i].y - 80);
-        } else if (counter <= 11) {
-          popText[i].position(windowWidth - 350, 340 + 50 * (counter - 7));
-          popText[i].style("position:fixed; font-size: 26px; color: blue");
-        } else if (counter <= 15) {
-          popText[i].position(windowWidth - 350, 340 + 50 * (counter - 7));
-          popText[i].style("position:fixed; font-size: 26px; color: blue");
-          serotoninSwitch = true;
-        } else {
-          popText[i].position(windowWidth - 450, 330 + 50 * (counter - 15));
-          popText[i].style("position:fixed; font-size: 100px; color: pink");
         }
+
+        // *** this is with more text ***
+        // } else if (counter <= 11) {
+        //   popText[i].position(windowWidth - 350, 340 + 50 * (counter - 7));
+        //   popText[i].style("position:fixed; font-size: 26px; color: blue");
+        // } else if (counter <= 15) {
+        //   popText[i].position(windowWidth - 350, 340 + 50 * (counter - 7));
+        //   popText[i].style("position:fixed; font-size: 26px; color: blue");
+        //   serotoninSwitch = true;
+        // } else {
+        //   popText[i].position(windowWidth - 450, 330 + 50 * (counter - 15));
+        //   popText[i].style("position:fixed; font-size: 100px; color: pink");
+        // }
 
         counter++;
         // move bubble off screen so no re-clicks
