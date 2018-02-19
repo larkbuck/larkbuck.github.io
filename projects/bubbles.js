@@ -9,6 +9,7 @@ let popSound = [];
 let serotoninImages = []
 let serotonin;
 let serotoninSwitch = false;
+let home;
 
 //Creating animations from explode things --- tho bug with animations so doing away with for now! saved copy in sync/code/games
 // let popAnimations = [];
@@ -44,9 +45,25 @@ function setup() {
   };
 
   //create array of bubble objects
+  //bug - to change later... for now reduced frequency bc you currently can't pop them
   for (var i = 0; i < bubblesPop.length; i++) {
-    bubbles[i] = new Bubble(bubblesPop[i], random(windowWidth - 200) + 100, windowHeight + 150 * (i) + random(200), popSound[0]);
+    bubbles[i] = new Bubble(bubblesPop[i], random(windowWidth - 200) + 100, windowHeight + 200 * (i) + random(200), popSound[0]);
+    // bubbles[i] = new Bubble(bubblesPop[i], random(windowWidth - 200) + 100, windowHeight + 150 * (i) + random(200), popSound[0]);
   }
+
+  //bug! gar can't get the menu items to click if bubbles also popping!
+  // won't let me select an element that wasn't created in p5
+  //home = select('bgCanvas');
+  //  home = select(".purpleLink");
+  // home = document.querySelector(".purpleLink");
+  // console.log(home);
+
+// won't let me do action on an object that wasn't created dynamically in p5
+  // canvas.mousePressed(logPress); // this works
+}
+
+function logPress() {
+  console.log("home pressed");
 }
 
 function draw() {
@@ -131,6 +148,7 @@ class Bubble {
 }
 
 // function mousePressed() {
+// bug! if this click is enabled you can't go back to menu
 function mouseClicked() {
 
   // loop backwards so bubbles on top pop first
