@@ -151,9 +151,9 @@ class Bubble {
   }
 }
 
-// function mousePressed() {
+function mousePressed() {
 // bug! if this click is enabled you can't go back to menu
-function mouseClicked() {
+// function mouseClicked() {
 
   // loop backwards so bubbles on top pop first
   for (var i = bubbles.length - 1; i >= 0; i--) {
