@@ -1,3 +1,17 @@
+
+
+// let canvas;
+// let alien;
+//
+// function setup() {
+// canvas = createCanvas(100,100);
+// canvas.position(0,0);
+// background(0);
+// alien = createImg('https://upload.wikimedia.org/wikipedia/commons/5/5b/Alien-hack-master.png');
+// alien.position(0,0);
+// }
+
+
 let state = 0;
 let bubblesPop = []; //array of images
 let bubble; //bubble object
@@ -9,7 +23,7 @@ let popSound = [];
 let serotoninImages = []
 let serotonin;
 let serotoninSwitch = false;
-let home;
+let test;
 
 //Creating animations from explode things --- tho bug with animations so doing away with for now! saved copy in sync/code/games
 // let popAnimations = [];
@@ -33,10 +47,11 @@ function preload() {
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
-  frameRate(60);
-  canvas.parent("bgCanvas");
+  // frameRate(30);
+  canvas.parent('bgCanvas');
   canvas.position(0, 0);
-
+  test = createImg('../assets/bubbles/serotonin_512px.png');
+  test.position(100, 100);
 
   if (window.matchMedia("(max-width: 600px)").matches) {
     // run JavaScript in here.
