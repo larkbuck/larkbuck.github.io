@@ -50,8 +50,8 @@ function setup() {
   // frameRate(30);
   canvas.parent('bgCanvas');
   canvas.position(0, 0);
-  test = createImg('../assets/bubbles/serotonin_512px.png');
-  test.position(100, 100);
+  // test = createImg('../assets/bubbles/serotonin_512px.png');
+  // test.position(100, 100);
 
   if (window.matchMedia("(max-width: 600px)").matches) {
     // run JavaScript in here.
