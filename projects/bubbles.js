@@ -53,13 +53,16 @@ function setup() {
 
   //bug! gar can't get the menu items to click if bubbles also popping!
   // won't let me select an element that wasn't created in p5
-  //home = select('bgCanvas');
-  //  home = select(".purpleLink");
+  // home = select('bgCanvas');
+  // home = select(".purpleLink");
   // home = document.querySelector(".purpleLink");
   // console.log(home);
 
 // won't let me do action on an object that wasn't created dynamically in p5
-  // canvas.mousePressed(logPress); // this works
+// canvas.mousePressed(logPress); // this works
+
+//bug with p5 dom!!! submitted a bug request, won't allow you to createImg() in
+//dom library at all!
 }
 
 function logPress() {
@@ -119,6 +122,7 @@ class Bubble {
     }
     // bug here! When there are more than a few bubbles on the screen
     // some of them will appear at middle of page not bottom. not sure why...
+    // for now getting around by having them reappear 1250px below window bottom
     if (this.y <= -250) {
       this.y = windowHeight + 1250;
     }
