@@ -1,17 +1,5 @@
 
 
-// let canvas;
-// let alien;
-//
-// function setup() {
-// canvas = createCanvas(100,100);
-// canvas.position(0,0);
-// background(0);
-// alien = createImg('https://upload.wikimedia.org/wikipedia/commons/5/5b/Alien-hack-master.png');
-// alien.position(0,0);
-// }
-
-
 let state = 0;
 let bubblesPop = []; //array of images
 let bubble; //bubble object
@@ -23,9 +11,11 @@ let popSound = [];
 let serotoninImages = []
 let serotonin;
 let serotoninSwitch = false;
-let test;
+let home;
 
-//Creating animations from explode things --- tho bug with animations so doing away with for now! saved copy in sync/code/games
+//Creating animations from explode things --- tho bug with animations so
+//doing away with for now! saved copy in sync/code/games
+
 // let popAnimations = [];
 // let confettiPop_pink;
 // let confettiPop_green;
@@ -50,8 +40,6 @@ function setup() {
   // frameRate(30);
   canvas.parent('bgCanvas');
   canvas.position(0, 0);
-  // test = createImg('../assets/bubbles/serotonin_512px.png');
-  // test.position(100, 100);
 
   if (window.matchMedia("(max-width: 600px)").matches) {
     // run JavaScript in here.
@@ -60,24 +48,16 @@ function setup() {
   };
 
   //create array of bubble objects
-  //bug - to change later... for now reduced frequency bc you currently can't pop them
   for (var i = 0; i < bubblesPop.length; i++) {
     bubbles[i] = new Bubble(bubblesPop[i], random(windowWidth - 200) + 100, windowHeight + 200 * (i) + random(200), popSound[0]);
     // bubbles[i] = new Bubble(bubblesPop[i], random(windowWidth - 200) + 100, windowHeight + 150 * (i) + random(200), popSound[0]);
   }
 
-  //bug! gar can't get the menu items to click if bubbles also popping!
-  // won't let me select an element that wasn't created in p5
+
   // home = select('bgCanvas');
-  // home = select(".purpleLink");
-  // home = document.querySelector(".purpleLink");
-  // console.log(home);
+  home = select(".purpleLink");
+  home.mousePressed(logPress);
 
-// won't let me do action on an object that wasn't created dynamically in p5
-// canvas.mousePressed(logPress); // this works
-
-//bug with p5 dom!!! submitted a bug request, won't allow you to createImg() in
-//dom library at all!
 }
 
 function logPress() {
@@ -111,7 +91,7 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-//create Bubble class using ES6 constructor
+//create Bubble class
 class Bubble {
   constructor(img, x, y, popSound, popped, popCounter, randomSeed) {
     this.img = img;
@@ -131,7 +111,6 @@ class Bubble {
   }
 
   move() {
-
     if (this.x >= windowWidth + 200) {
       this.x = random(windowWidth / 2);
     }
@@ -142,20 +121,21 @@ class Bubble {
       this.y = windowHeight + 1250;
     }
 
-    // this.y -= (300/(this.img.width));
+    // this.y -= (300/(this.img.width)); // different math
     this.y -= (1 + 100 / (this.img.width));
     this.x = this.x + sin(map(this.y, 0, windowHeight, 0, 3));
 
   }
 
   pop() {
-
+    // popCounter is for animation, counts frames following pop
     if (this.popCounter < 6) {
       stroke(0, this.randomSeed * 20, this.popCounter * this.randomSeed * 10, 100);
       strokeWeight(15 / this.popCounter);
       noFill();
       ellipse(this.x, this.y - this.popCounter * 2, this.img.height / this.popCounter, this.img.height / this.popCounter);
 
+      // if you want text
       // fill(0, 255, 10, 255/this.popCounter);
       // textAlign(CENTER);
       // textSize(33);
@@ -168,6 +148,7 @@ class Bubble {
 
 function mousePressed() {
 // bug! if this click is enabled you can't go back to menu
+// now it's working? new p5 fixed it?!
 // function mouseClicked() {
 
   // loop backwards so bubbles on top pop first
@@ -203,7 +184,8 @@ function mousePressed() {
         // move bubble off screen so no re-clicks
         bubbles[i].x -= 200;
         bubbles[i].y = windowHeight - 300;
-        // bubbles[i].popped = false;
+        // if you want to reset bubble state
+        // bubbles[i].popped = false; 
       }, 300);
 
       console.log(`bubbles[${i}] has popped`);
