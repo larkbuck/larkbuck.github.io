@@ -146,10 +146,10 @@ class Bubble {
   }
 }
 
-function mousePressed() {
+// function mousePressed() {
 // bug! if this click is enabled you can't go back to menu
 // now it's working? new p5 fixed it?!
-// function mouseClicked() {
+function mouseClicked() {
 
   // loop backwards so bubbles on top pop first
   for (var i = bubbles.length - 1; i >= 0; i--) {
@@ -185,7 +185,7 @@ function mousePressed() {
         bubbles[i].x -= 200;
         bubbles[i].y = windowHeight - 300;
         // if you want to reset bubble state
-        // bubbles[i].popped = false; 
+        // bubbles[i].popped = false;
       }, 300);
 
       console.log(`bubbles[${i}] has popped`);
