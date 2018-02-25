@@ -56,12 +56,15 @@ function setup() {
 
   // home = select('bgCanvas');
   home = select(".purpleLink");
-  home.mousePressed(logPress);
+  home.mousePressed(logPress, "/");
 
 }
 
-function logPress() {
-  console.log("home pressed");
+// working on this now
+function logPress(url) {
+  // window.location = url;
+  // window.location.href = `<a href="${url}" </a>`;
+  // console.log(url);
 }
 
 function draw() {
