@@ -7,7 +7,7 @@ body {
   max-width: 67%;
   height: 100%;
   font-family: "Anonymous Pro", "Courier", "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.7;
   padding: 1em 1em;
   color: #161616;
@@ -166,13 +166,13 @@ p a:hover, h1 a:hover {
 .half {
   width: 49%;
   /* IE */
-  flex: 0 2 calc(50% - 25px);
+  flex: 1 2 420px;
 }
 
 .third {
   width: 32.2%;
   /* IE */
-  flex: 0 1 calc(33.333333% - 25px);
+  flex: 1 1 calc(33.333333% - 25px);
 }
 
 .fourth {
@@ -188,6 +188,42 @@ p a:hover, h1 a:hover {
 }
 
 .sixth {
+  width: 15.7%;
+  /* IE */
+  flex: 0 1 calc(16.666666% - 25px);
+}
+
+.two-thirds-fixed {
+  width: 65%;
+  /* IE */
+  flex: 0 1 calc(66% - 25px);
+}
+
+.half-fixed {
+  width: 49%;
+  /* IE */
+  flex: 0 2 calc(50% - 25px);
+}
+
+.third-fixed {
+  width: 32.2%;
+  /* IE */
+  flex: 0 1 calc(33.333333% - 25px);
+}
+
+.fourth-fixed {
+  width: 24%;
+  /* IE */
+  flex: 0 1 calc(25% - 25px);
+}
+
+.fifth-fixed {
+  width: 19.5%;
+  /* IE */
+  flex: 0 1 calc(20% - 25px);
+}
+
+.sixth-fixed {
   width: 15.7%;
   /* IE */
   flex: 0 1 calc(16.666666% - 25px);
@@ -424,13 +460,9 @@ p a:hover, h1 a:hover {
 
 
 
-@media screen and (max-width: 768px) {
-/* not sure why this isn't working */
-
-  #bgCanvas {
-    /* position:fixed; */
-    z-index: -2;
-  }
+/* @media (min-width: 320px) and (max-width: 480px) {  */
+/* @media only screen and (max-width: 768px) { */
+/* not sure why media queries aren't working */
 
   /* body {
     margin: 50px;
@@ -442,8 +474,8 @@ p a:hover, h1 a:hover {
   }
   li {
     font-size: 36px;
-  } */
-  /* .flex-container {
+  }
+  .flex-container {
     flex-wrap: wrap;
   }
   .flex-item_2 {
@@ -455,8 +487,8 @@ p a:hover, h1 a:hover {
     flex: 0 1 90%;
     align-self: auto;
     margin: 10px;
-  } */
-}
+  }
+} */
 
 /*flexbox for setting sticky footer*/
 
@@ -505,7 +537,6 @@ footer {
   position: fixed;
   text-align: right;
   font-size: 14px;
-  background-color: #F7F7F7;
 }
 
 .greenLink {
