@@ -39,7 +39,6 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   // frameRate(30);
   canvas.parent('bgCanvas');
-  canvas.position(0, 0);
 
   if (window.matchMedia("(max-width: 600px)").matches) {
     // run JavaScript in here.
