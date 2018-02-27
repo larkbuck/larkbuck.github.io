@@ -170,7 +170,7 @@ p a:hover, h1 a:hover {
 .two-thirds {
   width: 65%;
   /* IE */
-  flex: 0 1 calc(66% - 25px);
+  flex: 1 1 calc(66% - 25px);
 }
 
 .half {
