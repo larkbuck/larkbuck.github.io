@@ -40,11 +40,11 @@ function setup() {
   // frameRate(30);
   canvas.parent('bgCanvas');
 
-  if (window.matchMedia("(max-width: 600px)").matches) {
-    // run JavaScript in here.
-    canvas.style("z-index: -2;");
-    console.log("media query works");
-  };
+  // if (window.matchMedia("(max-width: 600px)").matches) {
+  //   // run JavaScript in here.
+  //   canvas.style("z-index: -2;");
+  //   console.log("media query works");
+  // };
 
   //create array of bubble objects
   for (var i = 0; i < bubblesPop.length; i++) {
@@ -53,7 +53,7 @@ function setup() {
   }
 
 
-  // home = select('bgCanvas');
+  // hard coding links if not accessible bc of mousePressed()
   home = select(".purpleLink");
   home.mousePressed(logPress, "/");
 
