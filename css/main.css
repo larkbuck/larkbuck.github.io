@@ -319,16 +319,15 @@ p a:hover, h1 a:hover {
 }
 
 #container_bubbles {
-  /*flex properties set in flex-container*/
-  /* background-image: url("../assets/TTHeartMovie/StarBackSmall.jpg");
-  background-attachment: scroll; */
-  flex-direction: column;;
   flex-wrap: wrap;
   align-items: center;
-  padding: 40px 40px 40px 40px;
+  padding: 40px 20px 20px 20px;
   color: black;
-  /*justify-content: flex-end;*/
-  /*overflow: auto;*/
+  background-image: url("../assets/bubbles/bubblesPop_03.png");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  text-align: right;
+  /* background-color: #fff; */
 }
 
 #container_ttMovie {
@@ -416,10 +415,11 @@ p a:hover, h1 a:hover {
 
 #container_tGotchi {
   padding: 40px;
-  max-width: 600px;
+  max-width: 580px;
   background-color: #0F0F0F;
-  /* background-image: url("../assets/traumagotchi/traumagotchi_BG_tall.jpg");
-  background-attachment: scroll; */
+  background-image: url("../assets/traumagotchi/traumagotchi_BG_tall.jpg");
+  align-content: flex-end;
+  /* background-attachment: scroll; */
   /* Create the parallax scrolling effect */
   /* background-attachment: fixed;
   background-position: center;
