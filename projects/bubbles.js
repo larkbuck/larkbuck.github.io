@@ -39,13 +39,12 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   // frameRate(30);
   canvas.parent('bgCanvas');
-  canvas.position(0, 0);
 
-  if (window.matchMedia("(max-width: 600px)").matches) {
-    // run JavaScript in here.
-    canvas.style("z-index: -2;");
-    console.log("media query works");
-  };
+  // if (window.matchMedia("(max-width: 600px)").matches) {
+  //   // run JavaScript in here.
+  //   canvas.style("z-index: -2;");
+  //   console.log("media query works");
+  // };
 
   //create array of bubble objects
   for (var i = 0; i < bubblesPop.length; i++) {
@@ -54,7 +53,7 @@ function setup() {
   }
 
 
-  // home = select('bgCanvas');
+  // hard coding links if not accessible bc of mousePressed()
   home = select(".purpleLink");
   home.mousePressed(logPress, "/");
 
@@ -149,10 +148,10 @@ class Bubble {
   }
 }
 
-// function mousePressed() {
+function mousePressed() {
 // bug! if this click is enabled you can't go back to menu
 // now it's working? new p5 fixed it?!
-function mouseClicked() {
+// function mouseClicked() {
 
   // loop backwards so bubbles on top pop first
   for (var i = bubbles.length - 1; i >= 0; i--) {
