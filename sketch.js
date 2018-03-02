@@ -206,7 +206,22 @@ function mouseReleased() {
 function youWon() {
   setTimeout(function() {
     if (!done) {
-      alert("What a joy it is to tidy up. Thank you for your help in maintaining this homepage and flushing away the material world. \n \nThank you! \n \nYou may continue to the site.");
+      alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and doing away with the material world.
+
+
+
+
+
+                                          T                               !!!!
+                                              H                       U
+                                                  A               O
+                                                      N       Y
+                                                          K
+
+
+
+                                                                                                        You may continue.`);
+      // alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and flushing away the material world. \n \nThank you! \n \n \nYou may continue to the site.``);
       done = true;
     }
   }, 2000);

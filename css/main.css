@@ -1,3 +1,4 @@
+/* By Lark VCR. "In construction" */
 
 html {
   height: 100%;
@@ -316,6 +317,10 @@ p a:hover, h1 a:hover {
 .black {
   color: black;
 }
+
+/* #padding {
+  padding: 20px;
+} */
 
 #container_gallery {
   margin-top: 50px;
