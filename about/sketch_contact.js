@@ -2,6 +2,7 @@
 
 let meNala = [];
 let counter = 1;
+let caption;
 
 // function preload() {
 //   //need to preload images to bubblesPop array
@@ -12,16 +13,18 @@ let counter = 1;
 
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
-  canvas.position(0, 0);
+  // canvas = createCanvas(windowWidth, windowHeight);
+  // canvas.position(0, 0);
+  caption = createP("When you try to imitate your dog in a photo series.")
+  caption.position(500, 950);
   meNala[0] = createImg(`../assets/contact/larkNala_0.jpg`)
-  meNala[0].position(500, 500);
+  meNala[0].position(500, 700);
   setInterval(displayImage, 2500);
 }
 
 function displayImage (){
   meNala[counter] = createImg(`../assets/contact/larkNala_${counter}.jpg`)
-  meNala[counter].position(500, 500);
+  meNala[counter].position(500, 700);
   // meNala[counter-1].remove();
   counter = (counter+1)%3;
 

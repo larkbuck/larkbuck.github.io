@@ -85,6 +85,9 @@ function draw() {
   }
 
   if (serotoninSwitch == true) {
+    // p5 DOM createImg() not working here...
+    // serotoninImages[0] = createImg('../assets/bubbles/serotonin_512px.png');
+    serotoninImages[0].position(windowWidth - 600, 600);
     serotoninImages[0] = image(serotonin, windowWidth - 600, 600);
   }
 }
@@ -164,9 +167,11 @@ function mousePressed() {
         if (counter <= 7) {
           popText[i] = createP(popTextWords[counter]);
           popText[i].position(windowWidth - 250, 350 + 50 * counter);
-          popText[i].style("position:fixed; font-size: 26px; color: orange");
+          popText[i].style("position:fixed; font-size: 26px; color: #00DA80");
           // popText[i] = createP(`bubble #${counter}`);
           // popText[i].position(bubbles[i].x - 30, bubbles[i].y - 80);
+        // } else{
+        //   serotoninSwitch = true;
         }
 
         // *** this is with more text ***
