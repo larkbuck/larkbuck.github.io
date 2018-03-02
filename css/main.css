@@ -165,7 +165,15 @@ p a:hover, h1 a:hover {
   margin: 10px 10px 20px 10px;
   align-content: flex-start;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-around;
+}
+
+.left {
+  margin-right: auto;
+}
+
+.right {
+  margin-left: auto;
 }
 
 .full {
@@ -372,6 +380,7 @@ p a:hover, h1 a:hover {
   /* padding: 10px 10px 40px 80px; */
   max-width: 1000px;
   color: #F7F7F7;
+  text-align: center;
 }
 
 #container_ttProduct {
@@ -448,10 +457,6 @@ p a:hover, h1 a:hover {
   background-color: #fff;
   max-width: 600px;
   /* align-self: flex-end; */
-}
-
-.align-end {
-  align-self: flex-end;
 }
 
 #container_bubbles {
@@ -576,6 +581,10 @@ footer {
 
 .projectIndexLink a, .projectIndexLink p {
     color: #777777;
+}
+
+.topMargin {
+  margin-top: 20px;
 }
 
 .greenLink {
