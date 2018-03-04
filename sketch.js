@@ -29,48 +29,6 @@ let endFillAngle = 0;
 let fadeCounter = 0;
 let done = false;
 
-// sprites
-let purpleFolderScream_frames = [{
-    "name": "purpleFolderScream_01",
-    "frame": {
-      "x": 201,
-      "y": 0,
-      "width": 200,
-      "height": 101
-    }
-  },
-  {
-    "name": "purpleFolderScream_02",
-    "frame": {
-      "x": 402,
-      "y": 0,
-      "width": 200,
-      "height": 101
-    }
-  },
-  {
-    "name": "purpleFolderScream_03",
-    "frame": {
-      "x": 603,
-      "y": 0,
-      "width": 200,
-      "height": 101
-    }
-  },
-  {
-    "name": "purpleFolderScream_04",
-    "frame": {
-      "x": 804,
-      "y": 0,
-      "width": 200,
-      "height": 101
-    }
-  },
-];
-
-let purpleFolder_spriteSheet;
-let purpleFolder_kick;
-let purpleFolder_still
 
 
 function preload() {
@@ -84,25 +42,10 @@ function preload() {
   tagalongImg = loadImage('assets/homePage/folder_icons_tagalong.png');
   roboto = loadFont('assets/homePage/Roboto-Regular.ttf');
 
-  // Load folder sprite sheet from frames array
-  purpleFolder_spriteSheet = loadSpriteSheet('assets/homePage/foldersSpritesheet_200x101.png', purpleFolderScream_frames);
-
-  // kick scream animation passing in a SpriteSheet
-  purpleFolder_kick = loadAnimation(purpleFolder_spriteSheet);
-  // create animation with single frame
-  purpleFolder_still = loadAnimation(new SpriteSheet('assets/homePage/foldersSpritesheet_200x101.png', [{
-    "name": "purpleFolder_still",
-    "frame": {
-      "x": 0,
-      "y": 0,
-      "width": 200,
-      "height": 101
-    }
-  }]));
 }
 
 function setup() {
-
+  frameRate(30);
   canvas = createCanvas(windowWidth - 300, windowHeight);
   canvas.parent('bgCanvas');
 
@@ -121,15 +64,19 @@ function setup() {
   screenshot = createSprite(width / 7, height - 200);
   // folder1 = createSprite(width / 4 + 50, height - 200);
   folder1 = createSprite(width / 4 + 150, height - 400, 200, 101);
-  folder1.addAnimation('still', purpleFolder_still);
-  folder1.addAnimation('kick', purpleFolder_kick);
-  folder2 = createSprite(width / 4, height - 400);
-  folder3 = createSprite(width / 5, height - 350);
+  folder1.addAnimation('still', 'assets/homePage/greenFolder_0.png');
+  folder1.addAnimation('kick', 'assets/homePage/greenFolder_1.png', 'assets/homePage/greenFolder_4.png');
+  folder2 = createSprite(width / 4, height - 400, 200, 101);
+  folder2.addAnimation('still', 'assets/homePage/purpleFolder_0.png');
+  folder2.addAnimation('kick', 'assets/homePage/purpleFolder_1.png', 'assets/homePage/purpleFolder_4.png');
+  folder3 = createSprite(width / 5, height - 350, 200, 101);
+  folder3.addAnimation('still', 'assets/homePage/chartreuseFolder_0.png');
+  folder3.addAnimation('kick', 'assets/homePage/chartreuseFolder_1.png', 'assets/homePage/chartreuseFolder_4.png');
   trash.addImage(trashImg);
   screenshot.addImage(screenshotImg);
   // folder1.addImage(folder1img);
-  folder2.addImage(folder2img);
-  folder3.addImage(folder3img);
+  // folder2.addImage(folder2img);
+  // folder3.addImage(folder3img);
   screenshot.setCollider("rectangle", 0, 0, 100, 100);
   folder1.setCollider("rectangle", 0, 0, 100, 100);
   folder2.setCollider("rectangle", 0, 0, 100, 100);
@@ -210,7 +157,6 @@ function draw() {
     // textStyle(BOLD);
     text("cluttered desktop? drag items to trash \n (browsers only)", screenshot.position.x - 70, screenshot.position.y + 50, 140, 100);
   }
-  folder1.changeAnimation("kick");
   drawSprite(folder1);
   if (!folder1.removed) {
     text("mismatched socks", folder1.position.x - 70, folder1.position.y + 40, 140, 100);
@@ -245,6 +191,7 @@ function mouseDragged() {
   }
 
   if (dragObjectIndex !== null && folders[dragObjectIndex]) {
+    folders[dragObjectIndex].changeAnimation("kick");
     folders[dragObjectIndex].position.x = mouseX;
     folders[dragObjectIndex].position.y = mouseY;
   }
@@ -254,6 +201,9 @@ function mouseDragged() {
 
 function mouseReleased() {
   dragObjectIndex = null;
+  folder1.changeAnimation("still");
+  folder2.changeAnimation("still");
+  folder3.changeAnimation("still");
 
   //drop item in trash
   for (i = 0; i < folders.length; i++) {
@@ -273,31 +223,22 @@ function youWon() {
       alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and doing away with the material world.
 
 
+      Thank you!
 
-
-
-                                          T                               !!!!
-                                              H                       U
-                                                  A               O
-                                                      N       Y
-                                                          K
-
-
-
-                                                                                                        You may continue.`);
+      You may continue.`);
       // alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and flushing away the material world. \n \nThank you! \n \n \nYou may continue to the site.``);
       done = true;
     }
-  }, 2000);
-  textSize(20);
-  if (fadeCounter < 255) {
-    fill(210, 219, 33, fadeCounter);
-    fadeCounter += 2;
-    text("simple pleasures", width / 2, height - 100);
-  } else {
-    fill(210, 219, 33, 255);
-    text("virtually conflicted reality", width / 2, height - 100);
-  }
+  }, 1000);
+  // textSize(20);
+  // if (fadeCounter < 255) {
+  //   fill(210, 219, 33, fadeCounter);
+  //   fadeCounter += 2;
+  //   text("simple pleasures", width / 2, height - 100);
+  // } else {
+  //   fill(210, 219, 33, 255);
+  //   text("virtually conflicted reality", width / 2, height - 100);
+  // }
 }
 
 
