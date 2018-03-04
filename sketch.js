@@ -29,6 +29,8 @@ let endFillAngle = 0;
 let fadeCounter = 0;
 let done = false;
 
+// media query
+var mediaQueryList = window.matchMedia("(min-width: 400px)");
 
 
 function preload() {
@@ -49,7 +51,17 @@ function setup() {
   canvas = createCanvas(windowWidth - 300, windowHeight);
   canvas.parent('bgCanvas');
 
+// media queries to scale folders
+
+if (windowWidth > 800) {
+  console.log("under 400")
+}
   // canvas = createCanvas(windowWidth - 300, 800);
+  if (mediaQueryList.matches) {
+    // run JavaScript in here.
+    canvas.style("z-index: -2;");
+    console.log("media query works");
+  };
 
 
   //empty folders group

@@ -1,4 +1,5 @@
-// fix this so images just don't keep stacking! tried using remove() but causing error
+// fix this so images just don't keep stacking! tried using remove() but causing error,
+// perhaps add to array... see how dan did it in fireworks tut
 
 let meNala = [];
 let counter = 1;
