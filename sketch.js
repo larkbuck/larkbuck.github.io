@@ -3,6 +3,7 @@
 let larkPlatform;
 let tagalong;
 let tagalongImg;
+let greenFolder_sprite;
 let folder1;
 let folder1img;
 let folder2;
@@ -33,17 +34,18 @@ let done = false;
 function preload() {
   //preload sprites
   //platform = loadImage('images/platform_medium.png');
-  folder1img = loadImage('assets/homePage/folder_icons_green.png');
-  folder2img = loadImage('assets/homePage/folder_icons_purple.png');
-  folder3img = loadImage('assets/homePage/folder_icons_chartreuse.png');
+  folder1img = loadImage('assets/homePage/greenFolder_0.png');
+  folder2img = loadImage('assets/homePage/purpleFolder_0.png');
+  folder3img = loadImage('assets/homePage/chartreuseFolder_0.png');
   trashImg = loadImage('assets/homePage/trashempty.png');
   screenshotImg = loadImage('assets/homePage/folder_icons_Screenshot_1.png');
   tagalongImg = loadImage('assets/homePage/folder_icons_tagalong.png');
   roboto = loadFont('assets/homePage/Roboto-Regular.ttf');
+
 }
 
 function setup() {
-
+  frameRate(30);
   canvas = createCanvas(windowWidth - 300, windowHeight);
   canvas.parent('bgCanvas');
 
@@ -60,14 +62,21 @@ function setup() {
   // create desktop sprites
   trash = createSprite(width - 100, height - 175);
   screenshot = createSprite(width / 7, height - 200);
-  folder1 = createSprite(width / 4 + 50, height - 200);
-  folder2 = createSprite(width / 4, height - 400);
-  folder3 = createSprite(width / 5, height - 350);
+  // folder1 = createSprite(width / 4 + 50, height - 200);
+  folder1 = createSprite(width / 4 + 150, height - 400, 200, 101);
+  folder1.addAnimation('still', 'assets/homePage/greenFolder_0.png');
+  folder1.addAnimation('kick', 'assets/homePage/greenFolder_1.png', 'assets/homePage/greenFolder_4.png');
+  folder2 = createSprite(width / 4, height - 400, 200, 101);
+  folder2.addAnimation('still', 'assets/homePage/purpleFolder_0.png');
+  folder2.addAnimation('kick', 'assets/homePage/purpleFolder_1.png', 'assets/homePage/purpleFolder_4.png');
+  folder3 = createSprite(width / 5, height - 350, 200, 101);
+  folder3.addAnimation('still', 'assets/homePage/chartreuseFolder_0.png');
+  folder3.addAnimation('kick', 'assets/homePage/chartreuseFolder_1.png', 'assets/homePage/chartreuseFolder_4.png');
   trash.addImage(trashImg);
   screenshot.addImage(screenshotImg);
-  folder1.addImage(folder1img);
-  folder2.addImage(folder2img);
-  folder3.addImage(folder3img);
+  // folder1.addImage(folder1img);
+  // folder2.addImage(folder2img);
+  // folder3.addImage(folder3img);
   screenshot.setCollider("rectangle", 0, 0, 100, 100);
   folder1.setCollider("rectangle", 0, 0, 100, 100);
   folder2.setCollider("rectangle", 0, 0, 100, 100);
@@ -142,12 +151,13 @@ function draw() {
   fill(20);
   textAlign(CENTER);
   drawSprite(trash);
-  drawSprite(folder1);
+
   drawSprite(screenshot);
   if (!screenshot.removed) {
     // textStyle(BOLD);
     text("cluttered desktop? drag items to trash \n (browsers only)", screenshot.position.x - 70, screenshot.position.y + 50, 140, 100);
   }
+  drawSprite(folder1);
   if (!folder1.removed) {
     text("mismatched socks", folder1.position.x - 70, folder1.position.y + 40, 140, 100);
   }
@@ -181,6 +191,7 @@ function mouseDragged() {
   }
 
   if (dragObjectIndex !== null && folders[dragObjectIndex]) {
+    folders[dragObjectIndex].changeAnimation("kick");
     folders[dragObjectIndex].position.x = mouseX;
     folders[dragObjectIndex].position.y = mouseY;
   }
@@ -190,6 +201,9 @@ function mouseDragged() {
 
 function mouseReleased() {
   dragObjectIndex = null;
+  folder1.changeAnimation("still");
+  folder2.changeAnimation("still");
+  folder3.changeAnimation("still");
 
   //drop item in trash
   for (i = 0; i < folders.length; i++) {
@@ -209,31 +223,22 @@ function youWon() {
       alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and doing away with the material world.
 
 
+      Thank you!
 
-
-
-                                          T                               !!!!
-                                              H                       U
-                                                  A               O
-                                                      N       Y
-                                                          K
-
-
-
-                                                                                                        You may continue.`);
+      You may continue.`);
       // alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and flushing away the material world. \n \nThank you! \n \n \nYou may continue to the site.``);
       done = true;
     }
-  }, 2000);
-  textSize(20);
-  if (fadeCounter < 255) {
-    fill(210, 219, 33, fadeCounter);
-    fadeCounter += 2;
-    text("simple pleasures", width / 2, height - 100);
-  } else {
-    fill(210, 219, 33, 255);
-    text("virtually conflicted reality", width / 2, height - 100);
-  }
+  }, 1000);
+  // textSize(20);
+  // if (fadeCounter < 255) {
+  //   fill(210, 219, 33, fadeCounter);
+  //   fadeCounter += 2;
+  //   text("simple pleasures", width / 2, height - 100);
+  // } else {
+  //   fill(210, 219, 33, 255);
+  //   text("virtually conflicted reality", width / 2, height - 100);
+  // }
 }
 
 
