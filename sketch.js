@@ -3,6 +3,7 @@
 let larkPlatform;
 let tagalong;
 let tagalongImg;
+let greenFolder_sprite;
 let folder1;
 let folder1img;
 let folder2;
@@ -28,18 +29,76 @@ let endFillAngle = 0;
 let fadeCounter = 0;
 let done = false;
 
+// sprites
+let purpleFolderScream_frames = [{
+    "name": "purpleFolderScream_01",
+    "frame": {
+      "x": 201,
+      "y": 0,
+      "width": 200,
+      "height": 101
+    }
+  },
+  {
+    "name": "purpleFolderScream_02",
+    "frame": {
+      "x": 402,
+      "y": 0,
+      "width": 200,
+      "height": 101
+    }
+  },
+  {
+    "name": "purpleFolderScream_03",
+    "frame": {
+      "x": 603,
+      "y": 0,
+      "width": 200,
+      "height": 101
+    }
+  },
+  {
+    "name": "purpleFolderScream_04",
+    "frame": {
+      "x": 804,
+      "y": 0,
+      "width": 200,
+      "height": 101
+    }
+  },
+];
+
+let purpleFolder_spriteSheet;
+let purpleFolder_kick;
+let purpleFolder_still
 
 
 function preload() {
   //preload sprites
   //platform = loadImage('images/platform_medium.png');
-  folder1img = loadImage('assets/homePage/folder_icons_green.png');
-  folder2img = loadImage('assets/homePage/folder_icons_purple.png');
-  folder3img = loadImage('assets/homePage/folder_icons_chartreuse.png');
+  folder1img = loadImage('assets/homePage/greenFolder_0.png');
+  folder2img = loadImage('assets/homePage/purpleFolder_0.png');
+  folder3img = loadImage('assets/homePage/chartreuseFolder_0.png');
   trashImg = loadImage('assets/homePage/trashempty.png');
   screenshotImg = loadImage('assets/homePage/folder_icons_Screenshot_1.png');
   tagalongImg = loadImage('assets/homePage/folder_icons_tagalong.png');
   roboto = loadFont('assets/homePage/Roboto-Regular.ttf');
+
+  // Load folder sprite sheet from frames array
+  purpleFolder_spriteSheet = loadSpriteSheet('assets/homePage/foldersSpritesheet_200x101.png', purpleFolderScream_frames);
+
+  // kick scream animation passing in a SpriteSheet
+  purpleFolder_kick = loadAnimation(purpleFolder_spriteSheet);
+  // create animation with single frame
+  purpleFolder_still = loadAnimation(new SpriteSheet('assets/homePage/foldersSpritesheet_200x101.png', [{
+    "name": "purpleFolder_still",
+    "frame": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 101
+    }
+  }]));
 }
 
 function setup() {
@@ -60,12 +119,15 @@ function setup() {
   // create desktop sprites
   trash = createSprite(width - 100, height - 175);
   screenshot = createSprite(width / 7, height - 200);
-  folder1 = createSprite(width / 4 + 50, height - 200);
+  // folder1 = createSprite(width / 4 + 50, height - 200);
+  folder1 = createSprite(width / 4 + 150, height - 400, 200, 101);
+  folder1.addAnimation('still', purpleFolder_still);
+  folder1.addAnimation('kick', purpleFolder_kick);
   folder2 = createSprite(width / 4, height - 400);
   folder3 = createSprite(width / 5, height - 350);
   trash.addImage(trashImg);
   screenshot.addImage(screenshotImg);
-  folder1.addImage(folder1img);
+  // folder1.addImage(folder1img);
   folder2.addImage(folder2img);
   folder3.addImage(folder3img);
   screenshot.setCollider("rectangle", 0, 0, 100, 100);
@@ -142,12 +204,14 @@ function draw() {
   fill(20);
   textAlign(CENTER);
   drawSprite(trash);
-  drawSprite(folder1);
+
   drawSprite(screenshot);
   if (!screenshot.removed) {
     // textStyle(BOLD);
     text("cluttered desktop? drag items to trash \n (browsers only)", screenshot.position.x - 70, screenshot.position.y + 50, 140, 100);
   }
+  folder1.changeAnimation("kick");
+  drawSprite(folder1);
   if (!folder1.removed) {
     text("mismatched socks", folder1.position.x - 70, folder1.position.y + 40, 140, 100);
   }
