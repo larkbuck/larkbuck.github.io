@@ -167,7 +167,7 @@ function draw() {
   drawSprite(screenshot);
   if (!screenshot.removed) {
     // textStyle(BOLD);
-    text("cluttered desktop? drag items to trash \n (browsers only)", screenshot.position.x - 70, screenshot.position.y + 50, 140, 100);
+    text("wanna play? DRAG FOLDERS TO TOILET", screenshot.position.x - 70, screenshot.position.y + 50, 140, 100);
   }
   drawSprite(folder1);
   if (!folder1.removed) {
