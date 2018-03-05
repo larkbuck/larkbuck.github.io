@@ -5,7 +5,7 @@ let bubblesPop = []; //array of images
 let bubble; //bubble object
 let bubbles = []; //array of bubble objects
 let popText = [];
-let popTextWords = ["some things", "are", "just", "joyous", "and beatiful", "and fill you", "with awe,", "thank goddess.", "the act", "of watching", "bubbles move through", "air releases", "serotonin. this is", "an untested", "but not unlikely", "hypothesis.", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];
+let popTextWords = ["some things", "are", "just", "joyous", "and beautiful", "and fill you", "with awe,", "thank goddess.", "the act", "of watching", "bubbles move through", "air releases", "serotonin. this is", "an untested", "but not unlikely", "hypothesis.", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];
 let counter = 0;
 let popSound = [];
 let serotoninImages = []

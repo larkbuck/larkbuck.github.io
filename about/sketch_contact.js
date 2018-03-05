@@ -1,5 +1,6 @@
 // fix this so images just don't keep stacking! tried using remove() but causing error,
 // perhaps add to array... see how dan did it in fireworks tut
+// removed footer for now bc it wasn't lining up correct
 
 let meNala = [];
 let counter = 1;
@@ -17,15 +18,18 @@ function setup() {
   // canvas = createCanvas(windowWidth, windowHeight);
   // canvas.position(0, 0);
   caption = createP("When you try to imitate your dog in a photo series.")
-  caption.position(500, 950);
+  caption.position(500, 850);
   meNala[0] = createImg(`../assets/contact/larkNala_0.jpg`)
-  meNala[0].position(500, 700);
+  // meNala[0].parent('photos');
+  meNala[0].position(500, 600);
   setInterval(displayImage, 2500);
 }
 
 function displayImage (){
   meNala[counter] = createImg(`../assets/contact/larkNala_${counter}.jpg`)
-  meNala[counter].position(500, 700);
+  // meNala[counter].parent('photos');
+  meNala[counter].position(500, 600);
+
   // meNala[counter-1].remove();
   counter = (counter+1)%3;
 
