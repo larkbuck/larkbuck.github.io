@@ -5,7 +5,7 @@ let bubblesPop = []; //array of images
 let bubble; //bubble object
 let bubbles = []; //array of bubble objects
 let popText = [];
-let popTextWords = ["some things", "are", "just", "joyous", "and beautiful", "and fill you", "with awe,", "thank goddess.", "the act", "of watching", "bubbles move through", "air releases", "serotonin. this is", "an untested", "but not unlikely", "hypothesis.", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];
+// let popTextWords = ["some things", "are", "just", "joyous", "and beautiful", "and fill you", "with awe,", "thank goddess.", "the act", "of watching", "bubbles move through", "air releases", "serotonin. this is", "an untested", "but not unlikely", "hypothesis.", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];
 let counter = 0;
 let popSound = [];
 let serotoninImages = []
@@ -67,12 +67,10 @@ function logPress(url) {
 }
 
 function draw() {
-  // background(0);
   clear();
-  // background(34, 30, 24);
 
   for (var i = 0; i < bubbles.length; i++) {
-    //un-comment this if you want popped item to keep moving
+    //un-comment this if you want popped bubble to keep moving
     // bubbles[i].move();
 
     if (bubbles[i].popped == false) {
@@ -85,8 +83,6 @@ function draw() {
   }
 
   if (serotoninSwitch == true) {
-    // p5 DOM createImg() not working here...
-    // serotoninImages[0] = createImg('../assets/bubbles/serotonin_512px.png');
     serotoninImages[0].position(windowWidth - 600, 600);
     serotoninImages[0] = image(serotonin, windowWidth - 600, 600);
   }
@@ -110,7 +106,7 @@ class Bubble {
 
   display() {
     imageMode(CENTER);
-    // tint slows down processing too much
+    // tint slows down sketch
     // tint(255, 126);
     image(this.img, this.x, this.y);
   }
@@ -151,10 +147,11 @@ class Bubble {
   }
 }
 
-function mousePressed() {
+// function mousePressed() {
 // bug! if this click is enabled you can't go back to menu
 // now it's working? new p5 fixed it?!
 // function mouseClicked() {
+function mouseReleased() {
 
   // loop backwards so bubbles on top pop first
   for (var i = bubbles.length - 1; i >= 0; i--) {
@@ -164,15 +161,16 @@ function mousePressed() {
       bubbles[i].popSound.setLoop(false);
       bubbles[i].popSound.play();
       setTimeout(function() {
-        if (counter <= 7) {
-          popText[i] = createP(popTextWords[counter]);
-          popText[i].position(windowWidth - 250, 350 + 50 * counter);
-          popText[i].style("position:fixed; font-size: 26px; color: #00DA80");
-          // popText[i] = createP(`bubble #${counter}`);
-          // popText[i].position(bubbles[i].x - 30, bubbles[i].y - 80);
-        // } else{
-        //   serotoninSwitch = true;
-        }
+        // // For text appearing:
+        // if (counter <= 7) {
+        //   popText[i] = createP(popTextWords[counter]);
+        //   popText[i].position(windowWidth - 250, 350 + 50 * counter);
+        //   popText[i].style("position:fixed; font-size: 26px; color: #00DA80");
+        //   // popText[i] = createP(`bubble #${counter}`);
+        //   // popText[i].position(bubbles[i].x - 30, bubbles[i].y - 80);
+        // // } else{
+        // //   serotoninSwitch = true;
+        // }
 
         // *** this is with more text ***
         // } else if (counter <= 11) {

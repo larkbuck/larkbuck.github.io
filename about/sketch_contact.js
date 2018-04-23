@@ -1,6 +1,4 @@
-// fix this so images just don't keep stacking! tried using remove() but causing error,
-// perhaps add to array... see how dan did it in fireworks tut
-// removed footer for now bc it wasn't lining up correct
+// can do this with either imnages on p5 canvas or with DOM. This using DOM. 
 
 let meNala = [];
 let counter = 1;
@@ -12,7 +10,6 @@ let caption;
 //       meNala[i] = loadImage(`../assets/contact/larkNala_${i}.jpg`);
 //   }
 // }
-
 
 function setup() {
   // canvas = createCanvas(windowWidth, windowHeight);
@@ -30,7 +27,7 @@ function displayImage (){
   // meNala[counter].parent('photos');
   meNala[counter].position(500, 600);
 
-  // meNala[counter-1].remove();
+  // meNala[counter-1].remove(); // not working
   counter = (counter+1)%3;
 
 }

@@ -1,7 +1,5 @@
 // allow user to interact with artists statement while mouse highlights indiv
-// words - from dan schiffman's A-Z tutorial series
-// not working think it's line 17 the statement.value() was previously a call
-// on a textfield input
+// words
 
 var statement
 

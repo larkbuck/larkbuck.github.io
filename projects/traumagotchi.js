@@ -1,12 +1,7 @@
-//allow user to interact with artists statement
-//not working thing it's line 17 the statement.value() was previously a call
-//on a textfield input
-
 let meNala = [];
 let counter = 0;
 
 function preload() {
-  //need to preload images to bubblesPop array
   for (i = 0; i < 7; i++) {
       meNala[i] = loadImage(`../assets/traumagotchi/traumagotchi_${i}.png`);
   }
