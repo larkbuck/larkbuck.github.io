@@ -471,7 +471,7 @@ p a:hover, h1 a:hover {
   padding: 40px;
   max-width: 580px;
   background-color: #0F0F0F;
-  background-image: url("../assets/traumagotchi/traumagotchi_BG_tall.jpg");
+  background-image: url("../assets/traumagotchi/bg_staticGrid_0.png");
   align-content: flex-end;
   /* background-attachment: scroll; */
   /* Create the parallax scrolling effect */
@@ -482,7 +482,7 @@ p a:hover, h1 a:hover {
 }
 
 #item_tGotchiText {
-  color: #bcff66;
+  color: #00ff00;
   letter-spacing: .07em;
   font-weight: 200;
   text-align: center;
