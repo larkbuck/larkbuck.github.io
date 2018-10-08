@@ -24,6 +24,7 @@ body {
   /* margin-left: 5%; */
 }
 
+
 /*home-page */
 
 .top {
@@ -31,11 +32,13 @@ body {
   width: 100%;
 }
 
+
 /* not sure when using which version of canvas */
+
 #bgCanvas {
-  position:fixed;
-  top:0px;
-  left:0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   /* z-index: -2; */
 }
 
@@ -54,6 +57,7 @@ body {
   max-width: 66%;
   /*margin-left: 300px;*/
 }
+
 
 /*solid border boxes*/
 
@@ -128,7 +132,9 @@ p a:hover, h1 a:hover {
   text-decoration: none;
 }
 
+
 /* flexboxes */
+
 
 /* flexbox containers for project gallery */
 
@@ -138,8 +144,8 @@ p a:hover, h1 a:hover {
   display: flex;
   flex-flow: row wrap;
   color: #161616;
-  /* background-color: rgba(255, 255, 255, 0.15); */ */
-  padding: 20px;
+  /* background-color: rgba(255, 255, 255, 0.15); */
+  */ padding: 20px;
   margin: 30px 10px 30px 10px;
   align-content: flex-start;
   align-items: flex-start;
@@ -149,11 +155,15 @@ p a:hover, h1 a:hover {
 .container * {
   padding: 5px;
 }
+
+
 /* .container p {
   padding: 0, 55px, 0, 15px;
 } */
 
+
 /* ?? when using this? */
+
 .container-column {
   display: -webkit-flex;
   display: -ms-flex;
@@ -264,6 +274,7 @@ p a:hover, h1 a:hover {
   align-self: flex-end;
 }
 
+
 /*flex boxes for project pages --- old*/
 
 .flex-container {
@@ -313,6 +324,7 @@ p a:hover, h1 a:hover {
   height: auto;
 }
 
+
 /*.flex-item_1 iframe {
     width: 100%;
     height: auto;
@@ -331,6 +343,7 @@ p a:hover, h1 a:hover {
 .black {
   color: black;
 }
+
 
 /* #padding {
   padding: 20px;
@@ -473,12 +486,19 @@ p a:hover, h1 a:hover {
   background-color: #0F0F0F;
   background-image: url("../assets/traumagotchi/bg_staticGrid_0.png");
   align-content: flex-end;
+  border: 5px solid #00ff00;
   /* background-attachment: scroll; */
   /* Create the parallax scrolling effect */
   /* background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
   background-size: auto; */
+}
+
+#container_tGotchi:hover {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #D2DB21 #8787C1 #00DA80 #D31996;
 }
 
 #item_tGotchiText {
@@ -502,12 +522,16 @@ p a:hover, h1 a:hover {
 }
 
 
-
 /* @media (min-width: 320px) and (max-width: 480px) {  */
+
+
 /* @media only screen and (max-width: 768px) { */
+
+
 /* not sure why media queries aren't working */
 
-  /* body {
+
+/* body {
     margin: 50px;
     max-width: 50%;
     height: 100%;
@@ -533,6 +557,7 @@ p a:hover, h1 a:hover {
   }
 } */
 
+
 /*flexbox for setting sticky footer*/
 
 .main-content {
@@ -553,6 +578,7 @@ footer {
   padding: 60px 0px 10px 0px;
   font-size: 12px;
 }
+
 
 /*CSS for Nav Menu*/
 
@@ -580,7 +606,7 @@ footer {
 }
 
 .projectIndexLink a, .projectIndexLink p {
-    color: #777777;
+  color: #777777;
 }
 
 .topMargin {
@@ -641,6 +667,12 @@ footer {
   /*padding: .5em .5em .5em 1.5em;*/
 }
 
+/* social media icons */
+#social-media {
+text-decoration: none;
+}
+
+
 /*links no longer usings*/
 
 .moreInfoLink {
@@ -657,5 +689,6 @@ footer {
   /*background-color: #BFB8BA;*/
   /*padding: .5em .5em .5em 1.5em;*/
 }
+
 
 /*the end*/
