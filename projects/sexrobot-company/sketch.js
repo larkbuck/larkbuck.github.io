@@ -31,15 +31,15 @@ function setup() {
   })
 
   //create and play video
-  let video = createVideo(['assets/SHOWDOWN_H264.webm']);;
-  let videoWidth = document.querySelector("#videoDiv").offsetWidth;
-
-  video.parent("videoDiv");
-  video.id("videoEl");
-  document.querySelector("#videoEl").width = videoWidth - 80;
-  document.querySelector("#videoEl").height = videoWidth * 3 / 4;
-  // p.video.width = p.videoWidth;
-  video.loop();
+  // let video = createVideo(['assets/SHOWDOWN_H264.webm']);;
+  // let videoWidth = document.querySelector("#videoDiv").offsetWidth;
+  //
+  // video.parent("videoDiv");
+  // video.id("videoEl");
+  // document.querySelector("#videoEl").width = videoWidth - 80;
+  // document.querySelector("#videoEl").height = videoWidth * 3 / 4;
+  // // p.video.width = p.videoWidth;
+  // video.loop();
 
 
 
