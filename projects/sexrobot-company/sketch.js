@@ -11,7 +11,9 @@ let numOfBubbles = 69;
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('bgCanvas');
-  // background(0);
+
+  frameRate(30);
+
 
   // pop ups
   dolls = document.querySelector('#dolls');
@@ -27,6 +29,18 @@ function setup() {
   dolls.addEventListener("mouseleave", function() {
     onDolls.style.display = "none";
   })
+
+  //create and play video
+  let video = createVideo(['assets/SHOWDOWN_H264.webm']);;
+  let videoWidth = document.querySelector("#videoDiv").offsetWidth;
+
+  video.parent("videoDiv");
+  video.id("videoEl");
+  document.querySelector("#videoEl").width = videoWidth - 80;
+  document.querySelector("#videoEl").height = videoWidth * 3 / 4;
+  // p.video.width = p.videoWidth;
+  video.loop();
+
 
 
   // bubble animation
@@ -60,7 +74,8 @@ function draw() {
   class Bubble {
     constructor() {
       this.x = random(0, windowWidth);
-      this.y = random(windowHeight + 50, windowHeight * 2);
+      this.y = random(0, windowHeight);
+      // this.y = random(windowHeight + 50, windowHeight * 2);
       this.speedX = 0;
       this.speedY = 0;
       this.accelX = 0;
@@ -108,21 +123,25 @@ function draw() {
 
     p.canvas;
 
+
     p.setup = function() {
       p.canvas = p.createCanvas(400, 300);
       // p.canvas.class("gameCanvas");
       // p.canvas.id("breakoutGameCanvas");
       // p.canvas.style("z-index: 5;");
 
+
       p.frameRate(30);
-      p.background(0);
 
 
 
     };
 
     p.draw = function() {
-
+      // p.clear();
+      p.noStroke();
+      p.fill(225, 235, 255);
+      p.ellipse(p.mouseX, p.mouseY, 20, 20);
     };
 
   };
