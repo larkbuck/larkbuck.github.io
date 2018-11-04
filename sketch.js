@@ -1,4 +1,6 @@
-//homepage play in progress
+//homepage play
+// folder drag form larkVCR
+// fireworks thanks to Coding Train tutorial =p
 
 let larkPlatform;
 let tagalong;
@@ -55,11 +57,11 @@ function setup() {
   canvas = createCanvas(windowWidth - 300, windowHeight);
   canvas.parent('bgCanvas');
 
-// media queries to scale folders
+  // media queries to scale folders
 
-if (windowWidth > 800) {
-  // console.log("under 400")
-}
+  if (windowWidth > 800) {
+    // console.log("under 400")
+  }
   // canvas = createCanvas(windowWidth - 300, 800);
   if (mediaQueryList.matches) {
     // run JavaScript in here.
@@ -67,7 +69,7 @@ if (windowWidth > 800) {
     // console.log("media query works");
   };
 
-// fireworks
+  // fireworks
   gravity = createVector(0, 0.2);
   stroke(255);
   strokeWeight(0);
@@ -130,9 +132,12 @@ if (windowWidth > 800) {
 }
 
 function draw() {
-  //background(233, 102, 127);
-  clear();
 
+clear();
+
+  if (trashCounter === 4) {
+    youWon();
+  }
 
 
 
@@ -166,10 +171,7 @@ function draw() {
     }
   }
 
-  //you won!
-  if (trashCounter == 4) {
-    youWon();
-  }
+
 
   //draw text & sprites
   textSize(14);
@@ -181,7 +183,7 @@ function draw() {
   drawSprite(screenshot);
   if (!screenshot.removed) {
     // textStyle(BOLD);
-    text("wanna play? DRAG FOLDERS TO TOILET", screenshot.position.x - 70, screenshot.position.y + 50, 140, 100);
+    text("wanna play? DRAG THINGS TO TOILET", screenshot.position.x - 70, screenshot.position.y + 50, 140, 100);
   }
   drawSprite(folder1);
   if (!folder1.removed) {
@@ -255,12 +257,12 @@ function youWon() {
       // alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and flushing away the material world. \n \nThank you! \n \n \nYou may continue to the site.``);
       done = true;
     }
-  }, 1000);
+  }, 333);
 
   if (random(1) < .07) {
     fireworks.push(new Firework());
   }
-  for (var i = fireworks.length-1; i >=0; i--) {
+  for (var i = fireworks.length - 1; i >= 0; i--) {
     fireworks[i].update();
     fireworks[i].show();
     if (fireworks[i].done()) {

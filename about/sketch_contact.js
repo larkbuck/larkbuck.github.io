@@ -1,15 +1,9 @@
-// can do this with either imnages on p5 canvas or with DOM. This using DOM. 
+// this silly! update to toggle x-index on html element, creating image each time
 
 let meNala = [];
 let counter = 1;
 let caption;
 
-// function preload() {
-//   //need to preload images to bubblesPop array
-//   for (i = 0; i < 4; i++) {
-//       meNala[i] = loadImage(`../assets/contact/larkNala_${i}.jpg`);
-//   }
-// }
 
 function setup() {
   // canvas = createCanvas(windowWidth, windowHeight);
@@ -31,8 +25,3 @@ function displayImage (){
   counter = (counter+1)%3;
 
 }
-// if doing p5 images on canvas
-// function displayImage (){
-//   image(meNala[counter], 500, 500, image.width/2, image.height/2);
-//   counter = (counter+1)%3;
-// }

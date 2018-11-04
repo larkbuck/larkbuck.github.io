@@ -40,15 +40,15 @@ function Particle(x, y, hu, firework) {
   this.show = function() {
     colorMode(HSB);
     if (!this.firework) {
-    strokeWeight(2);
-    stroke(hu, 255, 255, this.lifespan)
-    // fill(hu, 255, 255, this.lifespan)
-  } else {
-    strokeWeight(4);
-    stroke(hu, 255, 255, 255);
-    fill(hu, 255, 255, 255);
-  }
-    rect(this.pos.x, this.pos.y, 5 , 5);
+      strokeWeight(2);
+      stroke(hu, 255, 255, this.lifespan)
+      // fill(hu, 255, 255, this.lifespan)
+    } else {
+      strokeWeight(4);
+      stroke(hu, 255, 255, this.lifespan);
+      fill(hu, 255, 255, this.lifespan);
+    }
+    rect(this.pos.x, this.pos.y, 5, 5);
     point(this.pos.x, this.pos.y)
   }
 }
