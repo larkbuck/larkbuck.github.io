@@ -29,6 +29,10 @@ let endFillAngle = 0;
 let fadeCounter = 0;
 let done = false;
 
+// fireworks
+let fireworks = [];
+let gravity;
+
 // media query
 var mediaQueryList = window.matchMedia("(min-width: 400px)");
 
@@ -54,14 +58,21 @@ function setup() {
 // media queries to scale folders
 
 if (windowWidth > 800) {
-  console.log("under 400")
+  // console.log("under 400")
 }
   // canvas = createCanvas(windowWidth - 300, 800);
   if (mediaQueryList.matches) {
     // run JavaScript in here.
     canvas.style("z-index: -2;");
-    console.log("media query works");
+    // console.log("media query works");
   };
+
+// fireworks
+  gravity = createVector(0, 0.2);
+  stroke(255);
+  strokeWeight(0);
+  firework = new Particle(random(width), height);
+  colorMode(RGB);
 
 
   //empty folders group
@@ -123,6 +134,8 @@ function draw() {
   clear();
 
 
+
+
   //trash move (sin pattern)
   var trashX = map(sin(angle), -1, 1, width - 280, width - 200);
   trash.position.x = trashX;
@@ -161,6 +174,7 @@ function draw() {
   //draw text & sprites
   textSize(14);
   fill(20);
+  strokeWeight(0);
   textAlign(CENTER);
   drawSprite(trash);
 
@@ -242,6 +256,17 @@ function youWon() {
       done = true;
     }
   }, 1000);
+
+  if (random(1) < .07) {
+    fireworks.push(new Firework());
+  }
+  for (var i = fireworks.length-1; i >=0; i--) {
+    fireworks[i].update();
+    fireworks[i].show();
+    if (fireworks[i].done()) {
+      fireworks.splice(i, 1);
+    }
+  }
   // textSize(20);
   // if (fadeCounter < 255) {
   //   fill(210, 219, 33, fadeCounter);
