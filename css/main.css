@@ -518,9 +518,12 @@ p a:hover, h1 a:hover {
 #container_everything-after {
   padding: 30px;
   /* padding: 10px 10px 40px 80px; */
-  max-width: 800px;
+  /* max-width: 90%; */
+  justify-content: flex-start;
+  /* padding: 20px 20px 20px 20px; */
+  background-color: #fff;
+  /* align-self: flex-end; */
 }
-
 
 /* @media (min-width: 320px) and (max-width: 480px) {  */
 
