@@ -170,7 +170,7 @@ p a:hover, h1 a:hover {
   display: flex;
   flex-flow: column nowrap;
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.15);
+  /* background-color: rgba(255, 255, 255, 0.15); */
   padding: 20px;
   margin: 10px 10px 20px 10px;
   align-content: flex-start;
@@ -421,12 +421,12 @@ p a:hover, h1 a:hover {
 
 #container_babump {
   background-color: #ffffff;
-  padding: 20px 5px 40px 5px;
   flex-wrap: wrap;
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   color: #222;
   letter-spacing: .07em;
   padding: 40px 50px 40px 50px;
+  margin-bottom: 0;
   /*font-family: 'Raleway', sans-serif;*/
 }
 
