@@ -1,0 +1,28 @@
+.personalsDivs {
+  background-color: #aabbcc;
+  color: #212121;
+  padding: 1rem;
+}
+
+.fullScreenCanvas {
+  /* sets canvas to be aligned to top right of screen
+position absolute will stop it from scrolling */
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* uncomment next line to position the canvas BEHIND the HTML */
+  /* z-index: -1; */
+}
+
+#bgP5Canvas{
+  z-index:-5;
+}
+
+#candleP5Canvas {
+  position: absolute;
+  right: 5%;
+  top: 2rem;
+  width: 20%;
+  /* height: 20%; */
+}
