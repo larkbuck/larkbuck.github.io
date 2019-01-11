@@ -1,6 +1,11 @@
 
+body {
+  background-color: #f7f7f7;
+  color: #020202;
+}
 .personalsDivs {
   background-color: #aabbcc;
-  color: #212121;
+  background-image: url("../assets/backgrounds/bg_small/gameBG_2.png");
+  color: #aabbcc;
   padding: 1rem;
 }
