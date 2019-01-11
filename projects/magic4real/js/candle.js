@@ -26,7 +26,7 @@ let candleP5Instance = function(p) { // p could be any variable name
   p.setup = function() {
     p.canvasDiv = document.querySelector("#candleP5Canvas");
 
-    console.log(p.canvasDiv.offsetWidth)
+    // console.log(p.canvasDiv.offsetWidth)
 
     p.canvas = p.createCanvas(p.canvasDiv.offsetWidth, p.canvasDiv.offsetWidth * 2);
     // p.canvas = p.createCanvas(400, 400);
@@ -44,9 +44,9 @@ let candleP5Instance = function(p) { // p could be any variable name
     // eraseButton.addEventListener("click", p.eraseCanvas);
 
     // 2D Fire: init size of fire
-    p.fireWidth = int(p.width / p.fireElemLenght);
-    p.fireHeight = int(p.height / p.fireElemLenght);
-    console.log(p.fireWidth + ", " + p.fireHeight);
+    p.fireWidth = p.int(p.width / p.fireElemLenght);
+    p.fireHeight = p.int(p.height / p.fireElemLenght);
+    // console.log(p.fireWidth + ", " + p.fireHeight);
 
     // for each p.fire's 'lines'
     for (var i = 0; i < p.fireHeight; i++) {

@@ -1,18 +1,19 @@
+/* font-family: 'Exo 2', sans-serif; */
+/* font-family: 'ZCOOL QingKe HuangYou', cursive; */
+
 /* html {
   height: 100%;
 }*/
 
 body {
-  margin: 50px 50px 50px 7%;
+  /* margin: 50px 50px 50px 7%; */
   /* max-width: 67%; */
   /* height: 100%; */
-  /* font-family: 'ZCOOL QingKe HuangYou', cursive; */
-  /* font-family: 'Shrikhand', cursive; */
+  font-family: 'Exo 2', sans-serif;
 
-  font-family: 'Gloria Hallelujah', cursive;
   font-size: 18px;
   line-height: 1.7;
-  padding: 1em 1em;
+  /* padding: 1em 1em; */
   color: #F7F7F7;
   background-color: #212121;
   display: flex;
@@ -20,13 +21,36 @@ body {
 }
 
 .spellHeader {
+  padding: 3em 1em;
   /* background-color: #21212122; */
   font-family: 'ZCOOL QingKe HuangYou', cursive;
-  /* font-family: 'Shrikhand', cursive; */
-/* font-family: 'Gloria Hallelujah', cursive; */
-text-shadow: 20px 10px 0 #FF0000;
+  /* text-shadow: 20px 10px 0 #FF0000; */
+  font-size: 33px;
+  height: 33vh;
+  /* background: url("") no-repear center center; */
+  /* background-size: cover; */
+  /* margin-bottom: 20px; */
+  /* background-color: #212121dd; */
 }
 
+
+.orion {
+  background: #212121 url("../assets/orion_nasa.jpg") no-repeat center center;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+.astral {
+  background: #212121 url("../assets/astral-world.jpg") no-repeat center center;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.divBackCanvas {
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -2;
+}
 
 
 .fullScreenCanvas {
@@ -40,8 +64,8 @@ position absolute will stop it from scrolling */
   /* z-index: -1; */
 }
 
-#bgP5Canvas{
-  z-index:-5;
+#bgP5Canvas {
+  z-index: -5;
   position: fixed;
 }
 
@@ -51,4 +75,10 @@ position absolute will stop it from scrolling */
   top: 2rem;
   width: 20%;
   /* height: 20%; */
+  z-index:5;
+}
+
+.border-rounded{
+  border: 5px solid #fdfdfd;
+  border-radius: 10px;
 }

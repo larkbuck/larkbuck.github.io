@@ -27,18 +27,18 @@ function setup() {
 
   // speak controls
   lightCandleButton = select("#lightCandleButton");
-  lightCandleButton.mousePressed(lightCandle);
+  lightCandleButton.mouseReleased(lightCandle);
 
   spellInput = select("#spellInput");
   castSpellButton = select("#castSpellButton");
-  castSpellButton.mousePressed(saveSpell);
+  castSpellButton.mouseReleased(saveSpell);
 
   numTimesP = select("#numTimesP");
   thisManyTimesSpan = select("#thisManyTimesSpan");
 
   // speak controls
   speakButton = select("#speakButton");
-  speakButton.mousePressed(toggleIncantation);
+  speakButton.mouseReleased(toggleIncantation);
 
 
   // incantationVoice.listVoices();
@@ -64,17 +64,20 @@ function setup() {
 
 
 // long css shadow
-  var shadowstring = '';
+  let shadowString = '';
+  let shadowColor = 50;
 
-  for (var i = 0; i < 200; i++) {
-    shadowstring += i + 'px ' + i + 'px rgba(128,55,128,' + ((200 - i) / 800) + '), ';
+  for (let i = 0; i < 200; i++) {
+    shadowColor++;
+    shadowString += `${i}px ${i}px rgba(${255 - shadowColor}, ${shadowColor}, 128, ${((200 - i) / 800)}), `;
+    // shadowString += i + 'px ' + i + 'px rgba(128,55,128,' + ((200 - i) / 800) + '), ';
   }
-  shadowstring = shadowstring.substr(0, shadowstring.length - 2);
+  shadowString = shadowString.substr(0, shadowString.length - 2);
 
 // hm somereason query selector not working....
   // document.querySelectorAll(".shadow").style.textShadow = shadowstring;
   // document.querySelector("#longShadow").style.textShadow = shadowstring;
-  document.getElementById("longshadow").setAttribute("style", "text-shadow: " + shadowstring);
+  document.getElementById("longshadow").setAttribute("style", "text-shadow: " + shadowString);
 }
 
 
