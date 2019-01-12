@@ -53,7 +53,7 @@ let magicBackP5Canvas = function(p) { // p could be any variable name
 
   p.windowResized = function() {
 
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
+    p.resizeCanvas(p.canvasDiv.clientWidth, p.canvasDiv.clientHeight);
     // draw back
 
     p.size = p.width / p.numCells;

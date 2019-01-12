@@ -64,6 +64,10 @@ position absolute will stop it from scrolling */
   /* z-index: -1; */
 }
 
+#yourPlace {
+  /* min-width: 400px; */
+}
+
 #bgP5Canvas {
   z-index: -5;
   position: fixed;

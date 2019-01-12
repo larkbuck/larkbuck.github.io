@@ -61,7 +61,7 @@
   </div>
 
   <header class="spellHeader container-fluid">
-    <div class="display-3" id="longshadow">
+    <div class="display-3 longShadow">
       WWW MAGIC4REAL DOT COM
     </div>
 
@@ -72,7 +72,7 @@
     <div class="row">
 
       <div class="col">
-        <h3>Harness powers of the interweb astral plane — the space in-between the binary.</h3>
+        <h3 class="longShadow">Harness powers of the interweb astral plane — tap into the space between 10010101000 binary.</h3>
       </div>
       <div class="col border-rounded text-center" id="yourPlace">
         <h1>YOUR PLACE FOR MAGIC ON THE WEB</h1>
@@ -81,36 +81,56 @@
         </div>
       </div>
     </div>
-    <div class="container" id="div2_spellActions">
-      <div class="spellSettings row">
-
-        <p class="shadow"><textarea rows="8" cols="64" id="spellInput" placeholder="you may type your magic spell here. The computer machine will type this incantation 60 times per second, and will utter it outloud indefinitely, should you choose. Leave the browser tab open for maximum multitasking magic."></textarea></p>
+  </div>
+  <div class="container" id="div2_spellActions">
+    <div class="row">
+      <div class="col">
+        <p>We recommend starting with pixel fire</p>
         <button type="button" id="lightCandleButton">lightCandle </button> </br>
-        <button type="button" id="castSpellButton">cast spell</button> </br>
-        <!-- <p><input type="text" name="spellInput" id="spellInput" placeholder="your spell here"><button type="button" id="castSpellButton">cast spell</button></p> -->
-        <button type="button" id="speakButton">speak incantation</button> </br>
-        <p>set volume
-          <input type="range" min="0.0" max="100.0" value="50" class="slider" id="volSlider" style="padding-top: none;"></p>
-
-        <p>set rate
-          <input type="range" min="0.0" max="200.0" value="150" class="slider" id="rateSlider" style="padding-top: none;"></p>
       </div>
+      <!-- <div class="col"> -->
+        <div class="col container">
+          <div class="row">
+            <p>then choose to</p>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button type="button" id="castSpellButton">cast spell</button> </br>
+            </div>
+            <div class="col">
+              <button type="button" id="speakButton">speak incantation</button> </br>
+              <p>set volume </br>
+                <input type="range" min="0.0" max="100.0" value="50" class="slider" id="volSlider" style="padding-top: none;"></p>
+
+              <p>set rate </br>
+                <input type="range" min="0.0" max="200.0" value="150" class="slider" id="rateSlider" style="padding-top: none;"></p>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
     </div>
 
-    <div class="flex-container">
-      <div class="two-thirds" id="spellLeftCol">
-        <p id="numTimesP" style="visibility:hidden;">Computer machine casts spell <span id="thisManyTimesSpan">infinite number of</span> times</p>
-      </div>
-      <div class="third" id="spellRightCol">
-        <!-- <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1> -->
-      </div>
-    </div>
+    <div class="row">
 
+
+        <p ><textarea class="longShadow" rows="8" cols="64" id="spellInput" placeholder="you may type your magic spell here. The computer machine will type this incantation 60 times per second, and will utter it outloud indefinitely, should you choose. Leave the browser tab open for maximum multitasking magic."></textarea></p>
+
+    </div>
   </div>
 
   <div class="container">
+    <div class="row">
 
+
+    <div class="col" id="spellLeftCol">
+      <p id="numTimesP" style="visibility:hidden;">Computer machine casts spell <span id="thisManyTimesSpan">infinite number of</span> times</p>
+    </div>
+    <div class="col" id="spellRightCol">
+      <!-- <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1> -->
+    </div>
+    </div>
   </div>
+
   <!-- <footer>
     <p>( ＾◡＾)っ✂ website by lark alder 2019</p>
   </footer> -->

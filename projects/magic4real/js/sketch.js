@@ -24,21 +24,23 @@ let numTimesP;
 
 
 function setup() {
+  // touch events to fix mobile bug
+  // https://developer.mozilla.org/en-US/docs/Web/API/Touch_events
 
   // speak controls
   lightCandleButton = select("#lightCandleButton");
-  lightCandleButton.mouseReleased(lightCandle);
+  lightCandleButton.mousePressed(lightCandle);
 
   spellInput = select("#spellInput");
   castSpellButton = select("#castSpellButton");
-  castSpellButton.mouseReleased(saveSpell);
+  castSpellButton.mousePressed(saveSpell);
 
   numTimesP = select("#numTimesP");
   thisManyTimesSpan = select("#thisManyTimesSpan");
 
   // speak controls
   speakButton = select("#speakButton");
-  speakButton.mouseReleased(toggleIncantation);
+  speakButton.mousePressed(toggleIncantation);
 
 
   // incantationVoice.listVoices();
@@ -75,9 +77,14 @@ function setup() {
   shadowString = shadowString.substr(0, shadowString.length - 2);
 
 // hm somereason query selector not working....
-  // document.querySelectorAll(".shadow").style.textShadow = shadowstring;
+  // document.querySelectorAll(".longShadow").style.textShadow = shadowString;
+  let longShadowEls = document.querySelectorAll(".longShadow");
+
+  for (let i = 0; i < longShadowEls.length; i++){
+    longShadowEls[i].style.textShadow = shadowString;
+  }
   // document.querySelector("#longShadow").style.textShadow = shadowstring;
-  document.getElementById("longshadow").setAttribute("style", "text-shadow: " + shadowString);
+  // document.getElementById("longShadow").setAttribute("style", "text-shadow: " + shadowString);
 }
 
 
@@ -85,7 +92,7 @@ function setup() {
 function draw() {
   if (spell) {
     numTimesP.style("visibility", "visible");
-    let smallSpell = createP(spell);
+    let smallSpell = createP(`${spell} **888**`);
     smallSpell.parent("#spellLeftCol");
     let bigSpell = createElement("h1", spell);
     bigSpell.parent("#spellRightCol");
