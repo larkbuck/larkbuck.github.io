@@ -65,9 +65,9 @@ function setup() {
   rateSlider.mouseReleased(setRate);
 
 
-// long css shadow
+  // long css shadow
   let shadowString = '';
-  let shadowColor = 50;
+  let shadowColor = 33;
 
   for (let i = 0; i < 200; i++) {
     shadowColor++;
@@ -76,17 +76,27 @@ function setup() {
   }
   shadowString = shadowString.substr(0, shadowString.length - 2);
 
-// hm somereason query selector not working....
+  // hm somereason query selector not working....
   // document.querySelectorAll(".longShadow").style.textShadow = shadowString;
   let longShadowEls = document.querySelectorAll(".longShadow");
 
-  for (let i = 0; i < longShadowEls.length; i++){
+  for (let i = 0; i < longShadowEls.length; i++) {
     longShadowEls[i].style.textShadow = shadowString;
   }
   // document.querySelector("#longShadow").style.textShadow = shadowstring;
   // document.getElementById("longShadow").setAttribute("style", "text-shadow: " + shadowString);
+
+// trying to make magic for loop
+  // ofMagicAscending(0, 1, 10, function() {
+  //   console.log(0);
+  // });
 }
 
+// function ofMagicAscending(_initial, _iterator, _condition, _magicLoop) {
+//   for (let iterator = _initial; this += _iterator; this < _condition) {
+//     _magicLoop();
+//   }
+// }
 
 
 function draw() {
