@@ -38,9 +38,9 @@ function setup() {
   numTimesP = select("#numTimesP");
   thisManyTimesSpan = select("#thisManyTimesSpan");
 
-  // speak controls
-  speakButton = select("#speakButton");
-  speakButton.mousePressed(toggleIncantation);
+  // // speak controls
+  // speakButton = select("#speakButton");
+  // speakButton.mousePressed(toggleIncantation);
 
 
   // incantationVoice.listVoices();
@@ -104,8 +104,8 @@ function draw() {
     numTimesP.style("visibility", "visible");
     let smallSpell = createP(`${spell} **888**`);
     smallSpell.parent("#spellLeftCol");
-    let bigSpell = createElement("h1", spell);
-    bigSpell.parent("#spellRightCol");
+    // let bigSpell = createElement("h1", spell);
+    // bigSpell.parent("#spellRightCol");
     thisManyTimesSpan.html(`${thisManyTimes}`);
     // thisManyTimesSpan.innerHTML = `${thisManyTimes}`;
     thisManyTimes++;
@@ -144,21 +144,21 @@ function saveSpell() {
   }
 }
 
-function toggleIncantation() {
-  if (!spellInput.value()) {
-    alert("what would you like me to incantate for you? write it in the input field and i'll get started asap")
-    // if (!spell) {
-    //   alert("it would work better if you cast the spell first.")
-  } else {
-    if (speaking == false) {
-      speaking = true;
-      speakButton.html("stop incantation");
-    } else {
-      speaking = false;
-      speakButton.html("start incantation");
-    }
-  }
-}
+// function toggleIncantation() {
+//   if (!spellInput.value()) {
+//     alert("what would you like me to incantate for you? write it in the input field and i'll get started asap")
+//     // if (!spell) {
+//     //   alert("it would work better if you cast the spell first.")
+//   } else {
+//     if (speaking == false) {
+//       speaking = true;
+//       speakButton.html("stop incantation");
+//     } else {
+//       speaking = false;
+//       speakButton.html("start incantation");
+//     }
+//   }
+// }
 
 function setVolume() {
   incantationVoice.setVolume(volSlider.value() / 100.);
