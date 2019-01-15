@@ -62,8 +62,9 @@
 
   </div>
 
-  <div class="container ">
-    <div class="row longShadow align-items-end spellHeader">
+  <div class="container">
+    <!-- row -->
+    <div class="row longShadow align-items-center" id="header">
       <div class="col ">
         <div class="display-3 ">
           WWW MAGIC4REAL DOT COM
@@ -71,11 +72,9 @@
 
         <h1>Harness powers of the digital ether</h1>
       </div>
-
     </div>
-
-    <div class="row" id="div1_about">
-
+    <!-- row -->
+    <div class="row" id="about">
       <div class="col-sm-6">
         <!-- <h3 class="">(∩｀-´)⊃━☆ﾟ.*･｡ﾟ </br> Let's tap into the space between the binary</h3> -->
         <h1><span class="magicText">(∩｀-´)⊃━☆ﾟ.*･｡ﾟ</span></h1>
@@ -83,49 +82,171 @@
       <div class="col-sm-6 border-rounded text-center pinkOutline" id="yourPlace">
         <h1>YOUR PLACE FOR MAGIC ON THE WEB</h1>
         <div class="divBackCanvas" id="yourPlaceP5Canvas">
-
         </div>
       </div>
     </div>
-    <!-- this all gets messy -->
-    <div class="row my-5" id="div2_spellSetup">
-      <div class="container my-5">
-
-        <div class="col">
-          <p class="pinkOutline">We recommend starting with pixel fire</p>
-          <button type="button" id="lightCandleButton">lightCandle </button> </br>
-        </div>
+    <!-- row -->
+    <div class="row my-5 justify-content-center pinkOutline" id="candle">
+      <div class="col text-center">
+        <h4>We recommend starting with pixel fire</h4>
+        <button type="button" id="lightCandleButton">lightCandle </button> </br>
       </div>
-      <div class="row container my-5">
-
-        <div class="col">
-          <p>then cast circle</p>
-          <button type="button" id="castCircleButton">cast circle</button> </br>
-        </div>
-        <div class="col" id="castCircleButtons">
-          <p>call the spirits of the North <img src="assets/dice_roll.gif" alt=" ">
-            <button type="button" id="saveEast">&#8737;90</button><br></p>
-
-          <img src="assets/dice_roll.gif" alt=" ">
-          <button type="button" id="saveSouth">&#8737;180</button><br>
-          <img src="assets/dice_roll.gif" alt=" ">
-          <button type="button" id="saveWest">&#8737;270</button><br>
-          <img src="assets/dice_roll.gif" alt=" ">
-          <button type="button" id="saveNorth">&#8737;0</button><br>
-          <img src="assets/dice_roll.gif" alt=" ">
-          <button type="button" id="saveAbove">&#8657;</button><br>
-          <img src="assets/dice_roll.gif" alt=" ">
-          <button type="button" id="saveBelow">&#8659;</button><br>
-          <img src="assets/dice_roll.gif" alt=" ">
-          <button type="button" id="saveDigital">10110</button><br>
-        </div>
-
-      </div>
-
-
     </div>
-    <div class="container my-5" id="div3_spell">
+    <!-- row -->
+    <div class="row my-5 pinkOutline" id="castCircle">
 
+      <div class="col text-center">
+        <h4>then cast circle</h4>
+      </div>
+      <div class="col-12 castCircleButtons">
+        <div class="row justify-content-center " id="castCircleRow_0">
+          <div class="col-4 text-right">
+            <h3>call the spirits of the East </h3>
+          </div>
+          <div class="col-2">
+            <!-- <img src="assets/dice_roll.gif" alt=" "> -->
+            <button type="button" id="saveEast" style="width: 100%;">&#8737;90</button><br>
+          </div>
+          <div class="col-4">
+            <p>land of the dawn, where dreams take action</p>
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center" id="castCircleRow_1">
+          <div class="col-4 text-right">
+            <h3>call the spirits of the South </h3>
+          </div>
+          <div class="col-2">
+            <!-- <img src="assets/dice_roll.gif" alt=" "> -->
+            <button type="button" id="saveSouth" style="width: 100%;">&#8737;180</button><br>
+          </div>
+          <div class="col-4">
+            <p>gaurdians of spirit and passion</p>
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center" id="castCircleRow_2">
+          <div class="col-4 text-right">
+            <h3>call the spirits of the West </h3>
+          </div>
+          <div class="col-2">
+            <!-- <img src="assets/dice_roll.gif" alt=" "> -->
+            <button type="button" id="saveWest" style="width: 100%;">&#8737;270</button><br>
+          </div>
+          <div class="col-4">
+            <p>setting sun, place of mystery and transformation and change</p>
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center" id="castCircleRow_3">
+          <div class="col-4 text-right">
+            <h3>call the spirits of the North </h3>
+          </div>
+          <div class="col-2">
+            <!-- <img src="assets/dice_roll.gif" alt=" "> -->
+            <button type="button" id="saveNorth" style="width: 100%;">&#8737;0</button><br>
+          </div>
+          <div class="col-4">
+            <p>realm of sustenance, grounding, rest & stillness where the dreams begin</p>
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center" id="castCircleRow_4">
+          <div class="col-4 text-right">
+            <h3>call the spirits of Above </h3>
+          </div>
+          <div class="col-2">
+            <!-- <img src="assets/dice_roll.gif" alt=" "> -->
+            <button type="button" id="saveAbove" style="width: 100%;">&#8657;</button><br>
+          </div>
+          <div class="col-4">
+            <p>divine sky beings, multidimensional light beings & spirit guides</p>
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center" id="castCircleRow_5">
+          <div class="col-4 text-right">
+            <h3>call the spirits of Below </h3>
+          </div>
+          <div class="col-2">
+            <!-- <img src="assets/dice_roll.gif" alt=" "> -->
+            <button type="button" id="saveBelow" style="width: 100%;">&#8659;</button><br>
+          </div>
+          <div class="col-4">
+            <p>mother earth, sacred core, the underworld & shadow-self</p>
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center" id="castCircleRow_6">
+          <div class="col-4 text-right">
+            <h3>call the spirits of the Center </h3>
+          </div>
+          <div class="col-2">
+            <!-- <img src="assets/dice_roll.gif" alt=" "> -->
+            <button type="button" id="saveCenter" style="width: 100%;">	&#9678;</button><br>
+          </div>
+          <div class="col-4">
+            <p>balance, union, oneness. spider woman who weaves the web and mends the broken threads.</p>
+          </div>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center" id="castCircleRow_7">
+          <div class="col-4 text-right">
+            <h3>call the spirits of the Digital </h3>
+          </div>
+          <div class="col-2">
+            <!-- <img src="assets/dice_roll.gif" alt=" "> -->
+            <button type="button" id="saveDigital" style="width: 100%;">101011</button><br>
+          </div>
+          <div class="col-4">
+            <p>electric, inter- hyper- space of connection & virtual manifestation</p>
+          </div>
+        </div>
+        <!-- row -->
+
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <button type="button" id="castCircleButton">cast circle</button> </br>
+
+          </div>
+          <div class="col-6 text-center">
+            <h1>WELCOME</h1>
+            <p>circle is cast</p>
+          </div>
+        </div>
+      </div>
+      <!-- row -->
+    </div>
+    <!-- row -->
+    <div class="row my-5 pinkOutline" id="castSpell">
+
+      <div class="col-12 text-center">
+        <h3>now we may recite the sacred words and cast your spell</h4>
+      </div>
+
+      <div class="col-12">
+
+<div class="row">
+  <div class="col-4">
+    <h4>what is it that you would like to manifest?</h4>
+  </div>
+  <div class="col-8">
+      <p><textarea class="longShadow" rows="8" cols="64" id="spellInput" placeholder="you may type your magic spell here. The computer machine will type this incantation 60 times per second, and will utter it outloud indefinitely, should you choose. Leave the browser tab open for maximum multitasking magic."></textarea></p>
+  </div>
+</div>
+      </div>
+      <div class="col-12">
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <p>how many times would you like it repeated?</p>
+          </div>
+          <div class="col-4">
+            256, 512, 1024, 2048, 4096, 8192, 16384, 32768, forever times
+            <button type="button" id="how many times?">so may it be</button> </br>
+          </div>
+    </div>
+      </div>
+      </div>
       <div class="row">
         <div class="col">
           <button type="button" id="castSpellButton">cast spell</button> </br>
@@ -142,12 +263,7 @@
     </div>
 
     <div class="container" id="divX_">
-      <div class="row">
 
-
-        <p><textarea class="longShadow" rows="8" cols="64" id="spellInput" placeholder="you may type your magic spell here. The computer machine will type this incantation 60 times per second, and will utter it outloud indefinitely, should you choose. Leave the browser tab open for maximum multitasking magic."></textarea></p>
-
-      </div>
       <div class="row">
 
 

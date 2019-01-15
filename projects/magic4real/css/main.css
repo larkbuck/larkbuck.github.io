@@ -22,15 +22,8 @@ body {
   /* flex-direction: column; */
 }
 
-.spellHeader {
-  /* padding: 3em 1em; */
-  /* background-color: #21212122; */
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  height: 50vh;
 
-}
-
-.orion {
+/* .orion {
   background: #212121 url("../assets/orion_nasa.jpg") no-repeat center center;
   background-size: cover;
   margin-bottom: 20px;
@@ -40,7 +33,7 @@ body {
   background: #212121 url("../assets/astral-world.jpg") no-repeat center center;
   background-size: cover;
   margin-bottom: 20px;
-}
+} */
 
 .magicText {
   color: #00000055;
@@ -71,9 +64,6 @@ position absolute will stop it from scrolling */
   /* z-index: -1; */
 }
 
-#yourPlace {
-  /* min-width: 400px; */
-}
 
 #bgP5Canvas {
   z-index: -5;
@@ -102,11 +92,11 @@ button {
   font-size: 20px;
   line-height: 1.8;
   padding: .4em;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   ;
 }
 
-#castCircleButtons button {
+.castCircleButtons button {
   margin-top: 0;
   font-size: 24px;
   width: 100px;
@@ -118,4 +108,12 @@ button {
 .border-rounded {
   border: 5px solid #fdfdfd;
   border-radius: 10px;
+}
+
+#header {
+  /* padding: 3em 1em; */
+  /* background-color: #21212122; */
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  height: 50vh;
+
 }
