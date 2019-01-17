@@ -81,7 +81,7 @@
       </div>
     </div>
     <!-- row -->
-    <div class="row my-5 py-5 pinkOutline" id="castCircle">
+    <div class="row my-5 py-5 pinkOutline hidden" id="castCircleDiv">
 
       <div class="col text-center">
         <h4>Great, now cast the circle</h4>
@@ -99,7 +99,7 @@
           </div>
         </div>
         <!-- row -->
-        <div class="row justify-content-center text-center my-5" id="castCircleRow_1">
+        <div class="row justify-content-center text-center my-5 hidden" id="castCircleRow_1">
           <div class="col-sm-4 text-sm-right order-sm-1 order-1">
             <h3>call the spirits of the South </h3>
           </div>
@@ -111,7 +111,7 @@
           </div>
         </div>
         <!-- row -->
-        <div class="row justify-content-center text-center my-5" id="castCircleRow_2">
+        <div class="row justify-content-center text-center my-5 hidden" id="castCircleRow_2">
           <div class="col-sm-4 text-sm-right order-sm-1 order-1">
             <h3>call the spirits of the West </h3>
           </div>
@@ -123,7 +123,7 @@
           </div>
         </div>
         <!-- row -->
-        <div class="row justify-content-center text-center my-5" id="castCircleRow_3">
+        <div class="row justify-content-center text-center my-5 hidden" id="castCircleRow_3">
           <div class="col-sm-4 text-sm-right order-sm-1 order-1">
             <h3>call the spirits of the North </h3>
           </div>
@@ -135,7 +135,7 @@
           </div>
         </div>
         <!-- row -->
-        <div class="row justify-content-center text-center my-5" id="castCircleRow_4">
+        <div class="row justify-content-center text-center my-5 hidden" id="castCircleRow_4">
           <div class="col-sm-4 text-sm-right order-sm-1 order-1">
             <h3>call the spirits of Above </h3>
           </div>
@@ -147,7 +147,7 @@
           </div>
         </div>
         <!-- row -->
-        <div class="row justify-content-center text-center my-5" id="castCircleRow_5">
+        <div class="row justify-content-center text-center my-5 hidden" id="castCircleRow_5">
           <div class="col-sm-4 text-sm-right order-sm-1 order-1">
             <h3>call the spirits of Below </h3>
           </div>
@@ -159,7 +159,7 @@
           </div>
         </div>
         <!-- row -->
-        <div class="row justify-content-center text-center my-5" id="castCircleRow_6">
+        <div class="row justify-content-center text-center my-5 hidden" id="castCircleRow_6">
           <div class="col-sm-4 text-sm-right order-sm-1 order-1">
             <h3>call the spirits of the Center </h3>
           </div>
@@ -171,7 +171,7 @@
           </div>
         </div>
         <!-- row -->
-        <div class="row justify-content-center text-center my-5" id="castCircleRow_7">
+        <div class="row justify-content-center text-center my-5 hidden" id="castCircleRow_7">
           <div class="col-sm-4 text-sm-right order-sm-1 order-1">
             <h3>call the spirits of the Digital </h3>
           </div>
@@ -184,12 +184,12 @@
         </div>
         <!-- row -->
 
-        <div class="row justify-content-center mt-5" id="castCircleButtonDiv">
+        <div class="row justify-content-center mt-5 hidden" id="castCircleButtonDiv">
           <div class="col-12 text-center">
             <button type="button" class="py-3" id="castCircleButton">⋆ ˚｡⋆ ˚ Join us ˚ ⋆｡˚ ⋆</button> </br>
 
           </div>
-          <div class="col-6 text-center py-3 mt-5" id="welcomeDiv">
+          <div class="col-6 text-center py-3 mt-5 hidden" id="welcomeDiv">
             <h1>WELCOME</h1>
             <h3>circle is cast</h3>
           </div>
@@ -198,7 +198,7 @@
       </div>
     </div>
     <!-- row -->
-    <div class="row my-5 py-5 pinkOutline justify-content-center" id="castSpell">
+    <div class="row mb-5 pb-5 pinkOutline justify-content-center hidden" id="castSpellDiv">
       <div class="col-12 text-center">
 
         <h2>Now we may recite the sacred words and cast your spell!</h2>
@@ -208,7 +208,7 @@
             <h3>What is it that you would like to manifest?</h3>
           </div>
           <div class="col-sm-6 text-left">
-            <p><textarea class="longShadow" rows="8" cols="64" id="spellInput" placeholder="you may type your magic spell here. The computer machine will type this incantation 60 times per second, and will utter it outloud indefinitely, should you choose. Leave the browser tab open for maximum multitasking magic."></textarea></p></br>
+            <p><textarea class="longShadow borderRounded" rows="8" cols="64" id="spellInput" placeholder="you may type your magic spell here. The computer machine will type this incantation 60 times per second, and will utter it outloud indefinitely, should you choose. Leave the browser tab open for maximum multitasking magic."></textarea></p></br>
           </div>
         </div><!-- row -->
         <!-- this includes how many times you would want it repeated -->
@@ -224,7 +224,7 @@
 
         <div class="row justify-content-center">
           <div class="col-4">
-            <button type="button" id="saveSpellButton">so may it be</button> </br>
+            <button type="button" id="saveSpellButton">okay, ready</button> </br>
           </div>
         </div><!-- row -->
 
@@ -232,7 +232,7 @@
       </div>
     </div><!-- row -->
 
-    <div class="row my-5 pinkOutline justify-content-center" id="spellDiv">
+    <div class="row my-5 pinkOutline justify-content-center hidden" id="spellDiv">
 
         <div class="col-12 text-center">
           <div class="row justify-content-center" id="spellTop">
@@ -246,11 +246,11 @@
               <!-- <p>> bar = <span id="numberTimes"># times</span> </br> > for (let foo = 0; foo < bar; foo += 1)</p> -->
             </div>
             <div class="col-12 my-3">
-              <button type="button" id="castSpellButton">cast spell</button> </br>
+              <button type="button" id="castSpellButton">so may it be</button> </br>
             </div>
 
           </div>
-          <div class="row my-5">
+          <div class="row my-5 hidden" id="spellBodyDiv">
             <div class="col-6" >
               <p id="numTimesP">Computer machine casts spell <span id="thisManyTimesSpan">infinite number of</span> times</p>
               <div class="" id="printSpellDiv" style="height: 200px; overflow: auto; background-color: #555;">

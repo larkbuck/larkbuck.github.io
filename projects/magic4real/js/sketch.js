@@ -24,6 +24,29 @@ let rateSlider;
 let speaking = false;
 let sayFooOnceBool = true;
 let numTimesP;
+let castCircleDiv;
+
+let castCircleRow_0;
+let castCircleRow_1;
+let castCircleRow_2;
+let castCircleRow_3;
+let castCircleRow_4;
+let castCircleRow_5;
+let castCircleRow_6;
+let castCircleRow_7;
+let saveEast;
+let saveSouth;
+let saveWest;
+let saveNorth;
+let saveAbove;
+let saveBelow;
+let saveCenter;
+let saveDigital;
+let castCircleButton;
+let welcomeDiv;
+let castSpellDiv;
+let spellDiv;
+let spellBodyDiv;
 let printSpellDiv;
 
 
@@ -31,15 +54,90 @@ function setup() {
   // touch events to fix mobile bug
   // https://developer.mozilla.org/en-US/docs/Web/API/Touch_events
 
-  // speak controls
+  // rows & divs
+  castCircleDiv = document.querySelector("#castCircleDiv");
+  castCircleRow_0 = document.querySelector("#castCircleRow_0");
+  castCircleRow_1 = document.querySelector("#castCircleRow_1");
+  castCircleRow_2 = document.querySelector("#castCircleRow_2");
+  castCircleRow_3 = document.querySelector("#castCircleRow_3");
+  castCircleRow_4 = document.querySelector("#castCircleRow_4");
+  castCircleRow_5 = document.querySelector("#castCircleRow_5");
+  castCircleRow_6 = document.querySelector("#castCircleRow_6");
+  castCircleRow_7 = document.querySelector("#castCircleRow_7");
+  welcomeDiv = document.querySelector("#welcomeDiv");
+  castSpellDiv = document.querySelector("#castSpellDiv");
+  spellDiv = document.querySelector("#spellDiv");
+  spellBodyDiv = document.querySelector("#spellBodyDiv");
+  printSpellDiv = document.querySelector("#printSpellDiv");
+  printSpellDiv = document.querySelector("#printSpellDiv");
+  saveEast = document.querySelector("#saveEast");
+
+
+  // buttons
   lightCandleButton = select("#lightCandleButton");
   lightCandleButton.mousePressed(lightCandle);
+
+  saveEast = select("#saveEast");
+  saveEast.mousePressed(function() {
+    castCircleRow_1.style.visibility = "visible";
+    // castCircleRow_1.style.display = "block";
+  });
+
+  saveSouth = select("#saveSouth");
+  saveSouth.mousePressed(function() {
+    castCircleRow_2.style.visibility = "visible";
+    // castCircleRow_1.style.display = "block";
+  });
+
+  saveWest = select("#saveWest");
+  saveWest.mousePressed(function() {
+    castCircleRow_3.style.visibility = "visible";
+    // castCircleRow_1.style.display = "block";
+  });
+
+  saveNorth = select("#saveNorth");
+  saveNorth.mousePressed(function() {
+    castCircleRow_4.style.visibility = "visible";
+    // castCircleRow_1.style.display = "block";
+  });
+
+  saveAbove = select("#saveAbove");
+  saveAbove.mousePressed(function() {
+    castCircleRow_5.style.visibility = "visible";
+    // castCircleRow_1.style.display = "block";
+  });
+
+  saveBelow = select("#saveBelow");
+  saveBelow.mousePressed(function() {
+    castCircleRow_6.style.visibility = "visible";
+    // castCircleRow_1.style.display = "block";
+  });
+
+  saveCenter = select("#saveCenter");
+  saveCenter.mousePressed(function() {
+    castCircleRow_7.style.visibility = "visible";
+    // castCircleRow_1.style.display = "block";
+  });
+
+  saveDigital = select("#saveDigital");
+  saveDigital.mousePressed(function() {
+    castCircleButtonDiv.style.visibility = "visible";
+    // castCircleRow_1.style.display = "block";
+  });
+
+  castCircleButton = select("#castCircleButton");
+  castCircleButton.mousePressed(function() {
+    welcomeDiv.style.visibility = "visible";
+    setTimeout(function() {
+      castSpellDiv.style.visibility = "visible";
+    }, 1000);
+    // castCircleRow_1.style.display = "block";
+  });
 
   spellInput = select("#spellInput");
 
   saveSpellButton = select("#saveSpellButton");
   saveSpellButton.mousePressed(saveSpell);
-
 
   castSpellButton = select("#castSpellButton");
   castSpellButton.mousePressed(castSpell);
@@ -47,7 +145,7 @@ function setup() {
   numTimesP = select("#numTimesP");
   thisManyTimesSpan = select("#thisManyTimesSpan");
 
-  printSpellDiv = document.querySelector("#printSpellDiv");
+
 
   // // speak controls
   // speakButton = select("#speakButton");
@@ -137,6 +235,8 @@ function draw() {
 function lightCandle() {
   if (candleBurning == false) {
     candleBurning = true;
+    // castCircleDiv.style.display = "block";
+    castCircleDiv.style.visibility = "visible";
     lightCandleButton.html("blow out candle");
   } else {
     candleBurning = false;
@@ -149,6 +249,7 @@ function saveSpell() {
   if (!spellInput.value()) {
     alert("sorry, i'm not sure what spell to cast. write something in the input field and we can go from there.")
   } else {
+    spellDiv.style.visibility = "visible";
     spell = spellInput.value();
   }
 }
@@ -158,6 +259,7 @@ function castSpell() {
   if (!spellInput.value()) {
     alert("sorry, i'm not sure what spell to cast. write something in the input field and we can go from there.")
   } else {
+    spellBodyDiv.style.visibility = "visible";
     spellCast = true;
     speaking = true;
   }
