@@ -10,17 +10,21 @@
 
 let spellInput;
 let spell;
+let spellCast = false;
+let saveSpellButton;
 let castSpellButton;
 let thisManyTimes = 1;
 let thisManyTimesSpan;
 let incantationVoice = new p5.Speech(); // new P5.Speech object
 let lightCandleButton;
 let candleBurning = false;
-let speakButton;
+let muteButton;
 let volSlider;
 let rateSlider;
 let speaking = false;
+let sayFooOnceBool = true;
 let numTimesP;
+let printSpellDiv;
 
 
 function setup() {
@@ -32,11 +36,18 @@ function setup() {
   lightCandleButton.mousePressed(lightCandle);
 
   spellInput = select("#spellInput");
+
+  saveSpellButton = select("#saveSpellButton");
+  saveSpellButton.mousePressed(saveSpell);
+
+
   castSpellButton = select("#castSpellButton");
-  castSpellButton.mousePressed(saveSpell);
+  castSpellButton.mousePressed(castSpell);
 
   numTimesP = select("#numTimesP");
   thisManyTimesSpan = select("#thisManyTimesSpan");
+
+  printSpellDiv = document.querySelector("#printSpellDiv");
 
   // // speak controls
   // speakButton = select("#speakButton");
@@ -44,14 +55,9 @@ function setup() {
 
 
   // incantationVoice.listVoices();
-  // incantationVoice.setVoice("Ellen");
   incantationVoice.setVoice("Karen");
-  // incantationVoice.setVoice("Victoria");
   incantationVoice.setPitch(.6);
-  // incantationVoice.setRate(.7);
   incantationVoice.setRate(1.5);
-  // incantationVoice.setVoice("Samantha");
-  // incantationVoice.setVoice("Veena");
 
 
   // for testing incantation voice upon page load
@@ -60,6 +66,9 @@ function setup() {
 
   volSlider = select("#volSlider");
   volSlider.mouseReleased(setVolume);
+
+  muteButton = select("#muteButton");
+  muteButton.mousePressed(muteIncantation);
 
   rateSlider = select("#rateSlider");
   rateSlider.mouseReleased(setRate);
@@ -83,36 +92,36 @@ function setup() {
   for (let i = 0; i < longShadowEls.length; i++) {
     longShadowEls[i].style.textShadow = shadowString;
   }
-  // document.querySelector("#longShadow").style.textShadow = shadowstring;
-  // document.getElementById("longShadow").setAttribute("style", "text-shadow: " + shadowString);
 
-// trying to make magic for loop
-  // ofMagicAscending(0, 1, 10, function() {
-  //   console.log(0);
-  // });
+
 }
 
-// function ofMagicAscending(_initial, _iterator, _condition, _magicLoop) {
-//   for (let iterator = _initial; this += _iterator; this < _condition) {
-//     _magicLoop();
-//   }
-// }
 
 
 function draw() {
-  if (spell) {
+  if (spellCast) {
     numTimesP.style("visibility", "visible");
-    let smallSpell = createP(`${spell} **888**`);
-    smallSpell.parent("#spellLeftCol");
+    let smallSpell = createP(`${spell}`);
+    smallSpell.parent("#printSpellDiv");
     // let bigSpell = createElement("h1", spell);
     // bigSpell.parent("#spellRightCol");
     thisManyTimesSpan.html(`${thisManyTimes}`);
     // thisManyTimesSpan.innerHTML = `${thisManyTimes}`;
     thisManyTimes++;
+    printSpellDiv.scrollTop++;
+    // printSpellDiv.scrollTop = printSpellDiv.scrollHeight - printSpellDiv.clientHeight;
   }
 
   if (speaking) {
-    incantationVoice.speak(spellInput.value());
+    if (sayFooOnceBool) {
+      incantationVoice.setRate(.8);
+      incantationVoice.speak("for let foo 0 foo bar foo 1");
+      // incantationVoice.speak("for, let foo 0; foo bar; foo 1");
+      incantationVoice.setRate(rateSlider.value() / 100.);
+      sayFooOnceBool = false;
+    } else {
+      incantationVoice.speak(spellInput.value());
+    }
   } else {
     incantationVoice.stop();
   }
@@ -144,6 +153,16 @@ function saveSpell() {
   }
 }
 
+
+function castSpell() {
+  if (!spellInput.value()) {
+    alert("sorry, i'm not sure what spell to cast. write something in the input field and we can go from there.")
+  } else {
+    spellCast = true;
+    speaking = true;
+  }
+}
+
 // function toggleIncantation() {
 //   if (!spellInput.value()) {
 //     alert("what would you like me to incantate for you? write it in the input field and i'll get started asap")
@@ -160,6 +179,16 @@ function saveSpell() {
 //   }
 // }
 
+function muteIncantation() {
+  if (speaking == false) {
+    speaking = true;
+
+  } else {
+    speaking = false;
+
+  }
+}
+
 function setVolume() {
   incantationVoice.setVolume(volSlider.value() / 100.);
 }
@@ -171,13 +200,6 @@ function setRate() {
 
 }
 
-
-// ideas for incantations:
-// may the hundred gazillion bits lighting up the internet ...
-// propel
-//may i be strong may i be resilient may my footsteps echo with joy and radiate out into the world
-// I believe in my ability to
-//
 
 
 // fire Code

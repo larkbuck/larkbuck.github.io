@@ -16,7 +16,7 @@ let bgP5Instance = function(p) { // p could be any variable name
 
   p.setup = function() {
 
-    p.frameRate(1);
+    p.frameRate(5);
     p.colorMode(HSL);
     p.noStroke();
 
@@ -26,6 +26,7 @@ let bgP5Instance = function(p) { // p could be any variable name
     // p.canvas = p.createCanvas(p.canvasDiv.offsetWidth, p.canvasDiv.offsetHeight);
 
 
+    p.frameCounter = 0; // for having background move slowly to start
     p.numCells = 50;
     p.size = p.width / p.numCells;
     p.numCellsY = p.height / p.size;
@@ -80,7 +81,24 @@ let bgP5Instance = function(p) { // p could be any variable name
 
 
 
-    if (spell) {
+    if (spell && !spellCast) {
+      p.frameCounter++;
+      if (p.frameCounter % 5 == 0) {
+        for (let i = 0; i < p.numCells; i++) {
+          for (let j = 0; j < p.numCellsY; j++) {
+            let n = noise(i * p.random(.4) / 10, j / 10);
+            let li = map(n, 0, 1, 0, 100);
+            let hu = map(n, 0, 1, 0, 360);
+
+            // for fire hue
+            // let li = map(n, 0, 1, 0, 100);
+            // let hu = map(n, 0, 1, 0, 60);
+            p.fill(hu, 100, li);
+            p.rect(i * p.size, j * p.size, p.size, p.size);
+          }
+        }
+      }
+    } else if (spell && spellCast) {
       for (let i = 0; i < p.numCells; i++) {
         for (let j = 0; j < p.numCellsY; j++) {
           let n = noise(i * p.random(.4) / 10, j / 10);
