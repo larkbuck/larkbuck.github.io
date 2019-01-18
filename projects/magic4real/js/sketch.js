@@ -1,8 +1,9 @@
+// by Lark VCR 2019
 // voice using  p5.speech library http://ability.nyu.edu/p5.js-speech/
+// candle & background sketches adapted from:
+// https://editor.p5js.org/runemadsen/sketches/S1qav1gJG
+// & https://kampeki-factory.blogspot.com/2018/03/set-your-browser-on-fire-with-p5js.html
 
-
-// ideas
-// light candle... scroll down = ascii drawings
 
 'use strict';
 
@@ -301,9 +302,3 @@ function setRate() {
   incantationVoice.speak(spellInput.value());
 
 }
-
-
-
-// fire Code
-// https://editor.p5js.org/runemadsen/sketches/S1qav1gJG
-// https://kampeki-factory.blogspot.com/2018/03/set-your-browser-on-fire-with-p5js.html
