@@ -184,14 +184,13 @@ function setup() {
   }
   shadowString = shadowString.substr(0, shadowString.length - 2);
 
-  // hm somereason query selector not working....
+
   // document.querySelectorAll(".longShadow").style.textShadow = shadowString;
   let longShadowEls = document.querySelectorAll(".longShadow");
 
   for (let i = 0; i < longShadowEls.length; i++) {
     longShadowEls[i].style.textShadow = shadowString;
   }
-
 
 }
 
