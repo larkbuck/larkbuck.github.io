@@ -2,10 +2,10 @@
 // https://p5js.org/examples/sound-load-and-play-sound.html
 
 // coding train tutorial (more detailed)
-// https://www.youtube.com/watch?v=Pn1g1wjxl_0
+// https://www.youtube.com/watch?v=YcezEwOXun4&list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW&index=2
 
 
-//get rid of preload
+//you can get rid of preload with a callback function
 
 let song;
 let playButton;
@@ -16,9 +16,9 @@ function preload() {
 }
 
 function setup() {
-  playButton = select("#playButton");
+  playButton = select('#playButton');
   playButton.mousePressed(playSong);
-  volumeSlider = select("#volumeSlider");
+  volumeSlider = select('#volumeSlider');
 
 }
 
@@ -29,9 +29,9 @@ function draw() {
 function playSong() {
   if (song.isPlaying()) {
     song.stop();
-    playButton.html("PLAY")
+    playButton.html('PLAY')
   } else {
     song.play();
-    playButton.html("STOP");
+    playButton.html('STOP');
   }
 }
