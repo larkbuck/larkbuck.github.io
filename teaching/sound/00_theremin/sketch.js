@@ -1,3 +1,7 @@
+'use strict'
+
+// coding train sound synth tutorial https://www.youtube.com/watch?v=Bk8rLzzSink&t=0s&index=7&list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW
+
 let osc;
 
 function setup() {

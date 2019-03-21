@@ -14,6 +14,8 @@ function setup() {
   buttonSound.setVolume(.3);
 
   buttons = selectAll('button');
+  console.log(buttons);
+
 
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].mousePressed(playSound);
@@ -21,9 +23,8 @@ function setup() {
 }
 
 function draw() {
-
 }
 
 function playSound() {
-    buttonSound.play();
+  buttonSound.play();
 }

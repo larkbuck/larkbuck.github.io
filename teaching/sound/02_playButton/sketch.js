@@ -1,11 +1,4 @@
-// p5 documentation
-// https://p5js.org/examples/sound-load-and-play-sound.html
-
-// coding train tutorial (more detailed)
-// https://www.youtube.com/watch?v=YcezEwOXun4&list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW&index=2
-
-
-//you can get rid of preload with a callback function
+'use strict'
 
 let song;
 let playButton;
@@ -19,7 +12,6 @@ function setup() {
   playButton = select('#playButton');
   playButton.mousePressed(playSong);
   volumeSlider = select('#volumeSlider');
-
 }
 
 function draw() {
@@ -35,3 +27,17 @@ function playSong() {
     playButton.html('STOP');
   }
 }
+
+
+// let song;
+//
+// function preload() {
+//   song = loadSound('../assets/music/astronomy-self-texture.mp3');
+// }
+//
+// function setup() {
+// }
+//
+// function draw() {
+//
+// }
