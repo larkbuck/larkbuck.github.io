@@ -36,9 +36,6 @@ function setup() {
 function draw() {
 }
 
-function playSound() {
-}
-
 function playBear() {
   bearSound.play();
 }
