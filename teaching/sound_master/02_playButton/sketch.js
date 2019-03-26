@@ -5,7 +5,7 @@ let playButton;
 let volumeSlider;
 
 function preload() {
-  song = loadSound('../assets/music/astronomy-self-texture.mp3');
+  song = loadSound('../assets/music/free-synth-texture');
 }
 
 function setup() {
