@@ -231,6 +231,11 @@ body {
   background: #3ac952;
 }
 
+.transBlack {
+  color: #D2DB21;
+  background: #161616bb;
+}
+
 a {
   text-decoration: none;
   border-bottom: none;
