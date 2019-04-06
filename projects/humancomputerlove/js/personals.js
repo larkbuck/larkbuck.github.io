@@ -119,7 +119,7 @@ function createPersonals() {
   personalsCreated = true;
 
   document.querySelector("#loading").style.visibility = "hidden";
-  document.querySelector("footer").style.visibility = "hidden";
+  document.querySelector("footer").style.display = "block";
 
   // shuffle entries
   for (let i = allDataArray.length - 1; i >= 0; i--) {
