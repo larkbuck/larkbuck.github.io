@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>human-computer love</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="robots" content="follow">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <!-- <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"> -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+  <script src="libraries/p5.js" type="text/javascript"></script>
+  <script src="libraries/p5.dom.js" type="text/javascript"></script>
+  <script src="libraries/p5.sound.js" type="text/javascript"></script>
+  <!-- <script src="libraries/p5.play.js" type="text/javascript"></script> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="js/personals.js" type="text/javascript"></script>
+  <script src="js/bubble.js" type="text/javascript"></script>
+  <script src="js/gotIt.js" type="text/javascript"></script>
+  <script src="js/bgCanvas.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+  <div id="bgCanvas">
+  </div>
+  <div id="bubbleCanvas">
+  </div>
+
+  <nav class="navbar navbar-default navbar-custom fixed-top navbar-expand-lg navbar-dark ">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link btn btn-lg mr-4" href="#">about<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link btn btn-lg mr-4" href="post/index.html" role="button">
+            post personal</a>
+          <!-- <a class="nav-link" href="#">post</a> -->
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle btn btn-lg mr-4" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            filter
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item pink" href="#">human seeking computer</a>
+            <a class="dropdown-item purple" href="#">computer seeking human</a>
+            <a class="dropdown-item green" href="#">seeking business partners</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="wrap>" <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-7 display-md-5 pt-5">human-computer love | personals</h1>
+      <p class="lead"> intimate futures think/fish/shark tank </p>
+      <p id="loading"> ... loading personals ... </p>
+      <!-- <p> radical possibility for virtual intimacy and machine coitus</p> -->
+      <!-- <p>
+        <a class="btn btn-lg btn-success post" href="post/index.html" role="button">
+          Post Personal</a>
+      </p> -->
+    </div>
+
+    <div id="personalsDiv" class="row gallery justify-content-around">
+      <!-- <div class="col-md-3 m-2 h-25 cell pink ">
+        <h4 class="personalsTitle">Seeking sex flower</h4>
+        <p class="personalsText">Blooming. Sexual flower with anatomy for both reception and penetration. Only blooms at specific times in the day.</p>
+        <p class="contact">beefyjuice@aol.com</p>
+        <p class="text-right mb-1"> <a href="javascript:void(0)" onclick="">like</a>
+          <a href="javascript:void(0)" onclick="">flag</a><br><span id="likes">0</span> likes</p>
+
+      </div>
+      <div class="col-md-3 m-2 h-25 cell purple ">
+        <h4 class="personalsTitle">Computer seeks cosleeper</h4>
+        <p>Large co-sleeper pillow with heart rate and warmth and several genitalia options from a long john butt-flap</p>
+      </div>
+      <div class="col-md-5 m-2 h-25 cell green ">
+        <h4 class="personalsTitle">lorem seeks ipsum</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt m</p>
+      </div>
+      <div class="col-md-3 m-2 h-25 cell pink ">
+        <p>Blooming. Sexual flower with anatomy for both reception and penetration. Only blooms at specific times in the day.</p>
+      </div>
+      <div class="col-md-3 m-2 h-25 cell purple ">
+        <p>Large co-sleeper pillow with heart rate and warmth and several genitalia options from a long john butt-flap</p>
+      </div>
+      <div class="col-md-3 m-2 h-25 cell green ">
+        <p>Femmebot, alternative to fembot. </p>
+        <p>The culture of desire around "fembots" is based on total domination of the female body. Drawing on the self-determined queer femme identity, what would an empowered Femmebot be like? </p>
+      </div> -->
+    </div>
+  </div>
+  </div>
+
+  <footer class="page-footer">
+    <p>-------->humancomputerlove@gmail.com</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
