@@ -156,7 +156,7 @@ function createCell(_id, _type, _title, _text, _contact, _likes, _flags) {
 
   let colSize;
 
-  colSize = `col-md-3`;
+  colSize = `col-md-8`;
 
   // // set col size, varies with text length
   // if (_text.length + _title.length * 4 > 400) {
@@ -168,17 +168,15 @@ function createCell(_id, _type, _title, _text, _contact, _likes, _flags) {
   // }
 
 
-// just title
+// // just title
+//   let html = `<h4 class="personalsTitle">${_title}</h4>`;
+//
+// includes body of personal
   let html = `<h4 class="personalsTitle">${_title}</h4>
+            <p class="personalsText">${_text}</p>
+            <p class="contact">${_contact}</p>
             <p class="text-right mb-1"> <a href="javascript:void(0)" onclick="">like</a>
               <a href="javascript:void(0)" onclick="">flag</a><br><span class="likes">${_likes}</span> likes</p>`;
-
-// // includes body of personal
-  // let html = `<h4 class="personalsTitle">${_title}</h4>
-  //           <p class="personalsText">${_text}</p>
-  //           <p class="contact">${_contact}</p>
-  //           <p class="text-right mb-1"> <a href="javascript:void(0)" onclick="">like</a>
-  //             <a href="javascript:void(0)" onclick="">flag</a><br><span class="likes">${_likes}</span> likes</p>`;
 
 
   let post = document.createElement("div");
