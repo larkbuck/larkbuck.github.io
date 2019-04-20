@@ -210,6 +210,10 @@ body {
   color: #D2DB21;
 }
 
+.hoverBlack:hover a, .black a, .transBlack a {
+  color: #D2DB21;
+}
+
 .noHover {
   background-color: #e0e1debb;
   color: #161616;
@@ -234,6 +238,11 @@ body {
 .transBlack {
   color: #D2DB21;
   background: #161616bb;
+}
+
+.black {
+  color: #D2DB21;
+  background: #161616;
 }
 
 a {
