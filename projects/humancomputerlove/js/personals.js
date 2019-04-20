@@ -168,15 +168,23 @@ function createCell(_id, _type, _title, _text, _contact, _likes, _flags) {
   // }
 
 
-// // just title
-//   let html = `<h4 class="personalsTitle">${_title}</h4>`;
-//
-// includes body of personal
+  // // just title
+  // let html = `<h4 class="personalsTitle">${_title}</h4>`;
+
+  // includes body of personal
+  // let html = `<h4 class="personalsTitle">${_title}</h4>
+  //           <p class="personalsText">${_text}</p>
+  //           <p class="contact">${_contact}</p>
+  //           <p class="text-right mb-1"> <a href="javascript:void(0)" onclick="">like</a>
+  //             <a href="javascript:void(0)" onclick="">flag</a><br><span class="likes">${_likes}</span> likes</p>`;
+
+  // includes body of personal
   let html = `<h4 class="personalsTitle">${_title}</h4>
             <p class="personalsText">${_text}</p>
             <p class="contact">${_contact}</p>
-            <p class="text-right mb-1"> <a href="javascript:void(0)" onclick="">like</a>
-              <a href="javascript:void(0)" onclick="">flag</a><br><span class="likes">${_likes}</span> likes</p>`;
+            <p class="text-right mb-1"> <span class="likes">${_likes} </span><a href="javascript:void(0)" onclick="">&#9825;</a>
+            <a href="javascript:void(0)" onclick="">&#9872;</a>
+              </p>`;
 
 
   let post = document.createElement("div");
