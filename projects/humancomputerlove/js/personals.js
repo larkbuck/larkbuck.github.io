@@ -118,7 +118,7 @@ function WidthChange(mq) {
 function createPersonals() {
   personalsCreated = true;
 
-  document.querySelector("#loading").style.visibility = "hidden";
+  // document.querySelector("#loading").style.visibility = "hidden";
   document.querySelector("footer").style.display = "block";
 
   // shuffle entries
