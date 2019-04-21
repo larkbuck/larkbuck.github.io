@@ -12,7 +12,7 @@ let allDataArray;
 let database;
 let keys;
 
-let personalsCreated = false;
+// let personalsCreated = false;
 
 
 // function loadItem(index, filename) {
@@ -92,9 +92,9 @@ function draw() {
 
   // console.log(allData);
 
-  if (allData && !personalsCreated) {
-    createPersonals();
-  }
+  // if (allData && !personalsCreated) {
+  //   createPersonals("humanSeeksComputer");
+  // }
 }
 
 
@@ -113,28 +113,47 @@ function WidthChange(mq) {
   // }
 }
 
+function returnToMenu() {
+  document.querySelector('#q1_filter').style.display = 'block';
+  document.querySelector('#personalsDiv').style.display = 'none';
+  document.querySelector('#backButtonDiv').style.display = 'none';
+}
+
+function createPersonals(_type) {
+
+  if (!allData) {
+    alert("Oops! Personals are still loading. Wait a hot sec and try again.")
+  } else {
+    // personalsCreated = true;
+    document.querySelector("#personalsDiv").innerHTML = "";
+    document.querySelector('#q1_filter').style.display = 'none';
+
+    setTimeout(function() {
+      document.querySelector('#backButtonDiv').style.display = 'block';
+      document.querySelector('#personalsDiv').style.display = 'block';
+    }, 0)
 
 
-function createPersonals() {
-  personalsCreated = true;
+    // document.querySelector("#loading").style.visibility = "hidden";
+    document.querySelector("footer").style.display = "block";
 
-  document.querySelector("#loading").style.visibility = "hidden";
-  document.querySelector("footer").style.display = "block";
+    // shuffle entries
+    for (let i = allDataArray.length - 1; i >= 0; i--) {
+      let randomIndex = Math.floor(Math.random() * (i + 1));
+      let itemAtIndex = allDataArray[randomIndex];
 
-  // shuffle entries
-  for (let i = allDataArray.length - 1; i >= 0; i--) {
-    let randomIndex = Math.floor(Math.random() * (i + 1));
-    let itemAtIndex = allDataArray[randomIndex];
+      allDataArray[randomIndex] = allDataArray[i];
+      allDataArray[i] = itemAtIndex;
+    }
 
-    allDataArray[randomIndex] = allDataArray[i];
-    allDataArray[i] = itemAtIndex;
+    // create post for each entry
+    allDataArray.forEach(function(post) {
+      if (_type === "viewAll") {
+        createCell(post.timeStamp, post.postType, post.postTitle, post.postText, post.contact, post.likes, post.flags);
+      } else if (post.postType === _type)
+        createCell(post.timeStamp, post.postType, post.postTitle, post.postText, post.contact, post.likes, post.flags);
+    });
   }
-
-  // create post for each entry
-  allDataArray.forEach(function(post) {
-    createCell(post.timeStamp, post.postType, post.postTitle, post.postText, post.contact, post.likes, post.flags);
-  });
-
 }
 
 function createCell(_id, _type, _title, _text, _contact, _likes, _flags) {
@@ -188,7 +207,7 @@ function createCell(_id, _type, _title, _text, _contact, _likes, _flags) {
 
 
   let post = document.createElement("div");
-  post.className = `${colSize} m-2 h-25 cell ${cellColor} `;
+  post.className = `${colSize} my-2 mx-auto h-25 cell ${cellColor} `;
   post.id = `${_id}`;
   post.innerHTML = html;
 
