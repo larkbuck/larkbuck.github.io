@@ -1,5 +1,3 @@
-
-
 let state = 0;
 let bubblesPop = []; //array of images
 let bubble; //bubble object
@@ -8,21 +6,11 @@ let popText = [];
 // let popTextWords = ["some things", "are", "just", "joyous", "and beautiful", "and fill you", "with awe,", "thank goddess.", "the act", "of watching", "bubbles move through", "air releases", "serotonin. this is", "an untested", "but not unlikely", "hypothesis.", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "];
 let counter = 0;
 let popSound = [];
-let serotoninImages = []
-let serotonin;
-let serotoninSwitch = false;
 let home;
 
-//Creating animations from explode things --- tho bug with animations so
-//doing away with for now! saved copy in sync/code/games
-
-// let popAnimations = [];
-// let confettiPop_pink;
-// let confettiPop_green;
-// let collisionAnimation;
 
 function preload() {
-  //need to preload images to bubblesPop array
+  //preload images to bubblesPop array
   for (i = 0; i < 21; i++) {
     if (i < 10) {
       bubblesPop[i] = loadImage(`../assets/bubbles/bubblesPop_0${i}.png`)
@@ -31,7 +19,6 @@ function preload() {
     }
   }
 
-  serotonin = loadImage('../assets/bubbles/serotonin_512px.png')
   popSound[0] = loadSound('../assets/bubbles/bubble_pop.mp3');
 }
 
@@ -49,13 +36,12 @@ function setup() {
   //create array of bubble objects
   for (var i = 0; i < bubblesPop.length; i++) {
     bubbles[i] = new Bubble(bubblesPop[i], random(windowWidth - 200) + 100, windowHeight + 200 * (i) + random(200), popSound[0]);
-    // bubbles[i] = new Bubble(bubblesPop[i], random(windowWidth - 200) + 100, windowHeight + 150 * (i) + random(200), popSound[0]);
   }
 
 
   // hard coding links if not accessible bc of mousePressed()
-  home = select(".purpleLink");
-  home.mousePressed(logPress, "/");
+  // home = select(".purpleLink");
+  // home.mousePressed(logPress, "/");
 
 }
 
@@ -70,22 +56,16 @@ function draw() {
   clear();
 
   for (var i = 0; i < bubbles.length; i++) {
-    //un-comment this if you want popped bubble to keep moving
-    // bubbles[i].move();
+
 
     if (bubbles[i].popped == false) {
       bubbles[i].move();
       bubbles[i].display();
     } else {
-      // animation(confettiPop_pink, bubbles[i].x, bubbles[i].y);
       bubbles[i].pop();
     }
   }
 
-  if (serotoninSwitch == true) {
-    serotoninImages[0].position(windowWidth - 600, 600);
-    serotoninImages[0] = image(serotonin, windowWidth - 600, 600);
-  }
 }
 
 function windowResized() {
@@ -161,30 +141,6 @@ function mouseReleased() {
       bubbles[i].popSound.setLoop(false);
       bubbles[i].popSound.play();
       setTimeout(function() {
-        // // For text appearing:
-        // if (counter <= 7) {
-        //   popText[i] = createP(popTextWords[counter]);
-        //   popText[i].position(windowWidth - 250, 350 + 50 * counter);
-        //   popText[i].style("position:fixed; font-size: 26px; color: #00DA80");
-        //   // popText[i] = createP(`bubble #${counter}`);
-        //   // popText[i].position(bubbles[i].x - 30, bubbles[i].y - 80);
-        // // } else{
-        // //   serotoninSwitch = true;
-        // }
-
-        // *** this is with more text ***
-        // } else if (counter <= 11) {
-        //   popText[i].position(windowWidth - 350, 340 + 50 * (counter - 7));
-        //   popText[i].style("position:fixed; font-size: 26px; color: blue");
-        // } else if (counter <= 15) {
-        //   popText[i].position(windowWidth - 350, 340 + 50 * (counter - 7));
-        //   popText[i].style("position:fixed; font-size: 26px; color: blue");
-        //   serotoninSwitch = true;
-        // } else {
-        //   popText[i].position(windowWidth - 450, 330 + 50 * (counter - 15));
-        //   popText[i].style("position:fixed; font-size: 100px; color: pink");
-        // }
-
         counter++;
         // move bubble off screen so no re-clicks
         bubbles[i].x -= 200;

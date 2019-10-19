@@ -605,7 +605,7 @@ footer {
   top: 300px;
   text-align: right;
   font-size: 14px;
-  line-height: 1;
+  line-height: .7;
 }
 
 .projectIndexLink a, .projectIndexLink p {
