@@ -3,36 +3,36 @@
  *  p5.sound extends p5 with <a href="http://caniuse.com/audio-api"
  *  target="_blank">Web Audio</a> functionality including audio input,
  *  playback, analysis and synthesis.
- *  <br/><br/>
- *  <a href="#/p5.SoundFile"><b>p5.SoundFile</b></a>: Load and play sound files.<br/>
- *  <a href="#/p5.Amplitude"><b>p5.Amplitude</b></a>: Get the current volume of a sound.<br/>
+ *  <br><br>
+ *  <a href="#/p5.SoundFile"><b>p5.SoundFile</b></a>: Load and play sound files.<br>
+ *  <a href="#/p5.Amplitude"><b>p5.Amplitude</b></a>: Get the current volume of a sound.<br>
  *  <a href="#/p5.AudioIn"><b>p5.AudioIn</b></a>: Get sound from an input source, typically
- *    a computer microphone.<br/>
+ *    a computer microphone.<br>
  *  <a href="#/p5.FFT"><b>p5.FFT</b></a>: Analyze the frequency of sound. Returns
- *    results from the frequency spectrum or time domain (waveform).<br/>
+ *    results from the frequency spectrum or time domain (waveform).<br>
  *  <a href="#/p5.Oscillator"><b>p5.Oscillator</b></a>: Generate Sine,
  *    Triangle, Square and Sawtooth waveforms. Base class of
  *    <a href="#/p5.Noise">p5.Noise</a> and <a href="#/p5.Pulse">p5.Pulse</a>.
- *    <br/>
+ *    <br>
  *  <a href="#/p5.Envelope"><b>p5.Envelope</b></a>: An Envelope is a series
  *    of fades over time. Often used to control an object's
  *    output gain level as an "ADSR Envelope" (Attack, Decay,
- *    Sustain, Release). Can also modulate other parameters.<br/>
+ *    Sustain, Release). Can also modulate other parameters.<br>
  *  <a href="#/p5.Delay"><b>p5.Delay</b></a>: A delay effect with
- *    parameters for feedback, delayTime, and lowpass filter.<br/>
+ *    parameters for feedback, delayTime, and lowpass filter.<br>
  *  <a href="#/p5.Filter"><b>p5.Filter</b></a>: Filter the frequency range of a
  *    sound.
- *  <br/>
+ *  <br>
  *  <a href="#/p5.Reverb"><b>p5.Reverb</b></a>: Add reverb to a sound by specifying
- *    duration and decay. <br/>
+ *    duration and decay. <br>
  *  <b><a href="#/p5.Convolver">p5.Convolver</a>:</b> Extends
  *  <a href="#/p5.Reverb">p5.Reverb</a> to simulate the sound of real
- *    physical spaces through convolution.<br/>
+ *    physical spaces through convolution.<br>
  *  <b><a href="#/p5.SoundRecorder">p5.SoundRecorder</a></b>: Record sound for playback
  *    / save the .wav file.
  *  <b><a href="#/p5.Phrase">p5.Phrase</a></b>, <b><a href="#/p5.Part">p5.Part</a></b> and
  *  <b><a href="#/p5.Score">p5.Score</a></b>: Compose musical sequences.
- *  <br/><br/>
+ *  <br><br>
  *  p5.sound is on <a href="https://github.com/therewasaguy/p5.sound/">GitHub</a>.
  *  Download the latest version
  *  <a href="https://github.com/therewasaguy/p5.sound/blob/master/lib/p5.sound.js">here</a>.
@@ -7513,7 +7513,7 @@ audioin = function () {
    *  Start processing audio input. This enables the use of other
    *  AudioIn methods like getLevel(). Note that by default, AudioIn
    *  is not connected to p5.sound's output. So you won't hear
-   *  anything unless you use the connect() method.<br/>
+   *  anything unless you use the connect() method.<br>
    *
    *  Certain browsers limit access to the user's microphone. For example,
    *  Chrome only allows access from localhost and over https. For this reason,
@@ -7580,7 +7580,7 @@ audioin = function () {
   };
   /**
    *  Connect to an audio unit. If no parameter is provided, will
-   *  connect to the master output (i.e. your speakers).<br/>
+   *  connect to the master output (i.e. your speakers).<br>
    *
    *  @method  connect
    *  @param  {Object} [unit] An object that accepts audio input,
@@ -7602,7 +7602,7 @@ audioin = function () {
   /**
    *  Disconnect the AudioIn from all audio units. For example, if
    *  connect() had been called, disconnect() will stop sending
-   *  signal to your speakers.<br/>
+   *  signal to your speakers.<br>
    *
    *  @method  disconnect
    */
@@ -7618,7 +7618,7 @@ audioin = function () {
    *  class contains its own instance of the Amplitude class to help
    *  make it easy to get a microphone's volume level. Accepts an
    *  optional smoothing value (0.0 < 1.0). <em>NOTE: AudioIn must
-   *  .start() before using .getLevel().</em><br/>
+   *  .start() before using .getLevel().</em><br>
    *
    *  @method  getLevel
    *  @param  {Number} [smoothing] Smoothing is 0.0 by default.
@@ -7632,7 +7632,7 @@ audioin = function () {
     return this.amplitude.getLevel();
   };
   /**
-   *  Set amplitude (volume) of a mic input between 0 and 1.0. <br/>
+   *  Set amplitude (volume) of a mic input between 0 and 1.0. <br>
    *
    *  @method  amp
    *  @param  {Number} vol between 0 and 1.0
@@ -7707,7 +7707,7 @@ audioin = function () {
    *  This is only available in browsers that support
    *  <a title="MediaDevices.enumerateDevices() - Web APIs | MDN" target="_blank" href=
    *  "https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices"
-   *  >navigator.mediaDevices.enumerateDevices()</a>.<br/>
+   *  >navigator.mediaDevices.enumerateDevices()</a>.<br>
    *
    *  @method setSource
    *  @param {number} num position of input source in the array
@@ -8496,12 +8496,12 @@ filter = function () {
    *  include:</p>
    *  * <a href="/reference/#/p5.LowPass"><code>p5.LowPass</code></a>:
    *  Allows frequencies below the cutoff frequency to pass through,
-   *  and attenuates frequencies above the cutoff.<br/>
+   *  and attenuates frequencies above the cutoff.<br>
    *  * <a href="/reference/#/p5.HighPass"><code>p5.HighPass</code></a>:
-   *  The opposite of a lowpass filter. <br/>
+   *  The opposite of a lowpass filter. <br>
    *  * <a href="/reference/#/p5.BandPass"><code>p5.BandPass</code></a>:
    *  Allows a range of frequencies to pass through and attenuates
-   *  the frequencies below and above this frequency range.<br/>
+   *  the frequencies below and above this frequency range.<br>
    *
    *  The <code>.res()</code> method controls either width of the
    *  bandpass, or resonance of the low/highpass cutoff frequency.
@@ -9255,8 +9255,8 @@ listener3d = function () {
   //   * The Listener modifies the properties of the Audio Context Listener. 
   //   * Both objects types use the same methods. The default is a spatial panner.
   //   *
-  //   * <code>p5.Panner3D</code> - Constructs a Spatial Panner<br/>
-  //   * <code>p5.Listener3D</code> - Constructs a Spatial Listener<br/>
+  //   * <code>p5.Panner3D</code> - Constructs a Spatial Panner<br>
+  //   * <code>p5.Listener3D</code> - Constructs a Spatial Listener<br>
   //   *
   //   * @class listener
   //   * @constructor
@@ -10195,7 +10195,7 @@ reverb = function () {
    *  the items in the <code>.impulses</code> Array. Accepts a parameter
    *  to identify which impulse you wish to use, identified either by its
    *  original filename (String) or by its position in the <code>.impulses
-   *  </code> Array (Number).<br/>
+   *  </code> Array (Number).<br>
    *  You can access the objects in the .impulses Array directly. Each
    *  Object has two attributes: an <code>.audioBuffer</code> (type:
    *  Web Audio <a href="

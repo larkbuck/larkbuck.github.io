@@ -471,6 +471,14 @@ p a:hover, h1 a:hover {
   /* align-self: flex-end; */
 }
 
+#container_startups {
+  justify-content: flex-start;
+  padding: 20px 20px 20px 20px;
+  background-color: #fff;
+  max-width: 1000px;
+  align-self: flex-start;
+}
+
 #container_bubbles {
   flex-wrap: wrap;
   align-items: center;

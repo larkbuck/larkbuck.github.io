@@ -1755,7 +1755,7 @@ module.exports={
             "module": "p5.sound",
             "file": "lib/addons/p5.sound.js",
             "line": 12761,
-            "description": "<p>p5.sound extends p5 with <a href=\"http://caniuse.com/audio-api\"\ntarget=\"_blank\">Web Audio</a> functionality including audio input,\nplayback, analysis and synthesis.\n<br/><br/>\n<a href=\"#/p5.SoundFile\"><b>p5.SoundFile</b></a>: Load and play sound files.<br/>\n<a href=\"#/p5.Amplitude\"><b>p5.Amplitude</b></a>: Get the current volume of a sound.<br/>\n<a href=\"#/p5.AudioIn\"><b>p5.AudioIn</b></a>: Get sound from an input source, typically\n  a computer microphone.<br/>\n<a href=\"#/p5.FFT\"><b>p5.FFT</b></a>: Analyze the frequency of sound. Returns\n  results from the frequency spectrum or time domain (waveform).<br/>\n<a href=\"#/p5.Oscillator\"><b>p5.Oscillator</b></a>: Generate Sine,\n  Triangle, Square and Sawtooth waveforms. Base class of\n  <a href=\"#/p5.Noise\">p5.Noise</a> and <a href=\"#/p5.Pulse\">p5.Pulse</a>.\n  <br/>\n<a href=\"#/p5.Envelope\"><b>p5.Envelope</b></a>: An Envelope is a series\n  of fades over time. Often used to control an object&#39;s\n  output gain level as an &quot;ADSR Envelope&quot; (Attack, Decay,\n  Sustain, Release). Can also modulate other parameters.<br/>\n<a href=\"#/p5.Delay\"><b>p5.Delay</b></a>: A delay effect with\n  parameters for feedback, delayTime, and lowpass filter.<br/>\n<a href=\"#/p5.Filter\"><b>p5.Filter</b></a>: Filter the frequency range of a\n  sound.\n<br/>\n<a href=\"#/p5.Reverb\"><b>p5.Reverb</b></a>: Add reverb to a sound by specifying\n  duration and decay. <br/>\n<b><a href=\"#/p5.Convolver\">p5.Convolver</a>:</b> Extends\n<a href=\"#/p5.Reverb\">p5.Reverb</a> to simulate the sound of real\n  physical spaces through convolution.<br/>\n<b><a href=\"#/p5.SoundRecorder\">p5.SoundRecorder</a></b>: Record sound for playback\n  / save the .wav file.\n<b><a href=\"#/p5.Phrase\">p5.Phrase</a></b>, <b><a href=\"#/p5.Part\">p5.Part</a></b> and\n<b><a href=\"#/p5.Score\">p5.Score</a></b>: Compose musical sequences.\n<br/><br/>\np5.sound is on <a href=\"https://github.com/therewasaguy/p5.sound/\">GitHub</a>.\nDownload the latest version\n<a href=\"https://github.com/therewasaguy/p5.sound/blob/master/lib/p5.sound.js\">here</a>.</p>\n",
+            "description": "<p>p5.sound extends p5 with <a href=\"http://caniuse.com/audio-api\"\ntarget=\"_blank\">Web Audio</a> functionality including audio input,\nplayback, analysis and synthesis.\n<br><br>\n<a href=\"#/p5.SoundFile\"><b>p5.SoundFile</b></a>: Load and play sound files.<br>\n<a href=\"#/p5.Amplitude\"><b>p5.Amplitude</b></a>: Get the current volume of a sound.<br>\n<a href=\"#/p5.AudioIn\"><b>p5.AudioIn</b></a>: Get sound from an input source, typically\n  a computer microphone.<br>\n<a href=\"#/p5.FFT\"><b>p5.FFT</b></a>: Analyze the frequency of sound. Returns\n  results from the frequency spectrum or time domain (waveform).<br>\n<a href=\"#/p5.Oscillator\"><b>p5.Oscillator</b></a>: Generate Sine,\n  Triangle, Square and Sawtooth waveforms. Base class of\n  <a href=\"#/p5.Noise\">p5.Noise</a> and <a href=\"#/p5.Pulse\">p5.Pulse</a>.\n  <br>\n<a href=\"#/p5.Envelope\"><b>p5.Envelope</b></a>: An Envelope is a series\n  of fades over time. Often used to control an object&#39;s\n  output gain level as an &quot;ADSR Envelope&quot; (Attack, Decay,\n  Sustain, Release). Can also modulate other parameters.<br>\n<a href=\"#/p5.Delay\"><b>p5.Delay</b></a>: A delay effect with\n  parameters for feedback, delayTime, and lowpass filter.<br>\n<a href=\"#/p5.Filter\"><b>p5.Filter</b></a>: Filter the frequency range of a\n  sound.\n<br>\n<a href=\"#/p5.Reverb\"><b>p5.Reverb</b></a>: Add reverb to a sound by specifying\n  duration and decay. <br>\n<b><a href=\"#/p5.Convolver\">p5.Convolver</a>:</b> Extends\n<a href=\"#/p5.Reverb\">p5.Reverb</a> to simulate the sound of real\n  physical spaces through convolution.<br>\n<b><a href=\"#/p5.SoundRecorder\">p5.SoundRecorder</a></b>: Record sound for playback\n  / save the .wav file.\n<b><a href=\"#/p5.Phrase\">p5.Phrase</a></b>, <b><a href=\"#/p5.Part\">p5.Part</a></b> and\n<b><a href=\"#/p5.Score\">p5.Score</a></b>: Compose musical sequences.\n<br><br>\np5.sound is on <a href=\"https://github.com/therewasaguy/p5.sound/\">GitHub</a>.\nDownload the latest version\n<a href=\"https://github.com/therewasaguy/p5.sound/blob/master/lib/p5.sound.js\">here</a>.</p>\n",
             "tag": "main",
             "itemtype": "main"
         }
@@ -2734,7 +2734,7 @@ module.exports={
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
             "line": 8493,
-            "description": "<p><p>A p5.Filter uses a Web Audio Biquad Filter to filter\nthe frequency response of an input source. Subclasses\ninclude:</p></p>\n<ul>\n<li><a href=\"/reference/#/p5.LowPass\"><code>p5.LowPass</code></a>:\nAllows frequencies below the cutoff frequency to pass through,\nand attenuates frequencies above the cutoff.<br/></li>\n<li><a href=\"/reference/#/p5.HighPass\"><code>p5.HighPass</code></a>:\nThe opposite of a lowpass filter. <br/></li>\n<li><a href=\"/reference/#/p5.BandPass\"><code>p5.BandPass</code></a>:\nAllows a range of frequencies to pass through and attenuates\nthe frequencies below and above this frequency range.<br/></li>\n</ul>\n<p>The <code>.res()</code> method controls either width of the\nbandpass, or resonance of the low/highpass cutoff frequency.</p>\n<p>This class extends <a href = \"/reference/#/p5.Effect\">p5.Effect</a>.<br>Methods <a href = \"/reference/#/p5.Effect/amp\">amp()</a>, <a href = \"/reference/#/p5.Effect/chain\">chain()</a>, \n<a href = \"/reference/#/p5.Effect/drywet\">drywet()</a>, <a href = \"/reference/#/p5.Effect/connect\">connect()</a>, and \n<a href = \"/reference/#/p5.Effect/disconnect\">disconnect()</a> are available.</p>\n",
+            "description": "<p><p>A p5.Filter uses a Web Audio Biquad Filter to filter\nthe frequency response of an input source. Subclasses\ninclude:</p></p>\n<ul>\n<li><a href=\"/reference/#/p5.LowPass\"><code>p5.LowPass</code></a>:\nAllows frequencies below the cutoff frequency to pass through,\nand attenuates frequencies above the cutoff.<br></li>\n<li><a href=\"/reference/#/p5.HighPass\"><code>p5.HighPass</code></a>:\nThe opposite of a lowpass filter. <br></li>\n<li><a href=\"/reference/#/p5.BandPass\"><code>p5.BandPass</code></a>:\nAllows a range of frequencies to pass through and attenuates\nthe frequencies below and above this frequency range.<br></li>\n</ul>\n<p>The <code>.res()</code> method controls either width of the\nbandpass, or resonance of the low/highpass cutoff frequency.</p>\n<p>This class extends <a href = \"/reference/#/p5.Effect\">p5.Effect</a>.<br>Methods <a href = \"/reference/#/p5.Effect/amp\">amp()</a>, <a href = \"/reference/#/p5.Effect/chain\">chain()</a>, \n<a href = \"/reference/#/p5.Effect/drywet\">drywet()</a>, <a href = \"/reference/#/p5.Effect/connect\">connect()</a>, and \n<a href = \"/reference/#/p5.Effect/disconnect\">disconnect()</a> are available.</p>\n",
             "extends": "p5.Effect",
             "is_constructor": 1,
             "params": [
@@ -4987,7 +4987,7 @@ module.exports={
         {
             "file": "src/core/shape/curves.js",
             "line": 13,
-            "description": "<p>Draws a cubic Bezier curve on the screen. These curves are defined by a\nseries of anchor and control points. The first two parameters specify\nthe first anchor point and the last two parameters specify the other\nanchor point, which become the first and last points on the curve. The\nmiddle parameters specify the two control points which define the shape\nof the curve. Approximately speaking, control points &quot;pull&quot; the curve\ntowards them.<br /><br />Bezier curves were developed by French\nautomotive engineer Pierre Bezier, and are commonly used in computer\ngraphics to define gently sloping curves. See also <a href=\"#/p5/curve\">curve()</a>.</p>\n",
+            "description": "<p>Draws a cubic Bezier curve on the screen. These curves are defined by a\nseries of anchor and control points. The first two parameters specify\nthe first anchor point and the last two parameters specify the other\nanchor point, which become the first and last points on the curve. The\nmiddle parameters specify the two control points which define the shape\nof the curve. Approximately speaking, control points &quot;pull&quot; the curve\ntowards them.<br><br>Bezier curves were developed by French\nautomotive engineer Pierre Bezier, and are commonly used in computer\ngraphics to define gently sloping curves. See also <a href=\"#/p5/curve\">curve()</a>.</p>\n",
             "itemtype": "method",
             "name": "bezier",
             "chainable": 1,
@@ -5228,7 +5228,7 @@ module.exports={
         {
             "file": "src/core/shape/curves.js",
             "line": 273,
-            "description": "<p>Draws a curved line on the screen between two points, given as the\nmiddle four parameters. The first two parameters are a control point, as\nif the curve came from this point even though it&#39;s not drawn. The last\ntwo parameters similarly describe the other control point. <br /><br />\nLonger curves can be created by putting a series of <a href=\"#/p5/curve\">curve()</a> functions\ntogether or using <a href=\"#/p5/curveVertex\">curveVertex()</a>. An additional function called\n<a href=\"#/p5/curveTightness\">curveTightness()</a> provides control for the visual quality of the curve.\nThe <a href=\"#/p5/curve\">curve()</a> function is an implementation of Catmull-Rom splines.</p>\n",
+            "description": "<p>Draws a curved line on the screen between two points, given as the\nmiddle four parameters. The first two parameters are a control point, as\nif the curve came from this point even though it&#39;s not drawn. The last\ntwo parameters similarly describe the other control point. <br><br>\nLonger curves can be created by putting a series of <a href=\"#/p5/curve\">curve()</a> functions\ntogether or using <a href=\"#/p5/curveVertex\">curveVertex()</a>. An additional function called\n<a href=\"#/p5/curveTightness\">curveTightness()</a> provides control for the visual quality of the curve.\nThe <a href=\"#/p5/curve\">curve()</a> function is an implementation of Catmull-Rom splines.</p>\n",
             "itemtype": "method",
             "name": "curve",
             "chainable": 1,
@@ -13572,7 +13572,7 @@ module.exports={
         {
             "file": "src/math/noise.js",
             "line": 40,
-            "description": "<p>Returns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br /><br /> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program; see\nthe <a href=\"#/p5/noiseSeed\">noiseSeed()</a> function). p5.js can compute 1D, 2D and 3D noise,\ndepending on the number of coordinates given. The resulting value will\nalways be between 0.0 and 1.0. The noise value can be animated by moving\nthrough the noise space as demonstrated in the example above. The 2nd\nand 3rd dimension can also be interpreted as time.<br /><br />The actual\nnoise is structured similar to an audio signal, in respect to the\nfunction&#39;s use of frequencies. Similar to the concept of harmonics in\nphysics, perlin noise is computed over several octaves which are added\ntogether for the final result. <br /><br />Another way to adjust the\ncharacter of the resulting sequence is the scale of the input\ncoordinates. As the function works within an infinite space the value of\nthe coordinates doesn&#39;t matter as such, only the distance between\nsuccessive coordinates does (eg. when using <b>noise()</b> within a\nloop). As a general rule the smaller the difference between coordinates,\nthe smoother the resulting noise sequence will be. Steps of 0.005-0.03\nwork best for most applications, but this will differ depending on use.</p>\n",
+            "description": "<p>Returns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br><br> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program; see\nthe <a href=\"#/p5/noiseSeed\">noiseSeed()</a> function). p5.js can compute 1D, 2D and 3D noise,\ndepending on the number of coordinates given. The resulting value will\nalways be between 0.0 and 1.0. The noise value can be animated by moving\nthrough the noise space as demonstrated in the example above. The 2nd\nand 3rd dimension can also be interpreted as time.<br><br>The actual\nnoise is structured similar to an audio signal, in respect to the\nfunction&#39;s use of frequencies. Similar to the concept of harmonics in\nphysics, perlin noise is computed over several octaves which are added\ntogether for the final result. <br><br>Another way to adjust the\ncharacter of the resulting sequence is the scale of the input\ncoordinates. As the function works within an infinite space the value of\nthe coordinates doesn&#39;t matter as such, only the distance between\nsuccessive coordinates does (eg. when using <b>noise()</b> within a\nloop). As a general rule the smaller the difference between coordinates,\nthe smoother the resulting noise sequence will be. Steps of 0.005-0.03\nwork best for most applications, but this will differ depending on use.</p>\n",
             "itemtype": "method",
             "name": "noise",
             "params": [
@@ -22484,7 +22484,7 @@ module.exports={
         {
             "file": "lib/addons/p5.sound.js",
             "line": 7512,
-            "description": "<p>Start processing audio input. This enables the use of other\nAudioIn methods like getLevel(). Note that by default, AudioIn\nis not connected to p5.sound&#39;s output. So you won&#39;t hear\nanything unless you use the connect() method.<br/></p>\n<p>Certain browsers limit access to the user&#39;s microphone. For example,\nChrome only allows access from localhost and over https. For this reason,\nyou may want to include an errorCallback—a function that is called in case\nthe browser won&#39;t provide mic access.</p>\n",
+            "description": "<p>Start processing audio input. This enables the use of other\nAudioIn methods like getLevel(). Note that by default, AudioIn\nis not connected to p5.sound&#39;s output. So you won&#39;t hear\nanything unless you use the connect() method.<br></p>\n<p>Certain browsers limit access to the user&#39;s microphone. For example,\nChrome only allows access from localhost and over https. For this reason,\nyou may want to include an errorCallback—a function that is called in case\nthe browser won&#39;t provide mic access.</p>\n",
             "itemtype": "method",
             "name": "start",
             "params": [
@@ -22518,7 +22518,7 @@ module.exports={
         {
             "file": "lib/addons/p5.sound.js",
             "line": 7581,
-            "description": "<p>Connect to an audio unit. If no parameter is provided, will\nconnect to the master output (i.e. your speakers).<br/></p>\n",
+            "description": "<p>Connect to an audio unit. If no parameter is provided, will\nconnect to the master output (i.e. your speakers).<br></p>\n",
             "itemtype": "method",
             "name": "connect",
             "params": [
@@ -22536,7 +22536,7 @@ module.exports={
         {
             "file": "lib/addons/p5.sound.js",
             "line": 7602,
-            "description": "<p>Disconnect the AudioIn from all audio units. For example, if\nconnect() had been called, disconnect() will stop sending\nsignal to your speakers.<br/></p>\n",
+            "description": "<p>Disconnect the AudioIn from all audio units. For example, if\nconnect() had been called, disconnect() will stop sending\nsignal to your speakers.<br></p>\n",
             "itemtype": "method",
             "name": "disconnect",
             "class": "p5.AudioIn",
@@ -22546,7 +22546,7 @@ module.exports={
         {
             "file": "lib/addons/p5.sound.js",
             "line": 7616,
-            "description": "<p>Read the Amplitude (volume level) of an AudioIn. The AudioIn\nclass contains its own instance of the Amplitude class to help\nmake it easy to get a microphone&#39;s volume level. Accepts an\noptional smoothing value (0.0 &lt; 1.0). <em>NOTE: AudioIn must\n.start() before using .getLevel().</em><br/></p>\n",
+            "description": "<p>Read the Amplitude (volume level) of an AudioIn. The AudioIn\nclass contains its own instance of the Amplitude class to help\nmake it easy to get a microphone&#39;s volume level. Accepts an\noptional smoothing value (0.0 &lt; 1.0). <em>NOTE: AudioIn must\n.start() before using .getLevel().</em><br></p>\n",
             "itemtype": "method",
             "name": "getLevel",
             "params": [
@@ -22568,7 +22568,7 @@ module.exports={
         {
             "file": "lib/addons/p5.sound.js",
             "line": 7634,
-            "description": "<p>Set amplitude (volume) of a mic input between 0 and 1.0. <br/></p>\n",
+            "description": "<p>Set amplitude (volume) of a mic input between 0 and 1.0. <br></p>\n",
             "itemtype": "method",
             "name": "amp",
             "params": [
@@ -22622,7 +22622,7 @@ module.exports={
         {
             "file": "lib/addons/p5.sound.js",
             "line": 7704,
-            "description": "<p>Set the input source. Accepts a number representing a\nposition in the array returned by getSources().\nThis is only available in browsers that support\n&lt;a title=&quot;MediaDevices.enumerateDevices() - Web APIs | MDN&quot; target=&quot;_blank&quot; href=\n&quot;<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices\">https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices</a>&quot;</p>\n<blockquote>\n<p>navigator.mediaDevices.enumerateDevices()</a>.<br/></p>\n</blockquote>\n",
+            "description": "<p>Set the input source. Accepts a number representing a\nposition in the array returned by getSources().\nThis is only available in browsers that support\n&lt;a title=&quot;MediaDevices.enumerateDevices() - Web APIs | MDN&quot; target=&quot;_blank&quot; href=\n&quot;<a href=\"https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices\">https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices</a>&quot;</p>\n<blockquote>\n<p>navigator.mediaDevices.enumerateDevices()</a>.<br></p>\n</blockquote>\n",
             "itemtype": "method",
             "name": "setSource",
             "params": [
@@ -23714,7 +23714,7 @@ module.exports={
         {
             "file": "lib/addons/p5.sound.js",
             "line": 10192,
-            "description": "<p>If you have used <code>.addImpulse()</code> to add multiple impulses\nto a p5.Convolver, then you can use this method to toggle between\nthe items in the <code>.impulses</code> Array. Accepts a parameter\nto identify which impulse you wish to use, identified either by its\noriginal filename (String) or by its position in the <code>.impulses\n</code> Array (Number).<br/>\nYou can access the objects in the .impulses Array directly. Each\nObject has two attributes: an <code>.audioBuffer</code> (type:\nWeb Audio <a href=\"\nhttp://webaudio.github.io/web-audio-api/#the-audiobuffer-interface\">\nAudioBuffer)</a> and a <code>.name</code>, a String that corresponds\nwith the original filename.</p>\n",
+            "description": "<p>If you have used <code>.addImpulse()</code> to add multiple impulses\nto a p5.Convolver, then you can use this method to toggle between\nthe items in the <code>.impulses</code> Array. Accepts a parameter\nto identify which impulse you wish to use, identified either by its\noriginal filename (String) or by its position in the <code>.impulses\n</code> Array (Number).<br>\nYou can access the objects in the .impulses Array directly. Each\nObject has two attributes: an <code>.audioBuffer</code> (type:\nWeb Audio <a href=\"\nhttp://webaudio.github.io/web-audio-api/#the-audiobuffer-interface\">\nAudioBuffer)</a> and a <code>.name</code>, a String that corresponds\nwith the original filename.</p>\n",
             "itemtype": "method",
             "name": "toggleImpulse",
             "params": [
@@ -53851,7 +53851,7 @@ _dereq_('../error_helpers');
  * anchor point, which become the first and last points on the curve. The
  * middle parameters specify the two control points which define the shape
  * of the curve. Approximately speaking, control points "pull" the curve
- * towards them.<br /><br />Bezier curves were developed by French
+ * towards them.<br><br>Bezier curves were developed by French
  * automotive engineer Pierre Bezier, and are commonly used in computer
  * graphics to define gently sloping curves. See also <a href="#/p5/curve">curve()</a>.
  *
@@ -54108,7 +54108,7 @@ p5.prototype.bezierTangent = function(a, b, c, d, t) {
  * Draws a curved line on the screen between two points, given as the
  * middle four parameters. The first two parameters are a control point, as
  * if the curve came from this point even though it's not drawn. The last
- * two parameters similarly describe the other control point. <br /><br />
+ * two parameters similarly describe the other control point. <br><br>
  * Longer curves can be created by putting a series of <a href="#/p5/curve">curve()</a> functions
  * together or using <a href="#/p5/curveVertex">curveVertex()</a>. An additional function called
  * <a href="#/p5/curveTightness">curveTightness()</a> provides control for the visual quality of the curve.
@@ -67715,7 +67715,7 @@ var perlin; // will be initialized lazily by noise() or noiseSeed()
  * succession of numbers compared to the standard <b>random()</b> function.
  * It was invented by Ken Perlin in the 1980s and been used since in
  * graphical applications to produce procedural textures, natural motion,
- * shapes, terrains etc.<br /><br /> The main difference to the
+ * shapes, terrains etc.<br><br> The main difference to the
  * <b>random()</b> function is that Perlin noise is defined in an infinite
  * n-dimensional space where each pair of coordinates corresponds to a
  * fixed semi-random value (fixed only for the lifespan of the program; see
@@ -67723,11 +67723,11 @@ var perlin; // will be initialized lazily by noise() or noiseSeed()
  * depending on the number of coordinates given. The resulting value will
  * always be between 0.0 and 1.0. The noise value can be animated by moving
  * through the noise space as demonstrated in the example above. The 2nd
- * and 3rd dimension can also be interpreted as time.<br /><br />The actual
+ * and 3rd dimension can also be interpreted as time.<br><br>The actual
  * noise is structured similar to an audio signal, in respect to the
  * function's use of frequencies. Similar to the concept of harmonics in
  * physics, perlin noise is computed over several octaves which are added
- * together for the final result. <br /><br />Another way to adjust the
+ * together for the final result. <br><br>Another way to adjust the
  * character of the resulting sequence is the scale of the input
  * coordinates. As the function works within an infinite space the value of
  * the coordinates doesn't matter as such, only the distance between

@@ -26318,7 +26318,7 @@ _dereq_('../error_helpers');
  * anchor point, which become the first and last points on the curve. The
  * middle parameters specify the two control points which define the shape
  * of the curve. Approximately speaking, control points "pull" the curve
- * towards them.<br /><br />Bezier curves were developed by French
+ * towards them.<br><br>Bezier curves were developed by French
  * automotive engineer Pierre Bezier, and are commonly used in computer
  * graphics to define gently sloping curves. See also <a href="#/p5/curve">curve()</a>.
  *
@@ -26575,7 +26575,7 @@ p5.prototype.bezierTangent = function(a, b, c, d, t) {
  * Draws a curved line on the screen between two points, given as the
  * middle four parameters. The first two parameters are a control point, as
  * if the curve came from this point even though it's not drawn. The last
- * two parameters similarly describe the other control point. <br /><br />
+ * two parameters similarly describe the other control point. <br><br>
  * Longer curves can be created by putting a series of <a href="#/p5/curve">curve()</a> functions
  * together or using <a href="#/p5/curveVertex">curveVertex()</a>. An additional function called
  * <a href="#/p5/curveTightness">curveTightness()</a> provides control for the visual quality of the curve.
@@ -40182,7 +40182,7 @@ var perlin; // will be initialized lazily by noise() or noiseSeed()
  * succession of numbers compared to the standard <b>random()</b> function.
  * It was invented by Ken Perlin in the 1980s and been used since in
  * graphical applications to produce procedural textures, natural motion,
- * shapes, terrains etc.<br /><br /> The main difference to the
+ * shapes, terrains etc.<br><br> The main difference to the
  * <b>random()</b> function is that Perlin noise is defined in an infinite
  * n-dimensional space where each pair of coordinates corresponds to a
  * fixed semi-random value (fixed only for the lifespan of the program; see
@@ -40190,11 +40190,11 @@ var perlin; // will be initialized lazily by noise() or noiseSeed()
  * depending on the number of coordinates given. The resulting value will
  * always be between 0.0 and 1.0. The noise value can be animated by moving
  * through the noise space as demonstrated in the example above. The 2nd
- * and 3rd dimension can also be interpreted as time.<br /><br />The actual
+ * and 3rd dimension can also be interpreted as time.<br><br>The actual
  * noise is structured similar to an audio signal, in respect to the
  * function's use of frequencies. Similar to the concept of harmonics in
  * physics, perlin noise is computed over several octaves which are added
- * together for the final result. <br /><br />Another way to adjust the
+ * together for the final result. <br><br>Another way to adjust the
  * character of the resulting sequence is the scale of the input
  * coordinates. As the function works within an infinite space the value of
  * the coordinates doesn't matter as such, only the distance between
