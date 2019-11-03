@@ -393,6 +393,7 @@ p a:hover, h1 a:hover {
   max-width: 1000px;
   color: #F7F7F7;
   text-align: center;
+  /* text-shadow: 2px 2px #000; */
 }
 
 #container_ttProduct {
