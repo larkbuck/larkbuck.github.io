@@ -5,7 +5,12 @@ let cnv;
 let points = 0;
 let bars = [];
 let w = 800;
-let h = 600;
+let h = 400;
+let backgroundSpeed = 1;
+let backgroundY1 = 0;
+let backgroundY2;
+let numBars = 6
+let imgHeight = 200;
 
 
 function preload() {
@@ -18,6 +23,8 @@ function preload() {
 
 function setup() {
   cnv = createCanvas(w, h);
+
+  backgroundY2 = -(imgHeight * numBars);
 
 }
 
@@ -44,21 +51,33 @@ function draw() {
 
 
 function title() {
-    background(0);
+  background(100);
 
-  for (let i = 0; i < 3; i++) {
-    image(bars[i + 2], 0, i * 200);
+
+
+  for (let i = 0; i < numBars; i++) {
+    image(bars[i], 0, backgroundY1 + i * imgHeight);
+    image(bars[i], 0, backgroundY2 + i * imgHeight);
+  }
+
+  backgroundY1 += backgroundSpeed;
+  backgroundY2 += backgroundSpeed;
+
+  if (backgroundY1 > imgHeight * numBars) {
+    backgroundY1 = -imgHeight * numBars;
+  }
+  if (backgroundY2 > imgHeight * numBars) {
+    backgroundY2 = -imgHeight * numBars;
   }
 
 
-  textSize(80);
-  textFont('monospace');
-  // stroke(255);
-  text('MY GAME', 10, 90);
 
-  textSize(28);
-  text(`click anywhere
-    to start`, 400, 90);
+  textSize(80);
+  stroke(255);
+  text('MY GAME', 100, 100);
+
+  textSize(30);
+  text('click anywhere to start', 100, 300);
 }
 
 function titleMouseClicked() {
@@ -68,10 +87,7 @@ function titleMouseClicked() {
 
 
 function level1() {
-  background(0);
-  image(bars[0], 0, 0);
-
-  fill(255);
+  background(50, 150, 200);
   text('click for points', 0, height - 30);
 }
 
