@@ -1,0 +1,96 @@
+
+{
+	"frames": {
+		"fruit_0.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 100,
+				"h": 80
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 100,
+				"h": 80
+			},
+			"sourceSize": {
+				"w": 100,
+				"h": 80
+			}
+		},
+		"fruit_1.png": {
+			"frame": {
+				"x": 1,
+				"y": 83,
+				"w": 100,
+				"h": 80
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 100,
+				"h": 80
+			},
+			"sourceSize": {
+				"w": 100,
+				"h": 80
+			}
+		},
+		"fruit_2.png": {
+			"frame": {
+				"x": 103,
+				"y": 1,
+				"w": 100,
+				"h": 80
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 100,
+				"h": 80
+			},
+			"sourceSize": {
+				"w": 100,
+				"h": 80
+			}
+		},
+		"fruit_3.png": {
+			"frame": {
+				"x": 103,
+				"y": 83,
+				"w": 100,
+				"h": 80
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 100,
+				"h": 80
+			},
+			"sourceSize": {
+				"w": 100,
+				"h": 80
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 204,
+			"h": 164
+		},
+		"scale": "1"
+	}
+}
