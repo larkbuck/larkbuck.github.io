@@ -3,6 +3,14 @@
 let state = 'title';
 let cnv;
 let points = 0;
+let bars = [];
+
+
+function preload(){
+  for (let i = 0; i <= 7; i++){
+    bars[i] = loadImage(`assets/bars/bars_${i}`);
+  }
+}
 
 function setup() {
   cnv = createCanvas(600, 600);
