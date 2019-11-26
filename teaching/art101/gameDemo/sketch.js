@@ -7,11 +7,47 @@ let w = 600;
 let h = 600;
 let player;
 let coins = [];
+let playerImg;
+let coinImg;
+
+// spritesheets and animations
+let playerSS;
+let coinSS;
+let playerJSON;
+let coinJSON;
+let playerAnimation = [];
+let coinAnimation = [];
+
+function preload(){
+  // still images
+  playerImg = loadImage('assets/fruit/fruit_100/fruit_0.png');
+  coinImg = loadImage('assets/ball/64x64/ball_0.png');
+
+  // spritesheets
+  playerSS = loadImage('assets/fruit/fruit_100/fruitSpritesheet.png')
+  playerJSON = loadJSON('assets/fruit/fruit_100/fruitSpritesheet.json')
+  coinSS = loadImage('assets/ball/64x64/ballSpritesheet.png');
+  coinJSON = loadJSON('assets/ball/64x64/ballSpritesheet.json');
+}
 
 function setup() {
   cnv = createCanvas(w, h);
+  frameRate(12);
 
   textFont('monospace');
+
+  // console.log(playerJSON.frames[0].frame);
+
+  let playerFrames = playerJSON.frames;
+
+  for (let i = 0; i < playerFrames.length; i++){
+    let pos = playerFrames[i].frame;
+    let img = playerSS.get(pos.x, pos.y, pos.w, pos.h);
+    playerAnimation.push(img);
+    console.log(playerAnimation);
+  }
+
+
 
   player = new Player();
 
@@ -20,6 +56,8 @@ function setup() {
 }
 
 function draw() {
+
+
 
   switch (state) {
     case 'title':
@@ -72,7 +110,7 @@ function titleMouseClicked() {
 function level1() {
   background(50, 150, 200);
 
-  if (random(1) <= 0.01) {
+  if (random(1) <= 0.08) {
     coins.push(new Coin());
   }
 
@@ -81,34 +119,23 @@ function level1() {
 
 
   // iterating through coins array to display and move them
-
   // using for loop
   for (let i = 0; i < coins.length; i++) {
     coins[i].display();
     coins[i].move();
   }
 
-  // using forEach loop
-  // coins.forEach(function(coin){
-  //   coin.display();
-  //   coin.move();
-  // })
-
-  // using for of loop
-  // for (let coin of coins){
-  //     coin.display();
-  //     coin.move();
-  // }
-
-
 
   // check for collision, if there is a collision increase points by 1 AND splice that coin out of array
   // need to iterate backwards through array
   for (let i = coins.length - 1; i >= 0; i--) {
+    // check for collision with player
     if (dist(player.x, player.y, coins[i].x, coins[i].y) <= (player.r + coins[i].r) / 2) {
       points++;
-      console.log(points);
       coins.splice(i, 1);
+    } else if (coins[i].y > h){
+      coins.splice(i, 1);
+      console.log('coin is out of town');
     }
   }
 
