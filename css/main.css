@@ -481,6 +481,20 @@ p a:hover, h1 a:hover {
   /* align-self: flex-end; */
 }
 
+#container_magic4real {
+  justify-content: flex-start;
+  padding: 33px;
+  background-color: #fff;
+    background-image: url("../assets/magic4real/magic4real_pattern.png");
+  /* max-width: 1000px; */
+}
+
+#container_magic4real p, h2 {
+  color: #3F6FFF;
+  background-color: #fff;
+  padding: 0;
+}
+
 #container_startups {
   justify-content: flex-start;
   padding: 20px 20px 20px 20px;
