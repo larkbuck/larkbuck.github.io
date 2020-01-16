@@ -486,7 +486,7 @@ p a:hover, h1 a:hover {
   padding: 33px;
   background-color: #fff;
     background-image: url("../assets/magic4real/magic4real_pattern.png");
-  /* max-width: 1000px; */
+  max-width: 700px;
 }
 
 #container_magic4real p {
