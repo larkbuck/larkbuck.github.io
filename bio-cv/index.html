@@ -29,6 +29,32 @@
   <!-- <script src="../libraries/p5.play.js" type="text/javascript"></script> -->
   <link rel="stylesheet" type="text/css" href="../css/main.css">
   <!-- <script src="sketch_bio.js" type="text/javascript"></script> -->
+  <!-- MailerLite popup -->
+  <script>
+    (function(m, a, i, l, e, r) {
+      m['MailerLiteObject'] = e;
+
+      function f() {
+        var c = {
+          a: arguments,
+          q: []
+        };
+        var r = this.push(c);
+        return "number" != typeof r ? r : f.bind(c.q);
+      }
+      f.q = f.q || [];
+      m[e] = m[e] || f.bind(f.q);
+      m[e].q = m[e].q || f.q;
+      r = a.createElement(i);
+      var _ = a.getElementsByTagName(i)[0];
+      r.async = 1;
+      r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
+      _.parentNode.insertBefore(r, _);
+    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+    var ml_account = ml('accounts', '2600831', 'p3a0y9j7q3', 'load');
+  </script>
+  <!-- End MailerLite Universal -->
 
 </head>
 
@@ -40,25 +66,32 @@
     <li><a class="chartreuseLink" href="../contact">contact</a></li>
     <!-- <li><a class="chartreuseLink" href="../about/services.html">services</a></li> -->
     <li><img class="platform" src="../assets/stripes/platform_small.svg" alt="">
+      <p></p>
+  </ul>
+  <ul class="links emailList">
+    <li><a class="greenLink" href="javascript:;" onclick="ml_account('webforms', '3025367', 'c5e0g6', 'show')">
+        Join my email list 💌
+      </a></li>
   </ul>
   <div class="main-content max1200">
-    <div class="box one margin_bottom">
+    <div class="box one margin_bottom" style="min-width:560px;">
       <h1>▼△▼△ Lark VCR </h1>
+      <p>aka. Lark Alder</p>
       <p>BORN: Santa Ana, CA 1981</p>
       <p>CURRENT RESIDENCE: California, US </p>
       <p>GENDER IDENTITY: Glamsport / Genderfluid</p>
       <p>PRONOUNS: They/Them/Theirs</p>
+
       <img src="../assets/contact/LarkVCR_portrait_mojica.jpg" alt="" style="width=100%; max-width:270px;">
       <p style="font-size: 14px; margin-top: 0;">illustration by <a href="https://www.instagram.com/the_last_mojican/">Edgar Mojica</a></p>
     </div>
     <div class="container">
     </div>
-    <div class="box four">
+    <div class="box four" style="min-width:700px;">
       <h2>Bio</h2>
       <p>
-        Lark Alder aka. Lark VCR explores the personal, political, and social implications of an increasingly digitized and bioengineered world. Through speculative fiction and critical design, they leverage humor as an entry point to engage
-        audiences in nondidactic
-        cultural critique. </p>
+        Lark VCR (aka Lark Alder) makes speculative proposals to explore the pitfalls and possibilities of an increasingly digitized and bioengineered world. Working in hybrid forms of video and web-based media, they leverage humor as an entry point
+        to engage audiences in nondidactic cultural critique.</p>
       <p>
         VCR stands for Virtually Conflicted Reality - it is both an homage to analog video and a skeptical nod at the techno-utopian promises of virtual reality (VR). Experientially, it is the state of perpetual disconnect we navigate as cognizant
         individuals
@@ -69,17 +102,15 @@
       <!-- <p>Lark's work has shown at Frameline Film Festival, MIX New York Queer Experimental Film Festival, San Jose Institute of Contemporary Art, the San Francisco International Arts Festival, Berkeley Art Museum, Cinema for Gender Transgression, and Schuwels Museum in Berlin.
       </p> -->
     </div>
-    <div class="container">
-    </div>
     <div class="box one">
       <h2>CV</h2>
       <p>
-        <a href="larkAlder_CV_2020.pdf">Download PDF of full CV</a></p>
+        <a href="larkAlder_CV_2020.pdf">PDF</a></p>
 
 
       </p>
     </div>
-    <div class="box three">
+    <div class="box three" style="min-width:700px;">
       <p>
         EXHIBITIONS
       </p>
@@ -137,7 +168,7 @@
         2014 <em>Quick! Eat my diamond</em>, Video and installation, WorkMore!, SOMArts, SF
       </p>
     </div>
-    <div class="box four">
+    <div class="box four" style="min-width:700px;">
       <p>
         SCREENINGS
       </p>
@@ -190,7 +221,7 @@
         2011 <em>Slime Queen</em>, Experimental Half-Hour (TV Show), Portland Community Media, Portland
       </p>
     </div>
-    <div class="box two">
+    <div class="box two" style="min-width:700px;">
       <p>
         GRANTS / RESIDENCIES
       </p>
@@ -220,7 +251,7 @@
         2003 David Rockefeller Travel Grant
       </p>
     </div>
-    <div class="box three">
+    <div class="box three" style="min-width:700px;">
       <p>
         LECTURES / PRESENTATIONS / WORKSHOPS
       </p>
@@ -276,7 +307,7 @@
         2015 Lecture/Presentation, 'Health Data for Employers,' Graduate Research Hot Topics, Berkeley EECS Annual Research Symposium (BEARS), Berkeley, CA
       </p>
     </div>
-    <div class="box four">
+    <div class="box two" style="min-width:700px;">
       <p>
         CURATORIAL PRACTICE
       </p>
@@ -295,7 +326,7 @@
         2006 BA, Visual and Environmental Studies, Harvard University
       </p>
     </div> -->
-    <div class="box four">
+    <div class="box four" style="min-width:700px;">
       <p>
         TEACHING
       </p>
