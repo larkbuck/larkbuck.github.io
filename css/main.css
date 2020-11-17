@@ -544,6 +544,26 @@ p a:hover, h1 a:hover {
   /* align-self: flex-end; */
 }
 
+
+@media screen and (max-width: 480px) {
+  .one {
+    max-width: 100%;
+  }
+
+  .two {
+    max-width: 100%;
+  }
+
+  .three {
+    max-width: 100%;
+  }
+
+  .four {
+    max-width: 100%;
+  }
+
+}
+
 /* @media (min-width: 320px) and (max-width: 480px) {  */
 /* @media only screen and (max-width: 768px) { */
 /* not sure why media queries aren't working */
@@ -1382,24 +1402,6 @@ footer {
   color: red !important
 }
 
-@media screen and (max-width: 480px) {
-  .one {
-    max-width: 100%;
-  }
-
-  .two {
-    max-width: 100%;
-  }
-
-  .three {
-    max-width: 100%;
-  }
-
-  .four {
-    max-width: 100%;
-  }
-
-}
 
 
 @media only screen and (max-width:400px) {
