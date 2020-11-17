@@ -1382,6 +1382,26 @@ footer {
   color: red !important
 }
 
+@media screen and (max-width: 480px) {
+  .one {
+    max-width: 100%;
+  }
+
+  .two {
+    max-width: 100%;
+  }
+
+  .three {
+    max-width: 100%;
+  }
+
+  .four {
+    max-width: 100%;
+  }
+
+}
+
+
 @media only screen and (max-width:400px) {
 
   .ml-form-embedWrapper.embedDefault,
