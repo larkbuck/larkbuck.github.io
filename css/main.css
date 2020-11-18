@@ -1,5 +1,4 @@
 /* By Lark VCR. */
-
 @import url(https://static.mailerlite.com/assets/plugins/groot/modules/includes/groot_fonts/import.css?version=11920);
 
 html, body {
@@ -8,11 +7,11 @@ html, body {
 
 body {
   /* margin: 50px; */
-
   font-family: "Anonymous Pro", "Courier", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.7;
-  /* padding: 1em 1em; */
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   color: #161616;
   background-color: #F7F7F7;
 }
@@ -54,10 +53,9 @@ body {
 
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
-  /* color: #00DA80;
-  background-color: #161616; */
+  /* color: #00DA80; */
+  /* background-color: #161616;  */
   color: #161616;
-
 }
 
 /* change the color of hovered links */
@@ -65,7 +63,6 @@ body {
   /* color: #95967c; */
   /* color: #6478CC;
   background-color: #161616; */
-
 }
 
 /* change the color of hovered links */
@@ -86,10 +83,12 @@ body {
 }
 
 .custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-
+.navbar-dark .navbar-toggler {
+  background-color: #D2DB21;
+}
 
 /* **************************** */
 /*Browser Nav Menu*/
@@ -124,8 +123,9 @@ body {
   line-height: .7;
 }
 
-.projectIndexLink a, .projectIndexLink p {
+.projectIndexLink a {
   color: #777777;
+  background-color: #f7f7f7;
 }
 
 .topMargin {
@@ -413,8 +413,8 @@ p a:hover, h1 a:hover {
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   color: #222;
   letter-spacing: .07em;
-  padding: 40px 50px 40px 50px;
-  margin-bottom: 0;
+  /* padding: 40px 50px 40px 50px;
+  margin-bottom: 0; */
   /*font-family: 'Raleway', sans-serif;*/
 }
 
@@ -422,8 +422,6 @@ p a:hover, h1 a:hover {
   color: #222;
   letter-spacing: .07em;
   order: 0;
-  min-width: 400px;
-  max-width: 800px;
   font-weight: 200;
 }
 
@@ -437,7 +435,6 @@ p a:hover, h1 a:hover {
 #item_babumpMainImage {
   flex: 1 1 45%;
   min-width: 300px;
-  max-width: 800px;
 }
 
 #item_babumpBanner {
@@ -448,7 +445,6 @@ p a:hover, h1 a:hover {
 #item_babumpImages {
   order: 0;
   /*flex: 1 1 45%;*/
-  min-width: 300px;
   max-width: 800px;
 }
 
@@ -461,17 +457,14 @@ p a:hover, h1 a:hover {
 }
 
 #container_magic4real {
-  justify-content: flex-start;
-  padding: 33px;
   background-color: #fff;
   background-image: url("../assets/magic4real/magic4real_pattern.png");
-  max-width: 700px;
 }
 
 #container_magic4real p {
   color: #3F6FFF;
   background-color: #fff;
-  padding: 0;
+  padding: .2rem;
 }
 
 #container_startups {
@@ -495,7 +488,7 @@ p a:hover, h1 a:hover {
   max-width: 580px;
   background-color: #0F0F0F;
   background-image: url("../assets/traumagotchi/bg_staticGrid_0.png");
-  align-content: flex-end;
+  /* align-content: flex-end; */
   border: 5px solid #00ff00;
   /* background-attachment: scroll; */
   /* Create the parallax scrolling effect */
@@ -519,11 +512,18 @@ p a:hover, h1 a:hover {
 }
 
 #container_hclove {
-  padding: 40px;
-  max-width: 1500px;
+  /* padding: 40px; */
+  /* max-width: 1500px; */
   background-image: url("../projects/humancomputerlove/assets/bubbles_fullScreen.jpg");
   text-align: center;
   font-family: "Ubuntu", "Lucida Console", "Courier", monospace;
+  color: #000;
+  font-size: 1.1rem;
+}
+
+#container_hclove h3, #container_hclove p {
+  /* color: #D2DB21;
+  background-color: #606060; */
 }
 
 #item_bubbleImages {
@@ -555,25 +555,20 @@ p a:hover, h1 a:hover {
 }
 
 @media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
 
-  /* body {
-    margin: 1rem;
-    max-width: 100%;
-    font-size: 1rem;
-    line-height: 1.7;
-    padding: .5rem;
-  } */
-  /*CSS for Nav Menu*/
-  /* .links {
-    right: 1rem;
-    top: 1rem;
-  } */
+  h2 {
+    font-size: 1.7rem;
+  }
+
   #projectIndex, #browserMenu {
     display: none;
   }
 
   #bootstrapNavbar {
-    display: block;
+    display: flex;
   }
 
   /*solid border boxes*/
