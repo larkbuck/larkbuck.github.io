@@ -1,36 +1,287 @@
 /* By Lark VCR. */
+/* I built this website as a way to learn html/css, so
+it is a bit of a tangled ball rolling up and down
+the learning curve.
 
+Unless necessary, I will likely never untangle it.
+Contrary to the code-bro perspective, I believe there
+is beauty in the strangely-shaped but still-functioning. */
 @import url(https://static.mailerlite.com/assets/plugins/groot/modules/includes/groot_fonts/import.css?version=11920);
 
-html, body {
+html {
   height: 100%;
 }
 
 body {
+  margin: 50px 50px 50px 7%;
   /* margin: 50px; */
-
+  max-width: 67%;
+  height: 100%;
   font-family: "Anonymous Pro", "Courier", "Helvetica", "Arial", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
-  /* padding: 1em 1em; */
+  padding: 1em 1em;
   color: #161616;
   background-color: #F7F7F7;
+  display: flex;
+  flex-direction: column;
 }
 
-/* sticky footer */
-#wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
+.flex-container {
+  flex-wrap: wrap;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header, .marketing, .page-footer {
-  padding-right: 1rem;
-  padding-left: 1rem;
+.flex-item_2 {
+  flex: 0 1 90%;
+  align-self: auto;
+  margin: 10px;
+}
+
+.flex-item {
+  flex: 0 1 90%;
+  align-self: auto;
+  margin: 10px;
+}
+}
+
+/*flexbox for setting sticky footer*/
+.main-content {
+  /* By setting flex-grow to 1, the main content will take up
+   all of the remaining space on the page.
+   The other elements have flex-grow: 0 and won't contest the free space. */
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 0 auto;
+}
+
+.max1200 {
+  max-width: 1200px;
+  /* margin-left: 5%; */
+}
+
+/*home-page */
+.top {
+  display: inline-block;
+  width: 100%;
+}
+
+/* not sure when using which version of canvas */
+#bgCanvas {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  /* z-index: -2; */
+}
+
+.canvas {
+  margin-top: 100px;
+  text-align: right;
+  /*margin-top: 200px;
+    background-color: #FFFFFF;
+    border-style: dotted;
+    border-width: 5px;
+    border-color: #D2DB21 #8787C1 #00DA80 #D31996;*/
+}
+
+.lark {
+  float: left;
+  max-width: 66%;
+  /*margin-left: 300px;*/
+}
+
+/*solid border boxes*/
+.box {
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-width: 1rem;
+  border-color: #D2DB21 #8787C1 #00DA80 #D31996;
+  padding: 2rem;
+  box-shadow: 5px 5px 20px #A0A1AF;
+}
+
+.boxBlank {
+  padding: 40px;
+}
+
+.one {
+  max-width: 60%;
+}
+
+.two {
+  max-width: 75%;
+}
+
+.three {
+  max-width: 81%;
+}
+
+.four {
+  max-width: 90%;
+}
+
+.dotted {
+  background-color: #FFFFFF;
+  border-style: dotted;
+  border-width: 5px;
+  border-color: #D2DB21 #8787C1 #00DA80 #D31996;
+  padding: 20px 20px 20px 40px;
+  margin-top: 50;
+  max-width: 550px;
+}
+
+p a, h1 a {
+  text-decoration: none;
+  color: #222;
+  border-bottom: 2px #00DA80 dotted;
+}
+
+p a:hover, h1 a:hover {
+  color: #FFFFFF;
+  background-color: #161616;
+  /*padding: .5em .5em .5em 1.5em;*/
+}
+
+.highlight {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #FF000000;
+}
+
+.highlight:hover {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #D2DB21 #8787C1 #00DA80 #D31996;
+  /* outline-style: solid;
+  outline-width: 5px;
+  outline-color: #D2DB21;
+  outline-offset: -5px; */
+}
+
+.highlight a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+
+/* flexboxes */
+/* flexbox containers for project gallery */
+.container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: row wrap;
+  color: #161616;
+  /* background-color: rgba(255, 255, 255, 0.15); */
+  */ padding: 20px;
+  margin: 30px 10px 30px 10px;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.container * {
+  padding: 5px;
+}
+
+/* .container p {
+  padding: 0, 55px, 0, 15px;
+} */
+/* ?? when using this? */
+.container-column {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: column nowrap;
+  color: #fff;
+  /* background-color: rgba(255, 255, 255, 0.15); */
+  padding: 20px;
+  margin: 10px 10px 20px 10px;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.left {
+  margin-right: auto;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.full {
+  width: 100%;
+  /* IE */
+  flex: 0 1 100%;
+}
+
+.two-thirds {
+  width: 65%;
+  /* IE */
+  flex: 1 1 calc(66% - 25px);
+}
+
+.half {
+  width: 49%;
+  /* IE */
+  flex: 1 2 420px;
+}
+
+.third {
+  width: 32.2%;
+  /* IE */
+  flex: 1 1 calc(33.333333% - 25px);
+}
+
+.fourth {
+  width: 24%;
+  /* IE */
+  flex: 0 1 calc(25% - 25px);
+}
+
+.fifth {
+  width: 19.5%;
+  /* IE */
+  flex: 0 1 calc(20% - 25px);
+}
+
+.sixth {
+  width: 15.7%;
+  /* IE */
+  flex: 0 1 calc(16.666666% - 25px);
+}
+
+.two-thirds-fixed {
+  width: 65%;
+  /* IE */
+  flex: 0 1 calc(66% - 25px);
+}
+
+.half-fixed {
+  width: 49%;
+  /* IE */
+  flex: 0 2 calc(50% - 25px);
+}
+
+.third-fixed {
+  width: 32.2%;
+  /* IE */
+  flex: 0 1 calc(33.333333% - 25px);
+}
+
+.fourth-fixed {
+  width: 24%;
+  /* IE */
+  flex: 0 1 calc(25% - 25px);
+}
+
+.fifth-fixed {
+  width: 19.5%;
+  /* IE */
+  flex: 0 1 calc(20% - 25px);
+}
+
+.sixth-fixed {
+  width: 15.7%;
+  /* IE */
+  flex: 0 1 calc(16.666666% - 25px);
 }
 
 .image {
@@ -38,61 +289,78 @@ body {
   height: auto;
 }
 
-/* **************************** */
-/* Customize navbar */
-.navbar-default {
-  /* background-color: #161616; */
-  /* border-color: #E7E7E7; */
+.align-right {
+  justify-content: flex-end;
+  align-self: flex-end;
 }
 
-.navbar-custom {}
-
-/* change the brand and text color */
-.navbar-custom .navbar-brand, .navbar-custom .navbar-text {
-  color: #3ac952;
+/*flex boxes for project pages --- old*/
+.flex-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+  margin-top: 80px;
+  /* height: 100%; */
 }
 
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-  /* color: #00DA80;
-  background-color: #161616; */
-  color: #161616;
-
+.flex-item_1 {
+  align-self: auto;
+  margin: 15px;
+  flex: 1 1 100%;
 }
 
-/* change the color of hovered links */
-.navbar-custom .nav-item.active .nav-link {
-  /* color: #95967c; */
-  /* color: #6478CC;
-  background-color: #161616; */
-
+.flex-item_2 {
+  align-self: auto;
+  margin: 15px;
+  flex: 1 1 40%;
 }
 
-/* change the color of hovered links */
-.navbar-custom .nav-item:hover .nav-link {
-  /* color: #D31996;
-  background-color: #161616; */
+.flex-item_3 {
+  align-self: auto;
+  margin: 15px;
+  flex: 1 1 25%;
 }
 
-/* style dropdown menu */
-.navbar-custom .dropdown-menu {
-  padding: 0;
-  background-color: #161616;
+.flex-item_4 {
+  align-self: auto;
+  margin: 15px;
+  flex: 1 1 25%;
 }
 
-/* change hamburger toggler color */
-.custom-toggler .navbar-toggler {
-  border-color: #161616;
+.flex-item_1 img, .flex-item_2 img, .flex-item_3 img, .flex-item_4 img {
+  width: 100%;
+  height: auto;
 }
 
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+.flex-item_2 iframe {
+  width: 100%;
+  height: auto;
 }
 
+/*.flex-item_1 iframe {
+    width: 100%;
+    height: auto;
+}*/
+.line_top {
+  border-top: 1px solid #D3D3D3;
+  padding-top: 50px;
+  margin-top: 30px;
+}
 
+.margin_bottom {
+  margin-bottom: 60px;
+}
 
-/* **************************** */
-/*Browser Nav Menu*/
+.black {
+  color: black;
+}
+
+/*CSS for Nav Menu*/
 .links {
   list-style-type: none;
   right: 50px;
@@ -115,6 +383,10 @@ body {
   line-height: 1.3;
   z-index: 2;
   position: fixed;
+}
+
+#projectIndex {
+  display: block;
 }
 
 .projectIndexLink {
@@ -186,6 +458,11 @@ body {
   /*padding: .5em .5em .5em 1.5em;*/
 }
 
+/* social media icons */
+#social-media {
+  text-decoration: none;
+}
+
 /*links no longer usings*/
 .moreInfoLink {
   text-decoration: none;
@@ -200,136 +477,6 @@ body {
   /*color: #FFFFFF;*/
   /*background-color: #BFB8BA;*/
   /*padding: .5em .5em .5em 1.5em;*/
-}
-
-/* social media icons */
-#social-media {
-  text-decoration: none;
-}
-
-/* ************************** */
-/*home-page */
-.top {
-  display: inline-block;
-  width: 100%;
-}
-
-/* not sure when using which version of canvas */
-#bgCanvas {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  /* z-index: -2; */
-}
-
-.canvas {
-  margin-top: 100px;
-  text-align: right;
-  /*margin-top: 200px;
-    background-color: #FFFFFF;
-    border-style: dotted;
-    border-width: 5px;
-    border-color: #D2DB21 #8787C1 #00DA80 #D31996;*/
-}
-
-.lark {
-  float: left;
-  max-width: 66%;
-  /*margin-left: 300px;*/
-}
-
-/*solid border boxes*/
-.box {
-  background-color: #FFFFFF;
-  border-style: solid;
-  border-width: 1rem;
-  border-color: #D2DB21 #8787C1 #00DA80 #D31996;
-  padding: 2rem;
-  box-shadow: 5px 5px 20px #A0A1AF;
-}
-
-/* .boxBlank {
-  padding: 40px;
-}
-
-.one {
-  max-width: 60%;
-}
-
-.two {
-  max-width: 75%;
-}
-
-.three {
-  max-width: 81%;
-}
-
-.four {
-  max-width: 90%;
-} */
-.dotted {
-  background-color: #FFFFFF;
-  border-style: dotted;
-  border-width: 5px;
-  border-color: #D2DB21 #8787C1 #00DA80 #D31996;
-  padding: 20px 20px 20px 40px;
-  margin-top: 50;
-  max-width: 550px;
-}
-
-p a, h1 a {
-  text-decoration: none;
-  color: #222;
-  border-bottom: 2px #00DA80 dotted;
-}
-
-p a:hover, h1 a:hover {
-  color: #FFFFFF;
-  background-color: #161616;
-  /*padding: .5em .5em .5em 1.5em;*/
-}
-
-.highlight {
-  border-style: solid;
-  border-width: 5px;
-  border-color: #FF000000;
-}
-
-.highlight:hover {
-  border-style: solid;
-  border-width: 5px;
-  border-color: #D2DB21 #8787C1 #00DA80 #D31996;
-  /* outline-style: solid;
-  outline-width: 5px;
-  outline-color: #D2DB21;
-  outline-offset: -5px; */
-}
-
-.highlight a:hover, a:visited, a:link, a:active {
-  text-decoration: none;
-}
-
-.left {
-  margin-right: auto;
-}
-
-.right {
-  margin-left: auto;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-}
-
-.line_top {
-  border-top: 1px solid #D3D3D3;
-  padding-top: 50px;
-  margin-top: 30px;
-}
-
-.black {
-  color: black;
 }
 
 /* project gallery page */
@@ -543,65 +690,68 @@ p a:hover, h1 a:hover {
   /* align-self: flex-end; */
 }
 
-/* ************************** */
-/* MOBILE RESPONSIVE */
-/* for toggling off/on mobile controls */
-#projectIndex, #browserMenu {
-  display: block;
-}
-
-#bootstrapNavbar {
-  display: none;
-}
-
 @media screen and (max-width: 480px) {
-
-  /* body {
+  body {
     margin: 1rem;
     max-width: 100%;
     font-size: 1rem;
     line-height: 1.7;
     padding: .5rem;
-  } */
-  /*CSS for Nav Menu*/
-  /* .links {
-    right: 1rem;
-    top: 1rem;
-  } */
-  #projectIndex, #browserMenu {
-    display: none;
   }
 
-  #bootstrapNavbar {
-    display: block;
+  /*CSS for Nav Menu*/
+  .links {
+    right: 1rem;
+    top: 1rem;
+  }
+
+  #projectIndex {
+    display: none;
   }
 
   /*solid border boxes*/
   .box {
-    border-width: .7rem;
+    border-width: 1rem;
     border-color: #D2DB21 #8787C1 #00DA80 #D31996;
     padding: 2rem;
     box-shadow: 5px 5px 20px #A0A1AF;
   }
-}
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 48em) {
-
-  /* Remove the padding we set earlier */
-  .header, .gallery, .footer {
-    padding-right: 0;
-    padding-left: 0;
+  .one {
+    max-width: 100%;
   }
 
-  /* Space out the masthead */
-  /* .header {
-    margin-bottom: 2rem;
-  } */
+  .two {
+    max-width: 100%;
+  }
+
+  .three {
+    max-width: 100%;
+  }
+
+  .four {
+    max-width: 100%;
+  }
 }
 
-/* *************** */
-/* for email list signup */
+footer {
+  /* Like the header, the footer will have a static height - it shouldn't grow or shrink.  */
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+  align-self: flex-end;
+  width: 100%;
+  text-align: right;
+  padding: 60px 0px 10px 0px;
+  font-size: 12px;
+}
+
+/*the end*/
+.ml-form-embedSubmitLoad {
+  display: inline-block;
+  width: 20px;
+  height: 20px
+}
+
 .ml-form-embedSubmitLoad:after {
   content: " ";
   display: block;
