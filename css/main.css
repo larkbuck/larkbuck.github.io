@@ -8,7 +8,7 @@ html, body {
 body {
   /* margin: 50px; */
   font-family: "Anonymous Pro", "Courier", "Helvetica", "Arial", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.7;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -352,36 +352,24 @@ p a:hover, h1 a:hover {
 }
 
 #container_bubbles {
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 40px 20px 20px 20px;
   color: black;
-  /* background-color: #fff; */
-}
-
-#container_bubbles_projectIndex {
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 40px 20px 20px 20px;
-  color: black;
-  text-align: right;
   /* background-color: #fff; */
   background-image: url("../assets/bubbles/bubblesPop_03.png");
   background-attachment: scroll;
   background-repeat: no-repeat;
+  text-align: right;
 }
 
 #container_ttMovie {
-  /*flex properties set in flex-container*/
   background-image: url("../assets/TTHeartMovie/StarBackSmall.jpg");
   background-attachment: scroll;
-  flex-wrap: wrap;
-  padding: 13px;
-  /* padding: 10px 10px 40px 80px; */
-  max-width: 1000px;
-  color: #F7F7F7;
+  /* padding: 13px; */
+  color: #fffff2;
   text-align: center;
-  /* text-shadow: 2px 2px #000; */
+  text-shadow: 3px 3px #000;
+  font-size: 1.2rem;
+font-family: "Anonymous Pro", "Courier", "Helvetica", "Arial", sans-serif;
+  /* font-family: sans-serif; */
 }
 
 #container_ttProduct {
@@ -396,63 +384,54 @@ p a:hover, h1 a:hover {
 }
 
 #item_ttMovieMainImage {
-  min-width: 300px;
-  max-width: 800px;
+  /* min-width: 300px;
+  max-width: 800px; */
 }
 
 #item_ttMovieImages {
   order: 0;
   /*flex: 1 1 45%;*/
-  min-width: 200px;
-  max-width: 800px;
+  /* min-width: 200px;
+  max-width: 800px; */
 }
 
 #container_babump {
   background-color: #ffffff;
-  flex-wrap: wrap;
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   color: #222;
   letter-spacing: .07em;
-  /* padding: 40px 50px 40px 50px;
-  margin-bottom: 0; */
-  /*font-family: 'Raleway', sans-serif;*/
+  text-align: justify;
 }
 
 #item_babumpText {
   color: #222;
   letter-spacing: .07em;
-  order: 0;
-  font-weight: 200;
+  /* order: 0; */
+  /* font-weight: 200; */
 }
 
 #item_babumpText h1 {
   margin: 0;
   font-weight: 100;
-  font-size: 38px;
+  /* font-size: 38px; */
   text-align: center;
 }
 
-#item_babumpMainImage {
-  flex: 1 1 45%;
-  min-width: 300px;
-}
+#item_babumpMainImage {}
 
 #item_babumpBanner {
   max-width: 400px;
-  align-self: flex-start;
 }
 
 #item_babumpImages {
   order: 0;
   /*flex: 1 1 45%;*/
-  max-width: 800px;
+  /* max-width: 800px; */
 }
 
 #container_meeglo {
-  justify-content: flex-start;
-  padding: 20px 20px 20px 20px;
   background-color: #fff;
-  max-width: 600px;
+  font-size: 1.1rem;
   /* align-self: flex-end; */
 }
 
@@ -465,22 +444,19 @@ p a:hover, h1 a:hover {
   color: #3F6FFF;
   background-color: #fff;
   padding: .2rem;
+  font-size: 1.2rem;
 }
 
 #container_startups {
-  justify-content: flex-start;
-  padding: 20px 20px 20px 20px;
   background-color: #fff;
-  max-width: 1000px;
-  align-self: flex-start;
+  color: #161616;
+  font-size: 1.3rem;
 }
 
 #container_bubbles {
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 40px 20px 20px 20px;
   color: black;
   /* background-color: #fff; */
+  font-size: 1.5rem;
 }
 
 #container_tGotchi {
@@ -518,19 +494,19 @@ p a:hover, h1 a:hover {
   text-align: center;
   font-family: "Ubuntu", "Lucida Console", "Courier", monospace;
   color: #000;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
-#container_hclove h3, #container_hclove p {
-  /* color: #D2DB21;
-  background-color: #606060; */
+.hclove-text {
+  color: #D2DB21;
+  background-color: #606060;
 }
 
 #item_bubbleImages {
   order: 0;
   /*flex: 1 1 45%;*/
-  min-width: 550px;
-  max-width: 640px;
+  /* min-width: 550px;
+  max-width: 640px; */
 }
 
 #container_everything-after {
@@ -554,6 +530,10 @@ p a:hover, h1 a:hover {
   display: none;
 }
 
+.medFont {
+  font-size: 1.25rem;
+}
+
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 2rem;
@@ -561,6 +541,10 @@ p a:hover, h1 a:hover {
 
   h2 {
     font-size: 1.7rem;
+  }
+
+  .medFont {
+    font-size: 1rem;
   }
 
   #projectIndex, #browserMenu {
@@ -575,8 +559,25 @@ p a:hover, h1 a:hover {
   .box {
     border-width: .7rem;
     border-color: #D2DB21 #8787C1 #00DA80 #D31996;
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: 5px 5px 20px #A0A1AF;
+  }
+
+  #container_hclove {
+    font-size: 1rem;
+  }
+
+  #container_magic4real p {
+    font-size: 1rem;
+  }
+
+  #container_ttMovie {
+    font-size: 1rem;
+  }
+
+  #container_startups {
+    font-size: 1rem;
+    text-align: justify;
   }
 }
 

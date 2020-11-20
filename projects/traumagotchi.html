@@ -13,7 +13,8 @@
 
     gtag('config', 'UA-131901646-1');
   </script>
-  <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Lark VCR | Traumagotchi</title>
   <meta name="description" content="Traumagotchi, your trauma externalized as your virtual pet.">
   <meta name="keywords" content="Lark Alder, Lark VCR, Lark V.C.R, Lark Buckingham, artist, Tattle-tale heart, Tattletale heart">
@@ -30,132 +31,166 @@
 </head>
 
 <body>
-  <ul>
-    <ul class="links">
-      <li><a class="purpleLink" href="/">home</a></li>
-      <li><a class="activeLink" href="../projects">projects</a></li>
-      <li><a class="pinkLink" href="../bio-cv">bio/CV</a></li>
-      <li><a class="chartreuseLink" href="../contact">contact</a></li>
-      <!-- <li><a class="chartreuseLink" href="../about/services.html">services</a></li> -->
-      <li><img class="platform" src="../assets/stripes/platform_small.svg" alt="">
-    </ul>
-    <ul class="links projectIndexLink">
-      <li class="">
-        <p><a href="index.html">Project Gallery</a></p>
-        <br>
-      </li>
-      <li class="">
-        <p><a href="traumagotchi.html">TRAUMAGOTCHI</a></p>
-        <br>
-      </li>
-      <li class="">
-        <p><a href="humancomputerlove">HUMAN-COMPUTER LOVE</a></p>
-        <br>
-      </li>
-      <li class="">
-        <p><a href="magic4realdotcom">MAGIC4REAL DOT COM</a></p>
-        <br>
-      </li>
-      <li class="">
-        <p><a href="tattletaleheart.html">TATTLE-TALE HEART (film) </a></p>
-        <br>
-      </li>
-      <li class="">
-        <p><a href="heart-startups.html">HEART STARTUP SERIES</a></p>
-      </li>
-      <li>
-        <p><a href="babump.html">Babump</a></p>
-      </li>
-      <li>
-        <p><a href="babump-talk.html">Babump performance</a></p>
-      </li>
-      <li>
-        <p><a href="meeglo.html">Meeglo</a></p>
-        <br>
-      </li>
-      <!-- <li class="">
+  <nav class="navbar navbar-default navbar-custom fixed-top navbar-expand-lg navbar-dark" id="bootstrapNavbar">
+    <!-- <a class="navbar-brand" href="../"> <img src="../assets/humanComputerLove-logo-04.png" alt="<3"></a> -->
+    <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item purpleLink">
+          <a class="nav-link btn btn-lg mr-4" href="/" role="button">home</a>
+        </li>
+        <li class="nav-item active activeLink">
+          <a class="nav-link btn btn-lg mr-4" href="index.html">projects<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item pinkLink">
+          <a class="nav-link btn btn-lg mr-4" href="../bio-cv" role="button">bio/cv</a>
+        </li>
+        <li class="nav-item chartreuseLink">
+          <a class="nav-link btn btn-lg mr-4" href="../contact" role="button">
+            contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <ul class="links" id="browserMenu">
+    <li><a class="purpleLink" href="/">home</a></li>
+    <li><a class="activeLink" href="../projects">projects</a></li>
+    <li><a class="pinkLink" href="../bio-cv">bio/CV</a></li>
+    <li><a class="chartreuseLink" href="../contact">contact</a></li>
+    <!-- <li><a class="chartreuseLink" href="../about/services.html">services</a></li> -->
+    <li><img class="platform" src="../assets/stripes/platform_small.svg" alt="">
+  </ul>
+  <ul class="links projectIndexLink" id="projectIndex">
+    <li class="">
+      <p><a href="index.html">Project Gallery</a></p>
+      <br>
+    </li>
+    <li class="">
+      <p><a href="traumagotchi.html">TRAUMAGOTCHI</a></p>
+      <br>
+    </li>
+    <li class="">
+      <p><a href="humancomputerlove">HUMAN-COMPUTER LOVE</a></p>
+      <br>
+    </li>
+    <li class="">
+      <p><a href="magic4realdotcom">MAGIC4REAL DOT COM</a></p>
+      <br>
+    </li>
+    <li class="">
+      <p><a href="tattletaleheart.html">TATTLE-TALE HEART (film) </a></p>
+      <br>
+    </li>
+    <li class="">
+      <p><a href="heart-startups.html">HEART STARTUP SERIES</a></p>
+    </li>
+    <li>
+      <p><a href="babump.html">Babump</a></p>
+    </li>
+    <li>
+      <p><a href="babump-talk.html">Babump performance</a></p>
+    </li>
+    <li>
+      <p><a href="meeglo.html">Meeglo</a></p>
+      <br>
+    </li>
+    <!-- <li class="">
         <p><a href="magic4real/index.html">MAGIC4REAL DOT COM</a></p>
         <br>
       </li> -->
-      <li class="">
-        <p><a href="bubbles.html">BUBBLE BLOG</a></p>
-        <br>
-      </li>
-      <!-- <li class="">
+    <li class="">
+      <p><a href="bubbles.html">BUBBLE BLOG</a></p>
+      <br>
+    </li>
+    <!-- <li class="">
         <p><a href="geoffs-letter.html">GEOFF'S LETTER</a></p>
       </li> -->
-      <!-- <li>
+    <!-- <li>
         <p><a href="possum-impressions.html">POSSUM IMPRESSIONS</a></p>
         <br>
       </li> -->
-    </ul>
   </ul>
-  <div class="main-content">
-    <div class="box two margin_bottom">
-      <h1>lark vcr</h1>
-      <h2>Traumagotchi</h2>
-      <p>Lark VCR, text by Porpentine Charity Heartscape</p>
-      <p>Live at <a href="https://www.traumagotchi.com/index.html">www.traumagotchi.com</a> (browsers only)</p>
-      <p>Supported by the Center for Cultural Innovation and the East Bay Fund for Artists</p>
-    </div>
-    <!-- <div class="flex-container">
-  <div class="third">
-    <p>You probably get asked this all the time, but what shape is your trauma?</p>
-  </div>
-  <div class="two-thirds">
-    <img class="image" src="../assets/traumagotchi/traumagotchi_options.png" alt="">
-  </div>
-</div> -->
-    <div class="container">
-      <div class="full">
-        <img class="image" src="../assets/traumagotchi/traumagotchi_screenShot.png" style="max-width: 1200px; border: 5px solid #00ff00; padding: 0;" alt="">
 
+  <div id="wrap">
+    <div class="container mx-0 mr-sm-2 ml-sm-5">
+      <div class="row">
+        <div class="box col-10 my-3 my-sm-5 ml-3 py-1 py-sm-3 medFont">
+          <!-- <h1>lark vcr</h1> -->
+          <h1 class="my-3">Traumagotchi</h1>
+          <p>Lark VCR, text by Porpentine Charity Heartscape</p>
+          <p>Live at <a href="https://www.traumagotchi.com/index.html">www.traumagotchi.com</a> (browsers only)</p>
+          <p>Supported by the Center for Cultural Innovation and the East Bay Fund for Artists</p>
+        </div>
       </div>
-      <div class="full container">
-        <div class="two-thirds">
+
+      <div class="row my-4 justify-content-start">
+        <div class="col-12 mt-sm-4 mb-4">
+          <img class="image" src="../assets/traumagotchi/traumagotchi_screenShot.png" style="border: 5px solid #00ff00; padding: 0;" alt="">
+
+        </div>
+        <div class="col-sm-8 my-4 medFont p-sm-3" style="">
           <p>Traumagotchi is a website for virtual spell-casting, collective healing, and general DeepMachineIncantation.</p>
-          <p> Visitors to <a href="https://www.traumagotchi.com/index.html">www.traumagotchi.com</a> are directed to create a virtualization of their trauma: their Traumagotchi. These Traumagotchi tend to the DeepInTheMachineWorldTraumaCompostShrine. While
+          <p> Visitors to <a href="https://www.traumagotchi.com/index.html">www.traumagotchi.com</a> are directed to create a virtualization of their trauma: their Traumagotchi. These Traumagotchi tend to the
+            DeepInTheMachineWorld TraumaCompostShrine. While
             the website is active, the code in the shrine casts virtual spells for healing in the CPU, GPU, and interweb astral-sphere.</p>
-          <p> Traumagotchi can be fed, bathed, and rested. Though the user may log off, the Traumagotchi persist in cyberspace maintaining preprogrammed cycles of self-care or self-harm. They may recite mantras, do drugs, apply moisturizer, or sink into slime.</p>
-          <p>The piece aspires to map challenging subject matter onto a realm of dark but curious fantasy, without making absolute claims as to how a person should choose to cope. Rather, it is an opportunity to examine the very personalized ways we engage
+          <p> Traumagotchi can be fed, bathed, and rested. Though the user may log off, the Traumagotchi persist in cyberspace maintaining preprogrammed cycles of self-care or self-harm. They may recite mantras, do drugs, apply moisturizer, or sink
+            into slime.</p>
+          <p>The piece aspires to map challenging subject matter onto a realm of dark but curious fantasy, without making absolute claims as to how a person should choose to cope. Rather, it is an opportunity to examine the very personalized ways
+            we engage
             with our psyche and in/externalize our most sensitive selves.</p>
-          <p> Traumagotchi explores not only experiential and intergenerational trauma, but also the trauma inherent to the rift between our physical and digital selves in an increasingly abstracted reality. It is an inquiry into the limits of computation,
+          <p> Traumagotchi explores not only experiential and intergenerational trauma, but also the trauma inherent to the rift between our physical and digital selves in an increasingly abstracted reality. It is an inquiry into the limits of
+            computation,
             asking if it is possible — or effective — to inject ritual magic into the fabric of the web.
           </p>
         </div>
-        <div class="third">
-          <img class="image center" src="../assets/traumagotchi/traumagotchiAltarStill.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-          <img class="image center" style="max-width: 200px;" src="../assets/traumagotchi/traumagotchi_screenShot200px_1.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-          <img class="image center" style="max-width: 200px;" src="../assets/traumagotchi/traumagotchi_screenShot600px_0.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-          <img class="image center" style="max-width: 200px;" src="../assets/traumagotchi/traumagotchi_screenShot600px_2.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-        </div>
-        <div class="container" style="margin: 10px 0 10px 0;">
-          <!-- <div class="third">
-            <img class="image center" style="max-width: 200px;" src="../assets/traumagotchi/traumagotchi_screenShot200px_1.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-            <img class="image center" style="max-width: 200px;" src="../assets/traumagotchi/traumagotchi_screenShot600px_0.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-            <img class="image center" style="max-width: 200px;" src="../assets/traumagotchi/traumagotchi_screenShot600px_2.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-          </div> -->
-          <!-- <div class="third">
-					<img class="image center" style="max-width: 200px;" src="../assets/traumagotchi/traumagotchi_screenShot600px_0.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-				</div>
-				<div class="third" style="max-width: 200px;">
-					<img class="image center" src="../assets/traumagotchi/traumagotchi_screenShot600px_2.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-				</div> -->
+        <div class="col-sm-4 p-1 p-sm-3">
+          <div class="row">
+            <div class="col-12 p-2">
+              <img class="image" src="../assets/traumagotchi/traumagotchiAltarStill.png" alt="Traumagotchi Lark Alder aka Lark VCR">
+            </div>
+            <div class="col-8 p-2">
+              <img class="image" src="../assets/traumagotchi/traumagotchi_screenShot200px_1.png" alt="Traumagotchi Lark Alder aka Lark VCR">
+            </div>
+            <div class="col-8 p-2 d-none d-sm-block">
+              <img class="image" src="../assets/traumagotchi/traumagotchi_screenShot600px_0.png" alt="Traumagotchi Lark Alder aka Lark VCR">
+            </div>
+            <div class="col-8 p-2 d-none d-sm-block">
+              <img class="image" src="../assets/traumagotchi/traumagotchi_screenShot600px_2.png" alt="Traumagotchi Lark Alder aka Lark VCR">
+            </div>
+          </div>
 
-          <div class="half" style="max-height: 600px;">
-            <img class="image center" src="../assets/traumagotchi/BAC_install.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-            <p><em>NEXTNEW Games exhibit</em>, San Jose Institute of Contemporary Art, June-Sept 2018 (above)</p>
-            <p><em>Queer Technologies</em>, Berkeley Art Center, July-Sept 2018 (right)</p>
-          </div>
-          <div class="half" style="max-height: 100%;">
-            <img class="image center" src="../assets/traumagotchi/SJICA_install.png" alt="Traumagotchi Lark Alder aka Lark VCR">
-          </div>
         </div>
       </div>
+
+      <div class="row my-4" style="">
+
+        <div class="col-sm-6 p-1 p-sm-4" style="">
+          <img class="image" src="../assets/traumagotchi/BAC_install.png" alt="Traumagotchi Lark Alder aka Lark VCR">
+          <p><em>NEXTNEW Games exhibit</em>, San Jose Institute of Contemporary Art, June-Sept 2018 (above)</p>
+          <p><em>Queer Technologies</em>, Berkeley Art Center, July-Sept 2018 (right)</p>
+        </div>
+        <div class="col-sm-6" style="">
+          <img class="image" src="../assets/traumagotchi/SJICA_install.png" alt="Traumagotchi Lark Alder aka Lark VCR">
+        </div>
+      </div>
+
     </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script></body>
+
+
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
 <footer>
   <p>( ＾◡＾)っ✂ website by lark alder 2020</p>
 </footer>
