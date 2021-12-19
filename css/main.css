@@ -620,6 +620,16 @@ p a:hover, h1 a:hover, h4 a:hover {
  }
 }
 
+/* **** for p5 canvas ***** */
+
+#bubbleCanvas {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -2;
+}
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 48em) {
 
