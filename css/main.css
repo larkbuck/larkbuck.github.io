@@ -284,13 +284,13 @@ body {
   max-width: 550px;
 }
 
-p a, h1 a {
+p a, h1 a, h4 a {
   text-decoration: none;
   color: #222;
   border-bottom: 2px #00DA80 dotted;
 }
 
-p a:hover, h1 a:hover {
+p a:hover, h1 a:hover, h4 a:hover {
   color: #FFFFFF;
   background-color: #161616;
   /*padding: .5em .5em .5em 1.5em;*/
