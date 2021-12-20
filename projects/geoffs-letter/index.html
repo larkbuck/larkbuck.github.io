@@ -2,134 +2,175 @@
 <html>
 
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131901646-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131901646-1"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+  function gtag() {
+   dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
 
-    gtag('config', 'UA-131901646-1');
-  </script>
-  <meta charset="UTF-8">
-  <title>Lark VCR | Geoff's Letter</title>
-  <meta name="description" content="Babump at the Berkeley EECS Annual Research Symposium.">
-  <meta name="keywords" content="Lark Alder, Lark VCR, Lark V.C.R, Lark Buckingham, artist, Tattle-tale heart, Tattletale heart">
-  <meta name="robots" content="nofollow">
-  <meta name="robots" content="nofollow">
-  <link rel="icon" type="image/png" href="../../favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="../../favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96">
-  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Open+Sans|Raleway" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../../css/main.css">
+  gtag('config', 'UA-131901646-1');
+ </script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <title>Lark VCR | Geoff's Letter</title>
+ <meta name="description" content="Babump at the Berkeley EECS Annual Research Symposium.">
+ <meta name="keywords" content="Lark Alder, Lark VCR, Lark V.C.R, Lark Buckingham, artist, Tattle-tale heart, Tattletale heart">
+ <meta name="robots" content="nofollow">
+ <link rel="icon" type="image/png" href="../../favicon-32x32.png" sizes="32x32">
+ <link rel="icon" type="image/png" href="../../favicon-16x16.png" sizes="16x16">
+ <link rel="icon" type="image/png" href="../../favicon-96x96.png" sizes="96x96">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Open+Sans|Raleway" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="../../css/main.css">
 </head>
 
 <body>
-  <ul>
-    <ul class="links">
-      <li><a class="purpleLink" href="/">home</a></li>
-      <li><a class="activeLink" href="../../projects">projects</a></li>
-      <li><a class="pinkLink" href="../../bio-cv">bio/CV</a></li>
-      <li><a class="chartreuseLink" href="../../contact">contact</a></li>
-      <!-- <li><a class="chartreuseLink" href="../../about/services.html">services</a></li> -->
-      <li><img class="platform" src="../../assets/stripes/platform_small.svg" alt="">
-    </ul>
-    <ul class="links projectIndexLink" id="projectIndex">
-      <li class="">
-        <p><a href="../index.html">Project Gallery</a></p>
-        <br>
-      </li>
-      <li class="">
-        <p><a href="traumagotchi.html">TRAUMAGOTCHI</a></p>
-        <br>
-      </li>
-      <li class="">
-        <p><a href="humancomputerlove">HUMAN-COMPUTER LOVE</a></p>
-        <br>
-      </li>
-      <li class="">
-        <p><a href="tattletaleheart.html">TATTLE-TALE HEART (film) </a></p>
-        <br>
-      </li>
-      <li class="">
-        <p><a href="heart-startups.html">HEART STARTUP SERIES</a></p>
-      </li>
-      <li>
-        <p><a href="babump.html">Babump</a></p>
-      </li>
-      <li>
-        <p><a href="babump-talk.html">Babump performance</a></p>
-      </li>
-      <li>
-        <p><a href="meeglo.html">Meeglo</a></p>
-        <br>
-      </li>
-      <!-- <li class="">
+ <nav class="navbar navbar-default navbar-custom fixed-top navbar-expand-lg navbar-dark" id="bootstrapNavbar">
+  <!-- <a class="navbar-brand" href="../"> <img src="../../assets/humanComputerLove-logo-04.png" alt="<3"></a> -->
+  <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarNavDropdown">
+   <ul class="navbar-nav ml-auto">
+    <li class="nav-item purpleLink">
+     <a class="nav-link btn btn-lg mr-4" href="/" role="button">home</a>
+    </li>
+    <li class="nav-item active activeLink">
+     <a class="nav-link btn btn-lg mr-4" href="../">projects<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item pinkLink">
+     <a class="nav-link btn btn-lg mr-4" href="../../about" role="button">about</a>
+    </li>
+    <li class="nav-item chartreuseLink">
+     <a class="nav-link btn btn-lg mr-4" href="../../contact" role="button">
+      contact</a>
+    </li>
+   </ul>
+  </div>
+ </nav>
+
+
+ <ul>
+  <ul class="links" id="browserMenu">
+   <li><a class="purpleLink" href="/">home</a></li>
+   <li><a class="activeLink" href="../../projects">projects</a></li>
+   <li><a class="pinkLink" href="../../about">about</a></li>
+   <li><a class="chartreuseLink" href="../../contact">contact</a></li>
+   <!-- <li><a class="chartreuseLink" href="../../about/services.html">services</a></li> -->
+   <li><img class="platform" src="../../assets/stripes/platform_small.svg" alt="Lark Alder or Lark VCR, aka Virtually Conflicted Reality">
+  </ul>
+
+  <ul class="links projectIndexLink" id="projectIndex">
+   <li class="">
+    <p><a href="../../index.html">Project Gallery</a></p>
+    <br>
+   </li>
+   <li class="">
+    <p><a href="traumagotchi">TRAUMAGOTCHI</a></p>
+    <br>
+   </li>
+   <li class="">
+    <p><a href="humancomputerlove">HUMAN-COMPUTER LOVE</a></p>
+    <br>
+   </li>
+   <li class="">
+    <p><a href="tattletaleheart">TATTLE-TALE HEART (film) </a></p>
+    <br>
+   </li>
+   <li class="">
+    <p><a href="heart-startups">HEART STARTUP SERIES</a></p>
+   </li>
+   <li>
+    <p><a href="babump.html">Babump</a></p>
+   </li>
+   <li>
+    <p><a href="babump-talk.html">Babump performance</a></p>
+   </li>
+   <li>
+    <p><a href="meeglo">Meeglo</a></p>
+    <br>
+   </li>
+   <!-- <li class="">
         <p><a href="magic4real/index.html">MAGIC4REAL DOT COM</a></p>
         <br>
       </li> -->
-      <li class="">
-        <p><a href="bubbles.html">BUBBLE BLOG</a></p>
-        <br>
-      </li>
-      <li class="">
-        <p><a href="geoffs-letter.html">GEOFF'S LETTER</a></p>
-      </li>
-      <!-- <li>
+   <li class="">
+    <p><a href="bubbles.html">BUBBLE BLOG</a></p>
+    <br>
+   </li>
+   <li class="">
+    <p><a href="geoffs-letter.html">GEOFF'S LETTER</a></p>
+   </li>
+   <!-- <li>
         <p><a href="possum-impressions.html">POSSUM IMPRESSIONS</a></p>
         <br>
       </li> -->
-    </ul>
   </ul>
-  <div class="main-content">
-    <div class="box two">
-      <h1>lark vcr</h1>
-      <h2>Geoff's Letter of (non)Apology</h2>
-      <p>Installation at the Berkeley Center for New Media <br> UC Berkeley <br> Sept - November 2015<br>
-      </p>
-    </div>
-    <div class="container" style="margin-top: 50px;">
-      <div class="half">
-        <img class="image" src="../../assets/geoffMarcy/BCNM_geoff-Marcy.jpg" style="max-width: 800px; padding: 0;" alt="">
-      </div>
-      <div class="half">
-        <img class="image" src="../../assets/geoffMarcy/BCNM_pleaseEdit.jpg" style="max-width: 800px; padding: 0;" alt="">
-      </div>
-      <div class="full">
-        <p><em>Geoff's Letter of (non)Apology</em> was a purposefully informal, bulletin-board style public forum for discussing accountability in regards to sexual and gender-based violence. Installed in 2015 prior to the #metoo movement on the UC Berkeley campus, the project was a bold public statement to invite public commentary and discource.</p>
-        <p> The installation featured a blown-up letter by Geoff Marcy, an established astronomy professor who resigned after decades-long accusations of assault. I made revisions to the letter in red marker, enlarged it to be 3ft x 5ft, and posted it on the window alongside markers and an invitation to edit.</p>
-        <p>Located outside the bustling Moffitt Library, the letter was heavily commented after 6 weeks, becoming a site for public discourse on not only this particular event, but also universal themes of accountability, sexual violence culture, and institutional response.</p>
-        <!-- <p>Located outside the bustling Moffitt Library, the letter was heavily commented after 6 weeks. The UC Berkeley administration requested that the Berkeley Center for New Media remove the installation, describing it as an "eyesore." </p> -->
-        <p><em>Geoff's Letter</em> was created as part of Everything After, an art and community organizing collaboration against sexual violence with Jadelynn Stahl and members of the UAW Student-Workers Union. In the yearlong project, we hosted workshops in transformative justice and intersectionality as well as a daylong Survivors' Symposium featuring speakers, panels, workshops, and student art. </p>
-      </div>
+ </ul>
 
-      <div class="full">
-        <p><a href="../../assets/geoffMarcy/Geoff-Marcy_letter.jpg" target="_blank">CLICK TO VIEW ENLARGED LETTER IN NEW TAB</a></p>
-        <img class="image" src="../../assets/geoffMarcy/Geoff-Marcy_letter.jpg" style="max-width: 1296px; padding: 0;" alt="">
-      </div>
-      <div class="full">
-        <p>Closeups:</p>
-        <img class="image" src="../../assets/geoffMarcy/letter_CU2.jpg" style="max-width: 1000px; padding: 0;" alt="">
-      </div>
-      <div class="full">
-        <img class="image" src="../../assets/geoffMarcy/letter_CU1.jpg" style="max-width: 600px; padding: 0;" alt="">
-      </div>
+ <div id="wrap">
+  <div class="container-fluid mx-0 mr-sm-5 ml-sm-5 p-1">
+   <div class="row">
+    <div class="box col-10 col-sm-6 my-5 ml-3">
+     <h1>lark vcr</h1>
+     <h2>Geoff's Letter of (non)Apology</h2>
+     <p>Installation at the Berkeley Center for New Media <br> UC Berkeley <br> Sept - November 2015<br>
+     </p>
     </div>
-    <!-- <div class="half">
+   </div>
+
+   <div class="row justify-content-left">
+    <div class="col-sm-5 mx-1 my-2 my-sm-5">
+     <img class="image" src="../../assets/geoffMarcy/BCNM_geoff-Marcy.jpg" style="" alt="Image of edited letter to Geoff Marcy">
+    </div>
+    <div class="col-sm-5 mx-1 my-2 my-sm-5">
+     <img class="image" src="../../assets/geoffMarcy/BCNM_pleaseEdit.jpg" style="" alt="Image of edited letter to Geoff Marcy">
+    </div>
+    <div class="col-sm-10 ml-5 my-5">
+     <p><em>Geoff's Letter of (non)Apology</em> was a purposefully informal public forum for discussing sexual and gender-based violence in academics. Installed in 2015 (prior to the #metoo movement) on the UC Berkeley campus, the project invited
+      public commentary and discourse in an era marked by silence and erasure.</p>
+     <p> The installation featured a blown-up letter written by Geoff Marcy, an established astronomy professor who resigned in 2015 after decades-long accusations of assault. I made revisions to the letter in red marker, enlarged it to 3ft x 5ft,
+      and posted it on the Berkeley Center for New Media window display alongside markers and an invitation to edit.</p>
+     <p>Located outside the bustling Moffitt Library, the letter was heavily commented after 6 weeks. It became a site for public discourse on not only this particular event, but also universal themes of accountability, sexual violence culture, and
+      institutional response.</p>
+     <p>After 6 weeks, the UC Berkeley administration requested that the Berkeley Center for New Media remove the installation, describing it as an "eyesore." </p>
+
+    </div>
+
+    <div class="col-sm-10 ml-5 my-5">
+     <p><a href="../../assets/geoffMarcy/Geoff-Marcy_letter.jpg" target="_blank">CLICK TO VIEW ENLARGED LETTER IN NEW TAB, CLOSEUPS BELOW</a></p>
+     <a href="../../assets/geoffMarcy/Geoff-Marcy_letter.jpg" target="_blank"><img class="image" src="../../assets/geoffMarcy/Geoff-Marcy_letter.jpg" style="max-width: 1296px; padding: 0;" alt=""></a>
+    </div>
+    <div class="col-sm-10 ml-5 my-5">
+     <p>Closeups:</p>
+     <img class="image" src="../../assets/geoffMarcy/letter_CU2.jpg" style="max-width: 1000px; padding: 0;" alt="">
+    </div>
+    <div class="col-sm-10 ml-5 my-5">
+     <img class="image" src="../../assets/geoffMarcy/letter_CU1.jpg" style="max-width: 1000px; padding: 0;" alt="">
+    </div>
+   </div>
+   <!-- <div class="half">
       <p>Following the forced removal of the installation, I created the <a href="possum-impressions.html"><em>Possum Impressions</em></a> installation in the same window space.</p>
     </div> -->
-    <div class="container align-right black">
-      <div class="two-thirds">
-        <p>Project advisor: Jadelynn Stahl <br> Supported by the Berkeley Center for New Media</p>
-      </div>
-    </div>
+   <div class="col-sm-10 ml-5 my-5">
+    <p><em>Geoff's Letter</em> was created as part of Everything After, an art and community organizing collaboration against sexual violence with Jadelynn Stahl and members of the UAW Student-Workers Union. In the yearlong project, we hosted
+     workshops in transformative justice and intersectionality as well as a daylong Survivors' Symposium featuring speakers, panels, workshops, and student art. </p>
+    <p>Project advisor: Jadelynn Stahl <br> Supported by the Berkeley Center for New Media</p>
+   </div>
   </div>
-  </div>
+ </div>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
-<footer>
-  <p>( ＾◡＾)っ✂ website by lark alder 2020</p>
+<footer class="d-flex align-items-end flex-column" id="sticky-footer">
+ <div class="p-2 mt-auto">
+  ( ＾◡＾)っ✂ website by lark alder 2022
+ </div>
 </footer>
 
 </html>
