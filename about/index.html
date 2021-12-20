@@ -60,33 +60,68 @@
 </head>
 
 <body>
-  <ul class="links">
-    <li><a class="purpleLink" href="/">home</a></li>
-    <li><a class="greenLink" href="../projects">projects</a></li>
-    <li><a class="activeLink" href="#">about</a></li>
-    <li><a class="chartreuseLink" href="../contact">contact</a></li>
-    <!-- <li><a class="chartreuseLink" href="../about/services.html">services</a></li> -->
-    <li><img class="platform" src="../assets/stripes/platform_small.svg" alt="">
-      <p></p>
-  </ul>
-  <ul class="links emailList">
+
+  <!-- <ul class="links emailList">
     <li><a class="greenLink" href="javascript:;" onclick="ml_account('webforms', '3025367', 'c5e0g6', 'show')">
         Join my email list 💌
       </a></li>
+  </ul> -->
+
+  <nav class="navbar navbar-default navbar-custom fixed-top navbar-expand-lg navbar-dark" id="bootstrapNavbar">
+   <!-- <a class="navbar-brand" href="../../"> <img src="../../assets/humanComputerLove-logo-04.png" alt="<3"></a> -->
+   <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+   </button>
+
+   <div class="collapse navbar-collapse " id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+     <li class="nav-item purpleLink">
+      <a class="nav-link btn btn-lg mr-4" href="/" role="button">home</a>
+     </li>
+     <li class="nav-item active activeLink">
+      <a class="nav-link btn btn-lg mr-4" href="../">projects<span class="sr-only">(current)</span></a>
+     </li>
+     <li class="nav-item pinkLink">
+      <a class="nav-link btn btn-lg mr-4" href="../../about" role="button">about</a>
+     </li>
+     <li class="nav-item chartreuseLink">
+      <a class="nav-link btn btn-lg mr-4" href="../../contact" role="button">
+       contact</a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+
+
+
+  <ul class="links" id="browserMenu">
+   <li><a class="purpleLink" href="/">home</a></li>
+   <li><a class="activeLink" href="../../projects">projects</a></li>
+   <li><a class="pinkLink" href="../../about">about</a></li>
+   <li><a class="chartreuseLink" href="../../contact">contact</a></li>
+   <!-- <li><a class="chartreuseLink" href="../../about/services.html">services</a></li> -->
+   <li><img class="platform" src="../../assets/stripes/platform_small.svg" alt="">
   </ul>
-  <div class="main-content max1200">
-    <div class="box one margin_bottom">
+
+  <div id="wrap">
+   <div class="container mx-0 mr-sm-2 ml-sm-5">
+    <div class="row">
+     <div class="box col-sm-8 my-3 my-sm-5 ml-3 py-1 py-sm-3 medFont">
       <h1>▼△▼△ Lark VCR </h1>
       <p>aka. Lark Alder</p>
       <p>BORN: Santa Ana, CA 1981</p>
-      <p>CURRENT RESIDENCE: California, US </p>
+      <p>CURRENT RESIDENCE: San Francisco, US </p>
       <p>GENDER IDENTITY: Glamsport / Genderfluid</p>
       <p>PRONOUNS: They/Them/Theirs</p>
 
       <img src="../assets/contact/LarkVCR_portrait_mojica.jpg" alt="" class="image" style="width=100%; max-width:270px;">
       <p style="font-size: 14px; margin-top: 0;">illustration by <a href="https://www.instagram.com/the_last_mojican/">Edgar Mojica</a></p>
     </div>
-    <div class="box four margin_bottom">
+    </div>
+
+    <div class="row my-4 justify-content-start">
+     <div class="col-12 mt-sm-4 mb-4 box ">
+    <!-- <div class="box four margin_bottom"> -->
       <h2>Bio</h2>
       <p>
         Lark VCR (aka Lark Alder) makes speculative proposals to explore the pitfalls and possibilities of an increasingly digitized and bioengineered world. Working in hybrid forms of video and web-based media, they leverage humor as an entry point
@@ -95,7 +130,7 @@
         VCR stands for Virtually Conflicted Reality - it is both an homage to analog video and a skeptical nod at the techno-utopian promises of virtual reality (VR). Experientially, it is the state of perpetual disconnect we navigate as cognizant
         individuals
         who have no choice but to participate in systems defined by injustice. </p>
-      <p> Lark received an MFA from UC Berkeley in 2016 and is currently teaching courses at intersections of art, technology, and queerness at San José State University (SJSU) and Stanford University in their home state of California.
+      <p> Lark received an MFA from UC Berkeley in 2016 and is currently teaching courses at intersections of art, technology, and queerness at San José State University and Stanford University in their home state of California.
       </p>
       <!-- <p>Lark's work has shown at Frameline Film Festival, MIX New York Queer Experimental Film Festival, San Jose Institute of Contemporary Art, the San Francisco International Arts Festival, Berkeley Art Museum, Cinema for Gender Transgression, and Schuwels Museum in Berlin.
       </p> -->
@@ -104,8 +139,6 @@
       <h2>CV</h2>
       <p>
         <a href="larkAlder_CV_2020.pdf">PDF</a></p>
-
-
       </p>
     </div>
     <div class="box four">
@@ -113,13 +146,13 @@
         TEACHING
       </p>
       <p>
-        2021 Lecturer, Stanford University. Courses: Queer Technology and Speculative Design (Winter Quarter), Stanford, CA
+        2021-now Lecturer, Stanford University. Courses: Queer Technology and Speculative Design (Winter Quarter), Stanford, CA
       </p>
       <p>
-        2017-now💗 Lecturer, San José State University. Courses: Digital Media Art / Creative Code, Intro to Queer Arts,  Advanced Video Production, Advanced Projects (Augmented Reality), BFA Capstone Exhibition, Intro to Digital Video Art, San Jose, CA
+        2017-now Lecturer, San José State University. Courses: Intro to Queer Arts, Digital Media Art / Creative Code, Advanced Video Production, Advanced Projects (Augmented Reality), BFA Capstone Exhibition, Intro to Digital Video Art, San Jose, CA
       </p>
       <p>
-        2018-2020  PRIDE Center Faculty Fellow. Curated <a href="https://sjsu-quartz.github.io/">QuArtz</a> queer arts events, San José State University, San Jose, CA
+        2018-2020  PRIDE Center Faculty Fellow, San José State University. Curated <a href="https://sjsu-quartz.github.io/">QuArtz</a> queer arts events and workshops, San Jose, CA
       </p>
       <p>
         2017 Lecturer, SAE Expression College, Multi-Media and Web Development, Oakland, CA
@@ -134,10 +167,23 @@
         2013-2014 Animation Instructor, Mid Peninsula Media Center Youth Program, Palo Alto, CA
       </p> -->
     </div>
-
+<div class="box">
+ <p>
+   PUBLICATIONS
+ </p>
+ <p>
+   2021 "Queer Time, Productivity, and Failure in Interactive Media", Chapter in <u>Interactive Storytelling for the Screen</u>, Routledge<p>
+ </p>
+ <p>
+   2021 <em>Network Imaginaries</em>, Publication by Hackers and Designers, article co-written with Xin-Xin</p>
+ </p>
+</div>
     <div class="box three">
       <p>
         EXHIBITIONS
+      </p>
+      <p>
+        2021 <em>KRAKEN</em>, Video and interactive website, SURF, Et. al Gallery, San Francisco, CA</p>
       </p>
       <p>
         2020 <em>Traumagotchi, </em>Interactive website and installation, Invincible California, Worth Ryder Gallery, Berkeley, CA</p>
@@ -280,6 +326,8 @@
       <p>
         LECTURES / PRESENTATIONS / WORKSHOPS
       </p>
+      <p>2021 Panelist, <em>Queer and Transgender Identities in Expanded Realities<em>, <u>Interactive Storytelling for the Screen</u> Book Launch</p>
+      <p>2021 Panelist, <em>On Female Prophecy<em> Akademie Schloss-Solitude</p>
       <p>2020 <a href="https://hackersanddesigners.nl/s/Summer_Academy_2020/p/Experimental_Chatroom">Experimental Chatroom Workshop</a>, Hackers & Designers Summer Academy 2020: Network Imaginaries. Collaboration with Xin Xin</p>
       <p>2020 Artist Talk, Tuesday Night Lecture Series, San Jose State University, San Jose, CA</p>
       <p>2019 Speaker, Code Kitchen, Parsons School of Art and Design, New York, NY</p>
@@ -332,15 +380,15 @@
         2015 Lecture/Presentation, 'Health Data for Employers,' Graduate Research Hot Topics, Berkeley EECS Annual Research Symposium (BEARS), Berkeley, CA
       </p>
     </div>
-    <div class="box two">
+    <!-- <div class="box two">
       <p>
         CURATORIAL PRACTICE
       </p>
       <p>
         2018-2020 <a href="https://sjsu-quartz.github.io/">QuArtz Queer Arts Programming</a>, San Jose State University, San Jose, CA
       </p>
-    </div>
-    <!-- <div class="box two">
+    </div> -->
+    <div class="box two">
       <p>
         EDUCATION
       </p>
@@ -350,7 +398,7 @@
       <p>
         2006 BA, Visual and Environmental Studies, Harvard University
       </p>
-    </div> -->
+    </div>
     <!-- <div class="box three">
       <p>
         VOLUNTEER AND ADVOCACY WORK
