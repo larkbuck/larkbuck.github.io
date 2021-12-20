@@ -224,13 +224,14 @@ body {
  width: 100%;
 }
 
-/* not sure when using which version of canvas */
+/* using for bubbles  */
 #bgCanvas {
  position: fixed;
  top: 0px;
  left: 0px;
  /* z-index: -2; */
 }
+
 
 .canvas {
  margin-top: 100px;

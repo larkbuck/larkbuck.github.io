@@ -13,13 +13,13 @@ function preload() {
   //preload images to bubblesPop array
   for (i = 0; i < 21; i++) {
     if (i < 10) {
-      bubblesPop[i] = loadImage(`../assets/bubbles/bubblesPop_0${i}.png`)
+      bubblesPop[i] = loadImage(`../../assets/bubbles/bubblesPop_0${i}.png`)
     } else {
-      bubblesPop[i] = loadImage(`../assets/bubbles/bubblesPop_${i}.png`)
+      bubblesPop[i] = loadImage(`../../assets/bubbles/bubblesPop_${i}.png`)
     }
   }
 
-  popSound[0] = loadSound('../assets/bubbles/bubble_pop.mp3');
+  popSound[0] = loadSound('../../assets/bubbles/bubble_pop.mp3');
 }
 
 function setup() {
