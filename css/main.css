@@ -48,7 +48,9 @@ body {
  /* border-color: #E7E7E7; */
 }
 
-.navbar-custom {}
+.navbar-custom {
+ z-index: 2;
+}
 
 /* change the brand and text color */
 .navbar-custom .navbar-brand, .navbar-custom .navbar-text {
