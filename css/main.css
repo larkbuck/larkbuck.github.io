@@ -364,6 +364,16 @@ p a:hover, h1 a:hover, h4 a:hover {
  max-width: 600px;
 }
 
+
+#container_ooo {
+background: #000;
+ color: #fffff2;
+ text-align: center;
+ font-size: 1.2rem;
+ font-family: "Anonymous Pro", "Courier", "Helvetica", "Arial", sans-serif;
+ /* font-family: sans-serif; */
+}
+
 #container_bubbles {
  color: black;
  /* background-color: #fff; */
@@ -384,6 +394,7 @@ p a:hover, h1 a:hover, h4 a:hover {
  font-family: "Anonymous Pro", "Courier", "Helvetica", "Arial", sans-serif;
  /* font-family: sans-serif; */
 }
+
 
 #container_ttProduct {
  /*flex properties set in flex-container*/
