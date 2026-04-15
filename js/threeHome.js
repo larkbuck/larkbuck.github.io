@@ -207,19 +207,31 @@ function animate() {
 
     // Limit framerate to 30fps by moving animation frame to a timeout function 
     // But only if the user is NOT on mobile (this causes stuttering on phones)
-    if (!navigator.userAgent.match(/Mobi/i) &&
-        !navigator.userAgent.match(/Android/i) &&
-        !navigator.userAgent.match(/iPhone/i)
-    ) {
-        // Device is a browser - limit framerate
-        setTimeout(function () {
+    // if (!navigator.userAgent.match(/Mobi/i) &&
+    //     !navigator.userAgent.match(/Android/i) &&
+    //     !navigator.userAgent.match(/iPhone/i)
+    // ) {
+    //     // Device is a browser - limit framerate
+    //     setTimeout(function () {
 
-            requestAnimationFrame(animate);
+    //         requestAnimationFrame(animate);
 
-        }, 1000 / 30);
-    } else {
-        requestAnimationFrame(animate);
-    }
+    //     }, 1000 / 30);
+    // } else {
+    //     requestAnimationFrame(animate);
+    // }
+
+
+    // slow framerate (all devices)
+    // setTimeout(function () {
+    //     requestAnimationFrame(animate);
+    // }, 50);
+
+    // no slowing framerate
+    requestAnimationFrame(animate);
+
+
+
 
     // scroll camera animation
     const scrollY = window.scrollY;
@@ -228,16 +240,25 @@ function animate() {
 
     // →→→→→→ add your animation here ↓↓↓↓
 
-    octahedron.rotation.x += 0.01;
-    octahedron.rotation.y += 0.01;
+    octahedron.rotation.x += 0.005;
+    octahedron.rotation.y += 0.005;
 
-    torus.rotation.x += 0.0005;
-    torus.rotation.y += 0.0005;
+    torus.rotation.x += 0.0001;
+    torus.rotation.y += 0.0001;
 
-    tube.rotation.x -= 0.0005;
-    tube.rotation.y -= 0.0005;
+    tube.rotation.x -= 0.0001;
+    tube.rotation.y -= 0.0001;
 
+    
+    // faster (old)
+    // octahedron.rotation.x += 0.01;
+    // octahedron.rotation.y += 0.01;
 
+    // torus.rotation.x += 0.0005;
+    // torus.rotation.y += 0.0005;
+
+    // tube.rotation.x -= 0.0005;
+    // tube.rotation.y -= 0.0005;
 
 
 

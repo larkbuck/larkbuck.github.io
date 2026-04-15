@@ -190,8 +190,8 @@ function animate() {
     octahedron.rotation.x += 0.01;
     octahedron.rotation.y += 0.01;
 
-    torus.rotation.x += 0.001;
-    torus.rotation.y += 0.001;
+    torus.rotation.x += 0.0005;
+    torus.rotation.y += 0.0005;
 
 
 
