@@ -207,18 +207,19 @@ function animate() {
 
     // Limit framerate to 30fps by moving animation frame to a timeout function 
     // But only if the user is NOT on mobile (this causes stuttering on phones)
-    // if (!navigator.userAgent.match(/Mobi/i) &&
-    //     !navigator.userAgent.match(/Android/i) &&
-    //     !navigator.userAgent.match(/iPhone/i)
-    // ) {
-    //     // console.log("browser")
-    //     // Device is a browser - limit framerate
-    //     setTimeout(function () {
+    if (!navigator.userAgent.match(/Mobi/i) &&
+        !navigator.userAgent.match(/Android/i) &&
+        !navigator.userAgent.match(/iPhone/i)
+    ) {
+        // Device is a browser - limit framerate
+        setTimeout(function () {
 
-    //         requestAnimationFrame(animate);
+            requestAnimationFrame(animate);
 
-    //     }, 1000 / 30);
-    // }
+        }, 1000 / 30);
+    } else {
+        requestAnimationFrame(animate);
+    }
 
     // scroll camera animation
     const scrollY = window.scrollY;

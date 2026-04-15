@@ -176,6 +176,8 @@ function animate() {
             requestAnimationFrame(animate);
 
         }, 1000 / 30);
+    } else {
+         requestAnimationFrame(animate);
     }
 
     // scroll camera animation
