@@ -39,18 +39,8 @@ function setup() {
   }
 
 
-  // hard coding links if not accessible bc of mousePressed()
-  // home = select(".purpleLink");
-  // home.mousePressed(logPress, "/");
-
 }
 
-// working on this now
-function logPress(url) {
-  // window.location = url;
-  // window.location.href = `<a href="${url}" </a>`;
-  // console.log(url);
-}
 
 function draw() {
   clear();
@@ -127,11 +117,28 @@ class Bubble {
   }
 }
 
-// function mousePressed() {
-// bug! if this click is enabled you can't go back to menu
-// now it's working? new p5 fixed it?!
-// function mouseClicked() {
+// link to home
+function mouseClicked() {
+
+  console.log(`${mouseX}, ${mouseX}`)
+
+  if (dist(0, 0, mouseX, mouseY) < 200) {
+    window.location = '/';
+  }
+
+}
+
+
+// pop bubbles
 function mouseReleased() {
+
+  console.log(`${mouseX}, ${mouseX}`)
+
+  //go to projects page with home link
+  if (dist(0, 0, mouseX, mouseY) < 200) {
+    window.location = '/';
+  }
+
 
   // loop backwards so bubbles on top pop first
   for (var i = bubbles.length - 1; i >= 0; i--) {
@@ -140,7 +147,7 @@ function mouseReleased() {
       bubbles[i].popSound.setVolume(0.1);
       bubbles[i].popSound.setLoop(false);
       bubbles[i].popSound.play();
-      setTimeout(function() {
+      setTimeout(function () {
         counter++;
         // move bubble off screen so no re-clicks
         bubbles[i].x -= 200;

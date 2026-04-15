@@ -62,6 +62,14 @@ body {
   /*margin-left: 300px;*/
 }
 
+.link-home-bubbles {
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00DA80;
+}
+
 /*solid border boxes*/
 .box {
   background-color: #FFFFFF;
@@ -118,20 +126,22 @@ body {
   max-width: 550px;
 }
 
-p a, h1 a {
+p a,
+h1 a {
   text-decoration: none;
   color: #222;
   border-bottom: 2px #00DA80 dotted;
 }
 
-p a:hover, h1 a:hover {
+p a:hover,
+h1 a:hover {
   color: #FFFFFF;
   background-color: #161616;
   /*padding: .5em .5em .5em 1.5em;*/
 }
 
 .link-home {
-  z-index = 20;
+  z-index=20;
 }
 
 .highlight {
@@ -150,7 +160,10 @@ p a:hover, h1 a:hover {
   outline-offset: -5px; */
 }
 
-.highlight a:hover, a:visited, a:link, a:active {
+.highlight a:hover,
+a:visited,
+a:link,
+a:active {
   text-decoration: none;
 }
 
@@ -326,7 +339,10 @@ p a:hover, h1 a:hover {
   flex: 1 1 25%;
 }
 
-.flex-item_1 img, .flex-item_2 img, .flex-item_3 img, .flex-item_4 img {
+.flex-item_1 img,
+.flex-item_2 img,
+.flex-item_3 img,
+.flex-item_4 img {
   width: 100%;
   height: auto;
 }
@@ -648,7 +664,7 @@ footer {
   position: fixed;
 }
 
-.links a{
+.links a {
   text-decoration: none;
   border-bottom: none;
 }
@@ -673,7 +689,8 @@ footer {
   line-height: .7;
 }
 
-.projectIndexLink a, .projectIndexLink p {
+.projectIndexLink a,
+.projectIndexLink p {
   color: #777777;
 }
 
