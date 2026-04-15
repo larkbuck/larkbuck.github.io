@@ -54,7 +54,7 @@ function preload() {
 
 function setup() {
   frameRate(30);
-  canvas = createCanvas(windowWidth - 300, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('bgCanvas');
 
   // media queries to scale folders
@@ -62,6 +62,8 @@ function setup() {
   if (windowWidth > 800) {
     // console.log("under 400")
   }
+
+
   // canvas = createCanvas(windowWidth - 300, 800);
   if (mediaQueryList.matches) {
     // run JavaScript in here.
