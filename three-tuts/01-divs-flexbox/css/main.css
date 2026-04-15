@@ -1,0 +1,158 @@
+/* 
+ADD CSS RESETS:
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+  62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/ 
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* GLOBAL STYLES 
+------------------------------ */
+
+body {
+    background: #f2efe9;
+    margin: 0;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* font weight is a value from 200-900 */
+    font-weight: 400;
+    font-variation-settings: "wdth" 100;
+    font-size: 1.6rem;
+    /* same as 16px using 62.5% fix for rem */
+    line-height: 1.6;
+}
+
+
+#three-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    margin: 2rem auto 2rem 2rem;
+    padding: 1rem;
+    max-width: 400px;
+    /* background: #f2efe9; */
+    border-radius: .5rem;
+}
+
+h1 {
+    /* display: inline-block; */
+    /* background: #f2efe9; */
+}
+
+h1,
+h2,
+h3 {
+    /* display: inline-block; */
+    font-family: "Onest", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    /* normal weight, removes default bold */
+    margin: 0;
+
+}
+
+h1 {
+    font-size: 5rem;
+    /* line-height: 0.85;  */
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+
+
+/* links */
+a {
+    color: #5c2be4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00ff00;
+}
+
+
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+
+/* ~~~~~ Homepage Note styling ~~~~~~~ */
+
+.note {
+    padding: 1rem;
+    margin: 5rem 1rem;
+    background: #f2efe9;
+    border-radius: .2rem;
+    max-width: 400px;   
+}
+
+
+/* ~~~~~~~~~~~~~ FLEX BOX ~~~~~~~~~~~~~~~ */
+
+.flex-container-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-item {
+    flex: 0 1 auto;
+}
+
+.align-self-start {
+    align-self: start;
+}
+
+.align-self-end {
+    align-self: end;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.align-self-stretch {
+    align-self: stretch;
+}

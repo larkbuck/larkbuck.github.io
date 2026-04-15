@@ -1,0 +1,26 @@
+
+1. build out more HTML - make page longer
+
+- added class for different size margins
+
+
+
+
+2. Added window scroll with camera
+
+- try changing values to rotate camera !
+
+
+3. added more dat.gui elements + moved octahedron
+
+
+4. made multiple octahedrons at once
+
+
+
+
+next video - parent all elements to a "null" which moves elements, not camera
+
+another video - check for when element appears in screen https://www.geeksforgeeks.org/how-to-check-a-dom-element-is-visible-in-current-viewport/
+
+add animated gifs https://www.youtube.com/watch?v=pGO1Hm-JB90

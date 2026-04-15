@@ -1,0 +1,97 @@
+
+Learning via Udemy course: https://www.udemy.com/share/108fec3@cKco8U5fHhoEEkWwVkpGi5bCKpw1CNWllux5E3wIMt9wFnht02d9vktPxZjq6B8H/
+
+
+_________________________
+
+
+02-three-stats-datGUI
+
+links:
+- dat gui - https://youtu.be/JyhhHhoqK2o?si=1lK5pD2T4bDRJE91
+- https://sbcode.net/threejs/dat-gui-module/
+stats: https://sbcode.net/threejs/stats-panel/
+
+
+
+>>>>
+1. import dat.gui + stats
+explain difference between importing from import map v CDN
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap
+
+CODE: 
+import { GUI } from 'https://unpkg.com/dat.gui@0.7.9/build/dat.gui.module.js'; 
+import Stats from 'three/addons/libs/stats.module.js'
+// import Stats from 'https://unpkg.com/three@0.162.0/examples/jsm/libs/stats.module.js'
+
+
+>>>>>>>>>
+2. initiate stats, debug performance issues
+
+steps:
+https://sbcode.net/threejs/stats-panel/
+
+FIX FPS issues - it was slower in Chrome for me (20fps)....
+I had disabled hardware acceleration at some point in Chrome > Settings > System
+But still slower than Firefox, running at 30fps instead of firefox's 60!
+So I LIMITED the framerate so it maxes out at 30fps
+... solution from here: https://stackoverflow.com/questions/11285065/limiting-framerate-in-three-js-to-increase-performance-requestanimationframe
+
+
+
+This is fine to do as long as you are not doing VR for headsets, in which case you need 60fps min
+
+CODE:
+    setTimeout(function () {
+
+        requestAnimationFrame(animate);
+
+    }, 1000 / 30);
+
+
+However, it causes stuttering on mobile, so we can check to see if the user is on a mobile device and - if not - limit the framerate
+
+    // If on a browser, limit framerate to 30fps by moving animation frame to a timeout function 
+    // This causes stuttering on mobile so you have to do a userAgent query to check
+    if (
+        navigator.userAgent.match(/Mobi/i) ||
+        navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/iPhone/i)
+    ) {
+        // Current device is a mobile device
+        // do not limit framerate
+    } else {
+        // Device is a browser - limit framerate
+        setTimeout(function () {
+
+            requestAnimationFrame(animate);
+
+        }, 1000 / 30);
+    }
+
+This is another way to code it
+    if (!navigator.userAgent.match(/Mobi/i) &&
+        !navigator.userAgent.match(/Android/i) &&
+        !navigator.userAgent.match(/iPhone/i)
+    ) {
+        // Device is a browser - limit framerate
+        setTimeout(function () {
+
+            requestAnimationFrame(animate);
+
+        }, 1000 / 30);
+    }
+
+
+>>>>>>>>
+3. Add DAT gui
+
+https://sbcode.net/threejs/dat-gui-module/
+^ better to put GUI in code where variables appear
+^ can name them with .name 
+^ toggle on and off with gui.hide() and gui.show()
+
+another link: https://www.tutorialspoint.com/threejs/threejs_debug_and_stats.htm
+
+Good video , includes toggling wireframe, changing color @3'42": https://www.youtube.com/watch?v=JyhhHhoqK2o
+

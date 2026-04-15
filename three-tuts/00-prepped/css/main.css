@@ -1,0 +1,44 @@
+
+/* 
+ADD CSS RESETS:
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+  62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/ 
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* GLOBAL STYLES 
+------------------------------ */
+
+body {
+    background: #f2efe9;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    /* same as 16px using 62.5% fix for rem */
+    line-height: 1.6;
+}
+
+#three-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}

@@ -1,0 +1,437 @@
+/* 
+ADD CSS RESETS:
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+  62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/ 
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/* FOR THREE.JS DEBUGGING */
+/* In order to use orbit controls in Three.js, you have to (temporarily) disable clicks on the HTML */
+
+/* body {
+    pointer-events: none;
+} */
+
+
+/* GLOBAL STYLES 
+------------------------------ */
+
+body {
+    background: #f2efe9;
+    margin: 0;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* font weight is a value from 200-900 */
+    font-weight: 400;
+    font-variation-settings: "wdth" 100;
+    font-size: 1.6rem;
+    /* same as 16px using 62.5% fix for rem */
+    line-height: 1.6;
+}
+
+
+#three-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+/* header styling */
+
+header {
+    margin: 2rem auto 2rem 2rem;
+    padding: 1rem;
+    max-width: 400px;
+    /* background: #f2efe9; */
+    border-radius: .5rem;
+}
+
+
+h1 {
+    /* display: inline-block; */
+    /* background: #f2efe9; */
+}
+
+h1,
+h2,
+h3 {
+    /* display: inline-block; */
+    font-family: "Onest", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    /* normal weight, removes default bold */
+    margin: 0;
+
+}
+
+h1 {
+    font-size: 5rem;
+    /* line-height: 0.85;  */
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+
+/* main section styling */
+
+main {
+    margin: 0 auto;
+}
+
+
+/* sections */
+section {
+    max-width: 1400px;
+    margin: 2rem auto;
+}
+
+section h1 {
+    margin: 3rem auto;
+}
+
+@media screen and (min-width: 860px) {
+    section {
+        margin: 15rem 5rem;
+    }
+}
+
+@media screen and (max-width: 859px) {
+    section {
+        margin: 10rem 1rem;
+    }
+}
+
+
+
+/* links */
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+
+
+
+header a {
+    text-decoration: none;
+    color: #222;
+    /* border-bottom: 2px #00DA80 dotted; */
+}
+
+p a {
+    text-decoration: none;
+    color: #222;
+    border-bottom: 2px #00DA80 dotted;
+}
+
+p a:hover {
+    color: #FFFFFF;
+    background-color: #161616;
+    /*padding: .5em .5em .5em 1.5em;*/
+}
+
+a img:hover {
+    background-color: #00ff00;
+}
+
+.highlight {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #FF000000;
+}
+
+.highlight:hover {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #D2DB21 #8787C1 #00DA80 #D31996;
+    /* outline-style: solid;
+  outline-width: 5px;
+  outline-color: #D2DB21;
+  outline-offset: -5px; */
+}
+
+.highlight a:hover,
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
+}
+
+
+/* buttons */
+
+.button {
+    padding: 1rem 2rem;
+    margin: 0;
+    background: #f2efe9;
+    border-radius: .5rem;
+    /* max-width: 400px; */
+    display: inline-block;
+}
+
+.button a {
+    color: #000;
+    text-decoration: none;
+}
+
+.button:hover {
+    color: #000;
+    background: #00ff00;
+    /* color: #00ff00; */
+}
+
+
+/* images + embeds */
+
+img,
+iframe {
+    max-width: 100%;
+}
+
+
+
+iframe {
+    background-color: black;
+    border-radius: .5rem;
+}
+
+
+/* margin classes  */
+.sm-margin-top {
+    margin: 1rem 1rem 0 1rem;
+}
+
+.med-margin-top {
+    margin: 5rem 1rem 0 1rem;
+}
+
+.big-margin-top {
+    margin: 10rem 1rem 0 1rem;
+}
+
+
+
+/* ~~~~~ shadows and borders ~~~~~~~ */
+
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/*solid border boxes*/
+.box-border {
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 13px;
+    border-color: #D2DB21 #8787C1 #00DA80 #D31996;
+    padding: 33px;
+    box-shadow: 5px 5px 20px #A0A1AF;
+}
+
+
+/* ~~~~~ notes ~~~~~~~ */
+
+.image-div {
+    max-width: 500px;
+    display: inline-block;
+}
+
+
+.note {
+    padding: 1rem 2rem;
+    margin: 3rem 1rem;
+    background: #f2efe9;
+    border-radius: .5rem;
+    max-width: 400px;
+    display: inline-block;
+}
+
+.note-wide {
+    max-width: 600px;
+}
+
+.note-med-wide {
+    max-width: 800px;
+}
+
+.note-extra-wide {
+    max-width: 1000px;
+}
+
+
+@media screen and (max-width: 859px) {
+
+    /* to make size only height of content, use align-self: baseline (but only when it is in row, not column mode */
+    .note {
+        padding: 1rem .8rem;
+        margin: 3rem .5rem;
+    }
+}
+
+@media screen and (min-width: 860px) {
+
+    /* to make size only height of content, use align-self: baseline (but only when it is in row, not column mode */
+    .note {
+        align-self: baseline;
+    }
+}
+
+
+
+
+
+
+
+/* ~~~~~~~~~~~~~ FLEX BOX ~~~~~~~~~~~~~~~ */
+
+/* .col class is a single column flexbox */
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+/* .multi-col class wraps multiple items on one line, collapses to one column on mobile */
+@media screen and (min-width: 860px) {
+    .multi-col {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 859px) {
+    .multi-col {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+
+
+.flex-item {
+    flex: 0 1 auto;
+}
+
+.align-self-start {
+    align-self: start;
+}
+
+.align-self-end {
+    align-self: end;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+.align-self-stretch {
+    align-self: stretch;
+}
+
+
+
+
+
+
+/*  ------------------------- ABOUT PAGE ------------------------------ */
+
+/* to make image stack on top of column in mobile */
+@media screen and (max-width: 859px) {
+    .flex-item.first-item {
+        order: -2;
+    }
+}
+
+
+
+/*  ------------------------- FOOTER ------------------------------ */
+
+
+footer p {
+    text-align: center;
+    padding: 10px;
+
+}
+
+footer img {
+    width: 16px;
+    margin-top: 5rem;
+    padding: 0;
+}
+
+
+/* Sticky Footer  */
+
+/* Flexbox creates sticky footer usint the .content-wrapper class around all content except the footer. */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body .content-wrapper {
+    flex: 1 0 auto;
+}
+
+
+@media screen and (max-width:650px) {
+    .home .content-wrapper {
+        padding: 10px;
+    }
+
+    .content-bg {
+        padding: 20px;
+    }
+
+}
+
+
+/*  ------------------------- CSS Animations------------------------------ */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: 2s infinite alternate fadeIn;
+}
