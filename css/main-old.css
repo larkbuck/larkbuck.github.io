@@ -45,6 +45,13 @@ body {
   left: 0px;
   /* z-index: -2; */
 }
+#bgCanvasDrag {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  touch-action: none;
+  /* z-index: -2; */
+}
 
 .canvas {
   margin-top: 100px;
