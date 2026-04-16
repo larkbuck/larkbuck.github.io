@@ -296,3 +296,14 @@ function youWon() {
 //         folders[dragObjectIndex].position.y = mouseY;
 //     }
 // }
+
+// link to home
+function mouseClicked() {
+
+  console.log(`${mouseX}, ${mouseX}`)
+
+  if (dist(0, 0, mouseX, mouseY) < 200) {
+    window.location = '/';
+  }
+
+}
