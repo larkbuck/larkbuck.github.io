@@ -55,7 +55,7 @@ function preload() {
 function setup() {
   frameRate(30);
   canvas = createCanvas(windowWidth, windowHeight);
-  canvas.parent('bgCanvas');
+  canvas.parent('bgCanvasDrag');
 
   // media queries to scale folders
 
