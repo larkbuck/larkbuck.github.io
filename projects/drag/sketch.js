@@ -250,13 +250,17 @@ function mouseReleased() {
 function youWon() {
   setTimeout(function() {
     if (!done) {
-      alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and doing away with the material world.
+      // alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and doing away with the material world.
 
 
-      Thank you!
+      // Thank you!
 
-      You may continue.`);
+      // You may continue.`);
       // alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and flushing away the material world. \n \nThank you! \n \n \nYou may continue to the site.``);
+      const endScreen = document.querySelector(".drag-end-screen");
+      endScreen.style.display = "block";
+
+
       done = true;
     }
   }, 333);
