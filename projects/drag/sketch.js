@@ -257,6 +257,9 @@ function youWon() {
 
       // You may continue.`);
       // alert(`What a joy it is to tidy up. Thank you for helping to maintain this site and flushing away the material world. \n \nThank you! \n \n \nYou may continue to the site.``);
+     
+
+     // toggle visibility of end screen
       const endScreen = document.querySelector(".drag-end-screen");
       endScreen.style.display = "block";
 
